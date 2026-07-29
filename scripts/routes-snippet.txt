@@ -1,11 +1,3 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/Layout';
-import Home from './pages/Home';
-import Kontak from './pages/Kontak';
-import Tentang from './pages/Tentang';
-
-// --- GENERATED IMPORTS START ---
 import Artikel5KesalahanPerawatanRo from './pages/generated/Artikel5KesalahanPerawatanRo';
 import ArtikelAirFarmasiRoEdi from './pages/generated/ArtikelAirFarmasiRoEdi';
 import ArtikelBiayaInstalasiRoIndustri from './pages/generated/ArtikelBiayaInstalasiRoIndustri';
@@ -97,20 +89,8 @@ import ProdukZincalumeTank from './pages/generated/ProdukZincalumeTank';
 import Produk from './pages/generated/Produk';
 import Sitemap from './pages/generated/Sitemap';
 import SyaratKetentuan from './pages/generated/SyaratKetentuan';
-// --- GENERATED IMPORTS END ---
 
-function App() {
-  return (
-    <Router>
-      <Layout>
-        <Routes>
-          {/* Main Manual Routes */}
-          <Route path="/" element={<Home />} />
-          <Route path="/kontak" element={<Kontak />} />
-          <Route path="/tentang" element={<Tentang />} />
-
-          {/* Generated Routes */}
-          <Route path="/artikel/5-kesalahan-perawatan-ro" element={<Artikel5KesalahanPerawatanRo />} />
+<Route path="/artikel/5-kesalahan-perawatan-ro" element={<Artikel5KesalahanPerawatanRo />} />
           <Route path="/artikel/air-farmasi-ro-edi" element={<ArtikelAirFarmasiRoEdi />} />
           <Route path="/artikel/biaya-instalasi-ro-industri" element={<ArtikelBiayaInstalasiRoIndustri />} />
           <Route path="/artikel/cara-pilih-vendor-water-treatment" element={<ArtikelCaraPilihVendorWaterTreatment />} />
@@ -201,10 +181,3 @@ function App() {
           <Route path="/produk" element={<Produk />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/syarat/ketentuan" element={<SyaratKetentuan />} />
-        </Routes>
-      </Layout>
-    </Router>
-  );
-}
-
-export default App;
