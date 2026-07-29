@@ -7,20 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: '#051930',
-        blue: '#005f99',
-        sky: '#2b90d9',
+        navy: '#0a2240',
+        blue: '#0d5fa8',
+        sky: '#1e90d6',
         accent: '#00b4d8',
-        ice: '#f4f9ff',
-        white: '#ffffff',
-        gray: '#f7fafc',
-        border: '#e4ebf3',
-        text: '#1a202c',
-        muted: '#4a5568',
+        ice: '#e8f4fd',
+        gray: '#f4f8fc',
+        text: '#1a2d42',
+        muted: '#5c7a96',
+        border: '#cde3f3'
       },
       fontFamily: {
-        sans: ['"Inter"', 'sans-serif'],
-        condensed: ['"Barlow Condensed"', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'], 
+        barlow: ['Barlow', 'sans-serif'],
+        condensed: ['Barlow Condensed', 'sans-serif'],
       },
       keyframes: {
         hZoom: {

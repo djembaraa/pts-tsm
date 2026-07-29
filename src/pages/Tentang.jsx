@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Rocket, Handshake, Lightbulb, Trophy, Users, Leaf, Zap, Award, BookOpen, ShieldCheck, FileBadge } from 'lucide-react';
+import { Target, Rocket, Handshake, Lightbulb, Trophy, Users, Leaf, Zap, Award, BookOpen, ShieldCheck, FileBadge, Microscope } from 'lucide-react';
 import ClientMarquee from '../components/ui/ClientMarquee';
 
 const Tentang = () => {
