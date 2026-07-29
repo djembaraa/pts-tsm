@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pttsm.co.id/sitemap.xml

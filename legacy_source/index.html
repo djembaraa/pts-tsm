@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>PT Tirta Sumber Makmur | Water Treatment Technology From Indonesia to the World</title>
+<meta name="description" content="Spesialis Reverse Osmosis, desalinasi, mesin suling air laut, dan mesin air asin Indonesia sejak 2002. Sistem RO industri, SWRO, water treatment system, water equipment. Klien: Ritz-Carlton, Pelindo, Sosro, KRI. Konsultasi gratis."/>
+<meta name="keywords" content="reverse osmosis, water treatment, desalinasi air laut, mesin suling air laut, mesin air asin, RO industri, water treatment system, ultrafiltration, sand filter, softener filter, pompa industri, PT Tirta Sumber Makmur"/>
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<link rel="canonical" href="https://pttsm.co.id/"/>
+<meta property="og:title" content="PT Tirta Sumber Makmur | RO & Desalinasi Indonesia Sejak 2002"/>
+<meta property="og:description" content="Spesialis Reverse Osmosis dan desalinasi Indonesia sejak 2002. Sistem RO industri, SWRO, UF, EDI. Klien: Ritz-Carlton, Pelindo, Sosro, KRI. Konsultasi gratis."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://pttsm.co.id/"/>
+<meta property="og:image" content="https://pttsm.co.id/images/foto-mesin-swro.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="stylesheet" href="assets/style.css"/>
+<style>
+/* ── HERO — Split feel, full bg photo ── */
+.hero {
+  position: relative;
+  height: 480px;
+  min-height: 420px;
+  max-height: 520px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Full background photo */
+.hero-bg-img {
+  position: absolute;
+  inset: 0; z-index: 0;
+}
+.hero-bg-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(0.78) saturate(1.1) contrast(1.1);
+  animation: hZoom 24s ease-in-out infinite alternate;
+}
+@keyframes hZoom {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.07) translateX(-1%); }
+}
+
+/* Split overlay:
+   - Left half: very dark (teks terbaca)
+   - Center: sharp diagonal fade
+   - Right half: minimal overlay (foto terlihat jelas)
+*/
+.hero-ov {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(
+    105deg,
+    rgba(6,18,38,0.97) 0%,
+    rgba(6,18,38,0.93) 28%,
+    rgba(6,18,38,0.75) 40%,
+    rgba(6,18,38,0.22) 52%,
+    rgba(6,18,38,0.06) 100%
+  );
+}
+
+/* Diagonal divider line — subtle */
+.hero-divider {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 44%;
+  width: 1px;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0,200,240,0.25) 20%,
+    rgba(0,200,240,0.45) 50%,
+    rgba(0,200,240,0.25) 80%,
+    transparent 100%
+  );
+  transform: skewX(-6deg);
+  transform-origin: center;
+}
+
+/* FIX 1: grid very subtle — only left panel */
+.hero-grid-tex {
+  position: absolute; inset: 0; z-index: 1;
+  background-image:
+    linear-gradient(rgba(255,255,255,.010) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.010) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to right, black 0%, black 30%, transparent 50%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 30%, transparent 50%);
+}
+
+/* Cyan accent line — left edge */
+.hero-accent-line {
+  position: absolute;
+  left: 0; top: 0; bottom: 0; width: 3px;
+  z-index: 2;
+  background: linear-gradient(to bottom, transparent 10%, var(--accent) 50%, transparent 90%);
+  animation: glowLine 3s ease-in-out infinite alternate;
+}
+@keyframes glowLine {
+  from { box-shadow: 0 0 6px rgba(0,200,240,0.4), 0 0 14px rgba(0,200,240,0.15); }
+  to   { box-shadow: 0 0 16px rgba(0,200,240,0.9), 0 0 32px rgba(0,200,240,0.35); }
+}
+
+/* Content — left side only */
+.hero-content {
+  position: relative; z-index: 3;
+  flex: 1; display: flex; align-items: center;
+}
+.hero-inner { max-width: 520px; }
+
+/* FIX 3: staggered fade-up animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eye {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .65rem; font-weight: 700;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.15s ease forwards;
+}
+.hero-eye::before {
+  content: ''; display: block;
+  width: 20px; height: 1.5px;
+  background: var(--accent); flex-shrink: 0;
+}
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.55rem, 2.3vw, 2.05rem);
+  font-weight: 700; line-height: 1.2;
+  letter-spacing: .02em; color: #fff;
+  margin-bottom: .85rem;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.32s ease forwards;
+}
+.hero h1 em { font-style: normal; color: var(--accent); }
+
+/* FIX 4: stronger subtitle */
+.hero-sub {
+  font-size: .82rem; font-weight: 400;
+  line-height: 1.78; color: rgba(255,255,255,.65);
+  max-width: 420px; margin-bottom: 1.6rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.50s ease forwards;
+}
+.hero-acts {
+  display: flex; gap: .65rem; flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.68s ease forwards;
+}
+
+/* Photo label bottom-right */
+.hero-photo-label {
+  position: absolute;
+  bottom: 14px; right: 20px;
+  z-index: 3;
+  font-size: .6rem; color: rgba(255,255,255,.35);
+  letter-spacing: .08em; font-style: italic;
+  pointer-events: none;
+}
+
+/* Stats bar */
+.hero-bar {
+  position: relative; z-index: 3;
+  background: rgba(5,14,30,0.97);
+  border-top: 1px solid rgba(255,255,255,.07);
+  backdrop-filter: blur(8px);
+}
+.hb-inner {
+  display: flex; align-items: stretch;
+  height: 64px; overflow-x: auto;
+}
+.hb-item {
+  flex: 1; min-width: 90px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: .45rem;
+  border-right: 1px solid rgba(255,255,255,.06);
+  color: #fff;
+}
+.hb-item:last-child { border-right: none; }
+.hb-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.35rem; font-weight: 900;
+  color: var(--accent); line-height: 1;
+}
+.hb-lbl {
+  font-size: .56rem; opacity: .52;
+  letter-spacing: .07em; text-transform: uppercase;
+  margin-top: .1rem; text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero { height: auto; min-height: 340px; max-height: none; }
+  .hero h1 { white-space: normal; font-size: clamp(1.3rem, 4vw, 1.75rem); }
+  .hero-inner { max-width: 80%; }
+  .hero-divider { display: none; }
+}
+@media (max-width: 640px) {
+  .hero-inner { max-width: 100%; }
+  .hb-inner { height: auto; flex-wrap: wrap; }
+  .hb-item { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,.06); }
+}
+
+/* ── HIGHLIGHTS ── */
+.hl-bg{background:var(--gray)}
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.1rem}
+.hl-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.5rem 1.35rem;transition:var(--t);position:relative;overflow:hidden}
+.hl-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--accent));transform:scaleX(0);transform-origin:left;transition:var(--t)}
+.hl-card:hover{transform:translateY(-3px);box-shadow:var(--shh)}
+.hl-card:hover::before{transform:scaleX(1)}
+.hl-ico{width:40px;height:40px;background:var(--ice);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:.85rem;transition:var(--t)}
+.hl-card:hover .hl-ico{background:var(--blue)}
+.hl-card h3{font-size:.87rem;font-weight:700;margin-bottom:.32rem;color:var(--navy)}
+.hl-card p{font-size:.79rem;color:var(--muted);line-height:1.65}
+
+/* ── PRODUCTS ── */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem}
+.pc{border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:var(--t);background:var(--white)}
+.pc:hover{transform:translateY(-4px);box-shadow:var(--shh);border-color:var(--accent)}
+.pc-img{height:175px;overflow:hidden}.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-body{padding:1.25rem}
+.pc-cat{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.32rem}
+.pc-body h3{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.38rem}
+.pc-body p{font-size:.79rem;color:var(--muted);line-height:1.62;margin-bottom:.8rem}
+.pc-lnk{font-size:.75rem;font-weight:700;color:var(--blue);letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.3rem;transition:var(--t)}
+.pc-lnk:hover{gap:.52rem;color:var(--navy)}
+
+/* ── INDUSTRIES ── */
+.ind-bg{background:var(--navy)}
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:.85rem}
+.ind-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:1.35rem .85rem;text-align:center;transition:var(--t);display:block;color:#fff}
+.ind-item:hover{background:rgba(0,180,216,.12);border-color:var(--accent);transform:translateY(-3px)}
+.ind-ico{font-size:1.75rem;margin-bottom:.55rem}
+.ind-item span{font-size:.75rem;font-weight:600;letter-spacing:.02em;display:block}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.av-wrap{position:relative;border-radius:10px;overflow:visible}
+.av-wrap img{width:100%;height:400px;object-fit:cover;border-radius:10px;display:block}
+.av-badge{position:absolute;bottom:1.5rem;right:-.8rem;background:var(--blue);color:#fff;border-radius:8px;padding:.9rem 1.2rem;text-align:center;box-shadow:var(--shh)}
+.av-badge .bnum{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:900;line-height:1;color:var(--accent)}
+.av-badge .blbl{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.at h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,2.4vw,2.1rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:.9rem}
+.at p{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:.8rem}
+.at-list li{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.6rem;font-size:.84rem;color:var(--text)}
+.at-list li::before{content:'✔';color:var(--accent);font-weight:700;flex-shrink:0;margin-top:.1rem}
+
+/* ── NEWS PREVIEW ── */
+.news-bg{background:var(--gray)}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
+
+/* ── TESTIMONIALS ── */
+.testi-bg{background:linear-gradient(135deg,var(--navy),#0d3a6b)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+.tc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1.5rem;transition:var(--t)}
+.tc:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.tc-stars{color:#ffd700;margin-bottom:.65rem;letter-spacing:.08em;font-size:.82rem}
+.tc p{font-size:.82rem;line-height:1.75;opacity:.82;margin-bottom:1rem;font-style:italic;color:#fff}
+.tc-auth{display:flex;align-items:center;gap:.65rem}
+.tc-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.76rem;color:#fff;flex-shrink:0}
+.tc-name{font-weight:600;font-size:.82rem;color:#fff}
+.tc-role{font-size:.68rem;opacity:.58;color:#fff}
+
+@media(max-width:1024px){.about-grid{grid-template-columns:1fr}.av-wrap img{height:280px}.av-badge{right:.6rem}}
+@media(max-width:640px){.hb-inner{height:auto;flex-wrap:wrap}.hb-item{min-width:50%;border-bottom:1px solid rgba(255,255,255,.08)}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "PT Tirta Sumber Makmur",
+  "url": "https://pttsm.co.id",
+  "logo": "https://pttsm.co.id/images/favicon.png",
+  "description": "Penyedia solusi Reverse Osmosis dan desalinasi air terpercaya di Indonesia sejak 2002. Sistem RO industri, komersial, dan desalinasi air laut.",
+  "foundingDate": "2002",
+  "telephone": "+62-21-88871689",
+  "email": "obed@tsm.or.id",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bekasi",
+    "addressRegion": "Jawa Barat",
+    "addressCountry": "ID"
+  },
+  "areaServed": "Indonesia",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": "50+"
+  },
+  "slogan": "Teknologi Air Kelas Dunia untuk Indonesia"
+}
+</script>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg-img">
+    <picture>
+      <source srcset="images/foto-pemasangan-lapangan.webp" type="image/webp">
+      <img src="images/foto-pemasangan-lapangan.jpg" alt="Water Treatment Plant PT Tirta Sumber Makmur" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-ov"></div>
+  <div class="hero-grid-tex"></div>
+  <div class="hero-divider"></div>
+  <div class="hero-accent-line"></div>
+  <div class="hero-content">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-eye">Trusted Water Technology Since 2002</div>
+        <h1>Water Treatment Technology &mdash; <em>From Indonesia to the World</em></h1>
+        <p class="hero-sub">Engineered water treatment solutions for industry, marine, hospitality, and infrastructure — trusted by leading companies across Indonesia.</p>
+        <div class="hero-acts">
+          <a href="kontak.html" class="btn-primary">Konsultasi Gratis</a>
+          <a href="produk.html" class="btn-ghost">Lihat Produk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-photo-label">Water Treatment Plant — PT Tirta Sumber Makmur</div>
+</section>
+<div class="hero-bar">
+  <div class="container">
+    <div class="hb-inner">
+      <div class="hb-item"><div class="hb-num">24+</div><div class="hb-lbl">Tahun Pengalaman</div></div>
+      <div class="hb-item"><div class="hb-num">500+</div><div class="hb-lbl">Proyek Selesai</div></div>
+      <div class="hb-item"><div class="hb-num">100+</div><div class="hb-lbl">Klien Aktif</div></div>
+      <div class="hb-item"><div class="hb-num">24/7</div><div class="hb-lbl">Dukungan Teknis</div></div>
+      <div class="hb-item"><div class="hb-num">ISO</div><div class="hb-lbl">Bersertifikasi</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ HIGHLIGHTS ══ -->
+<section class="section hl-bg">
+  <div class="container">
+    <div class="sec-header reveal">
+      <span class="sec-tag">Keunggulan Kami</span>
+      <h2>Mengapa Memilih TSM?</h2>
+      <p>Lebih dari dua dekade melayani industri air bersih Indonesia dengan dedikasi, inovasi, dan keahlian teknis terbaik.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="hl-grid">
+      <div class="hl-card reveal"><div class="hl-ico">🏆</div><h3>Berpengalaman Sejak 2002</h3><p>Lebih dari 24 tahun menjadi mitra solusi air bersih terpercaya bagi ratusan industri di seluruh Indonesia.</p></div>
+      <div class="hl-card reveal"><div class="hl-ico">🔬</div><h3>Teknologi Mutakhir</h3><p>Menggunakan membran RO dan komponen berteknologi terkini dari produsen terkemuka dunia untuk efisiensi optimal.</p></div>
+      <div class="hl-card reveal"><div class="hl-ico">🛠️</div><h3>Layanan Purna Jual</h3><p>Tim teknisi berpengalaman siap memberikan dukungan perawatan, suku cadang, dan respons darurat 24 jam.</p></div>
+      <div class="hl-card reveal"><div class="hl-ico">📐</div><h3>Solusi Custom</h3><p>Setiap sistem dirancang khusus sesuai kebutuhan kapasitas, kualitas air sumber, dan anggaran klien.</p></div>
+      <div class="hl-card reveal"><div class="hl-ico">🌱</div><h3>Ramah Lingkungan</h3><p>Solusi hemat energi dan sistem recovery air tinggi untuk meminimalkan dampak lingkungan dan biaya operasional.</p></div>
+      <div class="hl-card reveal"><div class="hl-ico">📜</div><h3>Bersertifikasi Resmi</h3><p>Seluruh produk dan layanan memenuhi standar nasional dan internasional dengan sertifikasi yang diakui.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCTS ══ -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header reveal">
+      <span class="sec-tag">Produk &amp; Solusi</span>
+      <h2>Sistem Pengolahan Air Kami</h2>
+      <p>Rangkaian lengkap solusi water treatment dari skala kecil hingga industri besar, dirancang untuk keandalan dan efisiensi maksimal.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc reveal"><div class="pc-img"><picture>
+  <source srcset="images/foto-mesin-swro.webp" type="image/webp">
+  <img src="images/foto-mesin-swro.jpg" alt="RO Industri" loading="lazy" decoding="async"/>
+</picture></div><div class="pc-body"><div class="pc-cat">Reverse Osmosis</div><h3>Sistem RO Industri</h3><p>Kapasitas 1–500 m³/hari untuk pabrik, pembangkit listrik, dan fasilitas industri besar yang butuh air proses berkualitas tinggi.</p><a href="produk-ro-industri.html" class="pc-lnk">Detail Produk →</a></div></div>
+      <div class="pc reveal"><div class="pc-img"><picture>
+  <source srcset="images/porto-pelindo-1.webp" type="image/webp">
+  <img src="images/porto-pelindo-1.jpg" alt="Desalinasi SWRO" loading="lazy" decoding="async"/>
+</picture></div><div class="pc-body"><div class="pc-cat">Desalinasi</div><h3>SWRO — Desalinasi Air Laut</h3><p>Sea Water Reverse Osmosis berkapasitas tinggi untuk kepulauan, resort pesisir, dan industri maritim.</p><a href="produk-desalinasi.html" class="pc-lnk">Detail Produk →</a></div></div>
+      <div class="pc reveal"><div class="pc-img"><picture>
+  <source srcset="images/produk-ro-9m3-a.webp" type="image/webp">
+  <img src="images/produk-ro-9m3-a.jpg" alt="RO Komersial" loading="lazy" decoding="async"/>
+</picture></div><div class="pc-body"><div class="pc-cat">Komersial</div><h3>RO Gedung &amp; Hotel</h3><p>Sistem RO terintegrasi untuk gedung bertingkat, hotel berbintang, pusat perbelanjaan, dan rumah sakit.</p><a href="produk-ro-komersial.html" class="pc-lnk">Detail Produk →</a></div></div>
+      <div class="pc reveal"><div class="pc-img"><picture>
+  <source srcset="images/porto-sosro-5.webp" type="image/webp">
+  <img src="images/porto-sosro-5.jpg" alt="UF Ultrafiltrasi" loading="lazy" decoding="async"/>
+</picture></div><div class="pc-body"><div class="pc-cat">Ultrafiltrasi</div><h3>Sistem UF &amp; MF</h3><p>Penyaringan Ultrafiltration dan Microfiltration sebagai pre-treatment RO maupun unit pengolahan air mandiri.</p><a href="produk-uf.html" class="pc-lnk">Detail Produk →</a></div></div>
+      <div class="pc reveal"><div class="pc-img"><picture>
+  <source srcset="images/porto-kontainer-1.webp" type="image/webp">
+  <img src="images/porto-kontainer-1.jpg" alt="RO Mobile Kontainer" loading="lazy" decoding="async"/>
+</picture></div><div class="pc-body"><div class="pc-cat">Mobile / Portable</div><h3>RO Mobile — Sistem Kontainer</h3><p>Unit RO dalam kontainer atau mobile yang dapat dipindah, ideal untuk offshore, kepulauan, dan lokasi terpencil.</p><a href="produk-ro-mobile.html" class="pc-lnk">Detail Produk →</a></div></div>
+      <div class="pc reveal"><div class="pc-img"><picture>
+  <source srcset="images/foto-bengkel.webp" type="image/webp">
+  <img src="images/foto-bengkel.jpg" alt="Bengkel Produksi TSM" loading="lazy" decoding="async"/>
+</picture></div><div class="pc-body"><div class="pc-cat">Produksi &amp; Workshop</div><h3>Bengkel Produksi TSM</h3><p>Setiap sistem dirancang, dirakit, dan diuji di bengkel sendiri di Bekasi sebelum dikirim ke lokasi klien.</p><a href="tentang.html" class="pc-lnk">Lihat Fasilitas →</a></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="produk.html" class="btn-blue">Lihat Semua Produk &amp; Solusi →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INDUSTRIES ══ -->
+<section class="section ind-bg">
+  <div class="container">
+    <div class="sec-header reveal" style="color:#fff">
+      <span class="sec-tag" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);color:var(--accent)">Sektor Industri</span>
+      <h2 style="color:#fff">Melayani Berbagai Industri</h2>
+      <p style="color:rgba(255,255,255,.7)">Solusi TSM telah dipercaya oleh beragam sektor industri di seluruh Indonesia.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="ind-grid reveal">
+      <a href="industri-manufaktur.html" class="ind-item"><div class="ind-ico">🏭</div><span>Manufaktur</span></a>
+      <a href="industri-hotel.html" class="ind-item"><div class="ind-ico">🏨</div><span>Hotel &amp; Pariwisata</span></a>
+      <a href="industri-rs.html" class="ind-item"><div class="ind-ico">⚕️</div><span>Rumah Sakit</span></a>
+      <a href="industri-farmasi.html" class="ind-item"><div class="ind-ico">💊</div><span>Farmasi</span></a>
+      <a href="industri-agrikultur.html" class="ind-item"><div class="ind-ico">🌾</div><span>Agrikultur</span></a>
+      <a href="industri-pltu.html" class="ind-item"><div class="ind-ico">⚡</div><span>Pembangkit Listrik</span></a>
+      <a href="industri.html#properti" class="ind-item"><div class="ind-ico">🏗️</div><span>Properti</span></a>
+      <a href="industri-maritim.html" class="ind-item"><div class="ind-ico">🚢</div><span>Maritim &amp; Offshore</span></a>
+      <a href="industri-manufaktur.html" class="ind-item"><div class="ind-ico">🧴</div><span>Minuman &amp; F&amp;B</span></a>
+      <a href="industri-manufaktur.html" class="ind-item"><div class="ind-ico">🖥️</div><span>Elektronik</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="av-wrap reveal">
+        <picture>
+  <source srcset="images/foto-mesin-swro.webp" type="image/webp">
+  <img src="images/foto-mesin-swro.jpg" alt="Fasilitas PT Tirta Sumber Makmur" loading="lazy" decoding="async">
+</picture>
+        <div class="av-badge"><div class="bnum">2002</div><div class="blbl">Berdiri Sejak</div></div>
+      </div>
+      <div class="at reveal">
+        <span class="sec-tag">Tentang Kami</span>
+        <h2>Dedikasi Dua Dekade untuk Air Bersih Indonesia</h2>
+        <p>PT Tirta Sumber Makmur (TSM) adalah perusahaan Indonesia yang telah berdiri sejak tahun 2002, berkomitmen menghadirkan solusi reverse osmosis dan desalinasi air berkualitas tinggi untuk berbagai sektor industri dan komersial di tanah air.</p>
+        <p>Berlokasi strategis di kawasan Bekasi, Jawa Barat, kami melayani pelanggan dari Sabang hingga Merauke dengan tim insinyur berpengalaman dan dukungan purna jual yang komprehensif.</p>
+        <ul class="at-list" style="margin-top:1rem;margin-bottom:1.5rem">
+          <li>Lebih dari 24 tahun pengalaman di bidang water treatment</li>
+          <li>Tim engineering bersertifikasi dan terlatih internasional</li>
+          <li>Portofolio lebih dari 500 proyek yang berhasil diselesaikan</li>
+          <li>Solusi turnkey dari desain, instalasi, hingga commissioning</li>
+          <li>Garansi sistem dan dukungan teknis jangka panjang</li>
+        </ul>
+        <a href="tentang.html" class="btn-blue">Pelajari Lebih Lanjut →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ARTICLE PREVIEW ══ -->
+<section class="section news-bg">
+  <div class="container">
+    <div class="sec-header reveal">
+      <span class="sec-tag">Artikel Terbaru</span>
+      <h2>Wawasan Dunia Water Treatment</h2>
+      <p>Pelajari teknologi terkini, tips perawatan sistem, dan perkembangan industri pengolahan air dari para ahli kami.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="news-grid">
+      <div class="art-card reveal">
+        <div class="art-img" style="background:linear-gradient(135deg,#054a6e,#1e90d6)"><picture>
+  <source srcset="images/foto-mesin-swro.webp" type="image/webp">
+  <img src="images/foto-mesin-swro.jpg" alt="RO" style="width:100%;height:100%;object-fit:cover;opacity:.7" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Teknologi</span></div>
+        <div class="art-body">
+          <div class="art-meta">📅 28 Maret 2025 &nbsp;·&nbsp; ⏱ 5 menit baca</div>
+          <h3><a href="artikel-ro-prinsip-kerja.html">Mengenal Teknologi Reverse Osmosis: Prinsip Kerja dan Keunggulannya</a></h3>
+          <p>RO menggunakan tekanan tinggi untuk memaksa air melewati membran semi-permeabel, menyisihkan kontaminan hingga 99%. Simak cara kerjanya secara mendalam.</p>
+        </div>
+        <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-ro-prinsip-kerja.html" class="art-readmore">Baca →</a></div>
+      </div>
+      <div class="art-card reveal">
+        <div class="art-img" style="background:linear-gradient(135deg,#0a2240,#0d5fa8)"><picture>
+  <source srcset="images/porto-pulau-ayer-1.webp" type="image/webp">
+  <img src="images/porto-pulau-ayer-1.jpg" alt="Desalinasi" style="width:100%;height:100%;object-fit:cover;opacity:.7" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Desalinasi</span></div>
+        <div class="art-body">
+          <div class="art-meta">📅 15 Maret 2025 &nbsp;·&nbsp; ⏱ 6 menit baca</div>
+          <h3><a href="artikel-desalinasi-solusi-pulau.html">Desalinasi Air Laut: Solusi Krisis Air Bersih di Pulau-Pulau Terpencil</a></h3>
+          <p>Kawasan pesisir dan kepulauan Indonesia menghadapi tantangan air tawar yang serius. Sistem SWRO hadir sebagai jawaban yang kini semakin terjangkau.</p>
+        </div>
+        <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-desalinasi-solusi-pulau.html" class="art-readmore">Baca →</a></div>
+      </div>
+      <div class="art-card reveal">
+        <div class="art-img" style="background:linear-gradient(135deg,#1a3a5c,#1e90d6)"><picture>
+  <source srcset="images/porto-sosro-1.webp" type="image/webp">
+  <img src="images/porto-sosro-1.jpg" alt="Perawatan RO" style="width:100%;height:100%;object-fit:cover;opacity:.7" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Perawatan</span></div>
+        <div class="art-body">
+          <div class="art-meta">📅 5 Maret 2025 &nbsp;·&nbsp; ⏱ 4 menit baca</div>
+          <h3><a href="artikel-5-kesalahan-perawatan-ro.html">5 Kesalahan Umum Perawatan Membran RO yang Perlu Dihindari</a></h3>
+          <p>Membran RO adalah komponen paling kritis sekaligus mahal. Kenali kesalahan umum dan cara mencegahnya untuk memaksimalkan usia pakai membran.</p>
+        </div>
+        <div class="art-footer"><span class="art-author">✍️ Tim Teknis TSM</span><a href="artikel-5-kesalahan-perawatan-ro.html" class="art-readmore">Baca →</a></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="artikel.html" class="btn-blue">Lihat Semua Artikel →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="section testi-bg">
+  <div class="container">
+    <div class="sec-header reveal" style="color:#fff">
+      <span class="sec-tag" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);color:var(--accent)">Testimoni Klien</span>
+      <h2 style="color:#fff">Dipercaya Ratusan Klien</h2>
+      <p style="color:rgba(255,255,255,.68)">Kepercayaan klien adalah amanah terbesar kami dalam setiap proyek yang kami kerjakan.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="tc reveal"><div class="tc-stars">★★★★★</div><p>"Sistem RO industri yang dipasang TSM sudah berjalan 3 tahun tanpa masalah berarti. Tim teknisnya responsif dan profesional. Sangat merekomendasikan untuk kebutuhan water treatment industri."</p><div class="tc-auth"><div class="tc-av">PM</div><div><div class="tc-name">Plant Manager</div><div class="tc-role">Plant Manager, PT Maju Jaya Industri</div></div></div></div>
+      <div class="tc reveal"><div class="tc-stars">★★★★★</div><p>"Kami menggunakan sistem desalinasi TSM untuk resort di kepulauan. Kualitas air sangat baik, dan layanan purna jualnya luar biasa. Investasi terbaik untuk operasional resort kami."</p><div class="tc-auth"><div class="tc-av">GM</div><div><div class="tc-name">GM Operations</div><div class="tc-role">GM Operations, Raja Ampat Resort</div></div></div></div>
+      <div class="tc reveal"><div class="tc-stars">★★★★★</div><p>"TSM membantu rumah sakit kami memenuhi standar air untuk instalasi farmasi sesuai regulasi BPOM. Proses dari survei hingga commissioning sangat terstruktur dan profesional."</p><div class="tc-auth"><div class="tc-av">KI</div><div><div class="tc-name">Kepala IFRS</div><div class="tc-role">Kepala IFRS, RSUD Bekasi</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ KLIEN ══ -->
+<section class="section" style="background:var(--gray)">
+  <div class="container">
+    <div class="sec-header reveal">
+      <span class="sec-tag">Klien &amp; Mitra</span>
+      <h2>Dipercaya oleh Perusahaan Terkemuka</h2>
+      <p>Lebih dari 24 tahun kami telah melayani berbagai perusahaan besar, institusi, dan lembaga pemerintah di seluruh Indonesia.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="client-marquee-wrap">
+      <div class="client-marquee" id="clientMarquee">
+        <div class="cl-track" id="clTrack">
+<div class="cl-item"><picture>
+  <source srcset="images/logo-ritzcarlton.webp" type="image/webp">
+  <img src="images/logo-ritzcarlton.png" alt="The Ritz-Carlton" title="The Ritz-Carlton" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-pelindo.webp" type="image/webp">
+  <img src="images/logo-pelindo.png" alt="PT Pelindo" title="PT Pelindo" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-sosro.webp" type="image/webp">
+  <img src="images/logo-sosro.png" alt="PT Sosro" title="PT Sosro" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-wintermar.webp" type="image/webp">
+  <img src="images/logo-wintermar.png" alt="Wintermar Offshore Marine" title="Wintermar Offshore Marine" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-app.webp" type="image/webp">
+  <img src="images/logo-app.png" alt="APP (Asia Pulp & Paper)" title="APP (Asia Pulp & Paper)" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-sasa.webp" type="image/webp">
+  <img src="images/logo-sasa.png" alt="PT Sasa Inti" title="PT Sasa Inti" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-ekahospital.webp" type="image/webp">
+  <img src="images/logo-ekahospital.png" alt="Eka Hospital" title="Eka Hospital" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-suryahutanijaya.webp" type="image/webp">
+  <img src="images/logo-suryahutanijaya.png" alt="PT Surya Hutani Jaya" title="PT Surya Hutani Jaya" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-hillcon.webp" type="image/webp">
+  <img src="images/logo-hillcon.png" alt="Hillcon" title="Hillcon" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-triton.webp" type="image/webp">
+  <img src="images/logo-triton.png" alt="Triton Offshore" title="Triton Offshore" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-suryainternusa.webp" type="image/webp">
+  <img src="images/logo-suryainternusa.png" alt="Surya Internusa" title="Surya Internusa" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-noahtu.webp" type="image/webp">
+  <img src="images/logo-noahtu.png" alt="Noahtu Shipyard" title="Noahtu Shipyard" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-mako.webp" type="image/webp">
+  <img src="images/logo-mako.png" alt="Mako Cake & Bakery" title="Mako Cake & Bakery" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-liziz.webp" type="image/webp">
+  <img src="images/logo-liziz.png" alt="Liziz Indoliziz Marine" title="Liziz Indoliziz Marine" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-melinda.webp" type="image/webp">
+  <img src="images/logo-melinda.png" alt="RS Melinda" title="RS Melinda" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-adani.webp" type="image/webp">
+  <img src="images/logo-adani.png" alt="Adani" title="Adani" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-atmajaya.webp" type="image/webp">
+  <img src="images/logo-atmajaya.png" alt="Universitas Atma Jaya Yogyakarta" title="Universitas Atma Jaya Yogyakarta" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-ijsm.webp" type="image/webp">
+  <img src="images/logo-ijsm.png" alt="PT Indojaya Sukses Makmur" title="PT Indojaya Sukses Makmur" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-klh.webp" type="image/webp">
+  <img src="images/logo-klh.png" alt="Kementerian Lingkungan Hidup" title="Kementerian Lingkungan Hidup" loading="lazy" decoding="async"/>
+</picture></div>
+<div class="cl-item"><picture>
+  <source srcset="images/logo-unair.webp" type="image/webp">
+  <img src="images/logo-unair.png" alt="Universitas Airlangga" title="Universitas Airlangga" loading="lazy" decoding="async"/>
+</picture></div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:1.5rem;font-style:italic">dan masih banyak klien lainnya di seluruh Indonesia 🇮🇩</p>
+  </div>
+</section>
+
+<!-- ══ BRANDS ══ -->
+<section class="section-sm" style="background:var(--white);border-top:1px solid var(--border)">
+  <div class="container">
+    <p style="text-align:center;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.65rem">Brand Komponen yang Kami Gunakan</p>
+    <div class="partner-logos">
+      <div class="partner-logo">Dow Filmtec</div>
+      <div class="partner-logo">Toray</div>
+      <div class="partner-logo">Grundfos</div>
+      <div class="partner-logo">Hydranautics</div>
+      <div class="partner-logo">Koch Membrane</div>
+      <div class="partner-logo">Pentair</div>
+      <div class="partner-logo">Veolia</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<div class="cta-band">
+  <div class="container">
+    <h2>Siap Memulai Proyek Water Treatment Anda?</h2>
+    <p>Konsultasikan kebutuhan air bersih Anda dengan tim ahli kami — gratis, tanpa komitmen.</p>
+    <div class="cta-actions">
+      <a href="kontak.html" class="btn-white">📞 Hubungi Kami Sekarang</a>
+      <a href="produk.html" class="btn-ghost">🔍 Lihat Semua Solusi</a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Artikel &amp; Edukasi – PT Tirta Sumber Makmur</title>
+<meta name="description" content="Artikel teknis, studi kasus, dan tips seputar reverse osmosis, desalinasi, dan water treatment dari para ahli TSM."/>
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<link rel="canonical" href="https://pttsm.co.id/artikel.html"/>
+<meta property="og:url" content="https://pttsm.co.id/artikel.html"/>
+<meta property="og:title" content="Artikel &amp; Edukasi – PT Tirta Sumber Makmur"/>
+<meta property="og:description" content="Artikel teknis, studi kasus, dan tips seputar reverse osmosis, desalinasi, dan water treatment dari para ahli TSM."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://pttsm.co.id/images/foto-mesin-swro.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Artikel & Edukasi – PT Tirta Sumber Makmur"/>
+<meta name="twitter:description" content="Artikel teknis, studi kasus, dan tips seputar reverse osmosis, desalinasi, dan water treatment dari para ahli TSM."/>
+<meta name="twitter:image" content="images/foto-mesin-swro.jpg"/>
+<link rel="stylesheet" href="assets/style.css"/>
+<style>
+.layout-2col{display:grid;grid-template-columns:1fr 308px;gap:2.8rem;align-items:start}
+.sticky-side{position:sticky;top:88px}
+
+/* Filter bar */
+.filter-bar{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap;margin-bottom:2.4rem}
+.fb-btn{padding:.42rem 1rem;border:2px solid var(--border);border-radius:20px;font-size:.8rem;font-weight:600;color:var(--muted);background:var(--white);cursor:pointer;transition:var(--t);font-family:inherit}
+.fb-btn:hover,.fb-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Article grid */
+.art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.6rem}
+
+/* No results */
+.no-results{text-align:center;padding:3rem;color:var(--muted);font-size:.95rem;grid-column:1/-1;display:none}
+.no-results.show{display:block}
+
+/* Search box */
+.search-wrap{position:relative;margin-bottom:.6rem}
+.search-wrap input{width:100%;padding:.68rem 1rem .68rem 2.4rem;border:1px solid var(--border);border-radius:var(--r);font-family:inherit;font-size:.88rem;color:var(--text);outline:none;transition:var(--t);background:var(--white)}
+.search-wrap input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(13,95,168,.1)}
+.search-ico{position:absolute;left:.78rem;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.9rem;pointer-events:none}
+
+/* Popular list */
+.pop-item{display:flex;gap:.75rem;align-items:flex-start;padding:.72rem 0;border-bottom:1px solid var(--border)}
+.pop-item:last-child{border-bottom:none}
+.pop-num{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:900;color:var(--accent);line-height:1;flex-shrink:0;width:22px}
+.pop-title{font-size:.84rem;font-weight:600;color:var(--text);line-height:1.4;transition:var(--t)}
+.pop-title:hover,.pop-title:focus{color:var(--blue)}
+.pop-meta{font-size:.7rem;color:var(--muted);margin-top:.18rem}
+
+/* Tags */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:.48rem}
+.tag-chip{font-size:.76rem;font-weight:600;padding:.28rem .78rem;background:var(--ice);border:1px solid var(--border);border-radius:20px;color:var(--text);transition:var(--t);cursor:pointer;font-family:inherit}
+.tag-chip:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Sidebar CTA box */
+.sb-cta{background:linear-gradient(145deg,var(--navy),var(--blue));color:#fff;border:none!important}
+.sb-cta h4{color:rgba(255,255,255,.5)!important;border-color:rgba(255,255,255,.15)!important}
+.sb-cta p{font-size:.86rem;line-height:1.65;margin-bottom:1rem;opacity:.84}
+
+@media(max-width:1024px){.layout-2col{grid-template-columns:1fr}.sticky-side{position:static}}
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Beranda</a> › Artikel</div>
+    <h1>Artikel &amp; Edukasi</h1>
+    <p>Wawasan terkini seputar teknologi reverse osmosis, desalinasi, tips perawatan, dan perkembangan industri water treatment Indonesia.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="layout-2col">
+
+      <!-- MAIN -->
+      <div>
+        <div class="filter-bar reveal" id="filter-bar">
+          <button class="fb-btn active" data-cat="semua" onclick="doFilter(this,'semua')">Semua</button>
+          <button class="fb-btn" data-cat="teknologi" id="teknologi" onclick="doFilter(this,'teknologi')">📚 Teknologi</button>
+          <button class="fb-btn" data-cat="desalinasi" id="desalinasi" onclick="doFilter(this,'desalinasi')">🌊 Desalinasi</button>
+          <button class="fb-btn" data-cat="perawatan" id="perawatan" onclick="doFilter(this,'perawatan')">🔧 Perawatan</button>
+          <button class="fb-btn" data-cat="industri" id="industri" onclick="doFilter(this,'industri')">🏭 Industri</button>
+          <button class="fb-btn" data-cat="studi-kasus" id="studi-kasus" onclick="doFilter(this,'studi-kasus')">📂 Studi Kasus</button>
+        </div>
+
+        <div class="art-grid" id="artGrid">
+
+          <div class="art-card reveal" data-cat="industri" data-title="cara memilih vendor water treatment kriteria checklist tender">
+            <div class="art-img" style="background:linear-gradient(135deg,#054a6e,#1e90d6)"><picture>
+  <source srcset="images/foto-pemasangan-lapangan.webp" type="image/webp">
+  <img alt="Tim PT TSM di lapangan instalasi water treatment" src="images/foto-pemasangan-lapangan.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75"/>
+</picture><span class="art-badge">Industri</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 4 Mei 2026 &nbsp;·&nbsp; ⏱ 8 menit baca &nbsp;·&nbsp; 👁 Baru</div>
+              <h3><a href="artikel-cara-pilih-vendor-water-treatment.html">Cara Memilih Vendor Water Treatment: 8 Kriteria Wajib & Checklist Tender</a></h3>
+              <p>Panduan praktis memilih vendor water treatment yang tepat — dari pengalaman, sertifikasi, garansi membran, hingga ketersediaan suku cadang dan layanan purna jual. Lengkap dengan checklist tender.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-cara-pilih-vendor-water-treatment.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="industri" data-title="biaya instalasi ro industri capex opex harga sistem reverse osmosis indonesia">
+            <div class="art-img" style="background:linear-gradient(135deg,#0a2240,#0d5fa8)"><picture>
+  <source srcset="images/foto-pemasangan-kontainer.webp" type="image/webp">
+  <img alt="Sistem RO industri PT TSM dalam container skid" src="images/foto-pemasangan-kontainer.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75"/>
+</picture><span class="art-badge">Industri</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 4 Mei 2026 &nbsp;·&nbsp; ⏱ 10 menit baca &nbsp;·&nbsp; 👁 Baru</div>
+              <h3><a href="artikel-biaya-instalasi-ro-industri.html">Biaya Instalasi RO Industri 2026: Breakdown Lengkap CAPEX & OPEX</a></h3>
+              <p>Estimasi realistis biaya investasi sistem RO industri kapasitas 1–500 m³/hari — termasuk membran, pompa tekanan tinggi, instrumentasi, instalasi, dan biaya operasional bulanan.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-biaya-instalasi-ro-industri.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="perawatan" data-title="jadwal perawatan ro preventive maintenance harian mingguan bulanan tahunan">
+            <div class="art-img" style="background:linear-gradient(135deg,#054a6e,#0a8e63)"><picture>
+  <source srcset="images/foto-bengkel.webp" type="image/webp">
+  <img alt="Bengkel perawatan dan service RO PT TSM" src="images/foto-bengkel.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75"/>
+</picture><span class="art-badge">Perawatan</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 4 Mei 2026 &nbsp;·&nbsp; ⏱ 9 menit baca &nbsp;·&nbsp; 👁 Baru</div>
+              <h3><a href="artikel-jadwal-perawatan-ro.html">Jadwal Perawatan Sistem RO: Panduan Preventive Maintenance Lengkap</a></h3>
+              <p>Checklist perawatan RO harian, mingguan, bulanan, tahunan, dan multi-tahun — termasuk CIP, penggantian membran, kalibrasi instrumen, dan dokumentasi log book sesuai standar industri.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim Teknis TSM</span><a href="artikel-jadwal-perawatan-ro.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="teknologi" data-title="mengenal teknologi reverse osmosis prinsip kerja keunggulan">
+            <div class="art-img" style="background:linear-gradient(135deg,#054a6e,#1e90d6)"><picture>
+  <source srcset="images/foto-mesin-swro.webp" type="image/webp">
+  <img alt="Mesin SWRO PT Tirta Sumber Makmur" src="images/foto-mesin-swro.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75"/>
+</picture><span class="art-badge">Teknologi</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 28 Maret 2025 &nbsp;·&nbsp; ⏱ 5 menit baca &nbsp;·&nbsp; 👁 1.2k</div>
+              <h3><a href="artikel-ro-prinsip-kerja.html">Mengenal Teknologi Reverse Osmosis: Prinsip Kerja dan Keunggulannya</a></h3>
+              <p>Panduan lengkap memahami cara kerja sistem RO, komponen utamanya, dan mengapa teknologi ini menjadi standar emas pengolahan air industri global.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-ro-prinsip-kerja.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="desalinasi" data-title="desalinasi air laut solusi krisis air bersih pulau terpencil swro">
+            <div class="art-img" style="background:linear-gradient(135deg,#0a2240,#0d5fa8)"><picture>
+  <source srcset="images/porto-pamjaya-1.webp" type="image/webp">
+  <img alt="Proyek PAM JAYA Pulau Lancang TSM" src="images/porto-pamjaya-1.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Desalinasi</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 15 Maret 2025 &nbsp;·&nbsp; ⏱ 6 menit baca &nbsp;·&nbsp; 👁 890</div>
+              <h3><a href="artikel-desalinasi-solusi-pulau.html">Desalinasi Air Laut: Solusi Krisis Air Bersih di Pulau-Pulau Terpencil</a></h3>
+              <p>Indonesia memiliki 17.000+ pulau namun jutaan warganya kekurangan air tawar. Sistem SWRO hadir sebagai jawaban yang kini semakin terjangkau.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-desalinasi-solusi-pulau.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="perawatan" data-title="kesalahan perawatan membran ro fouling scaling cip">
+            <div class="art-img" style="background:linear-gradient(135deg,#1a3a5c,#1e90d6)"><picture>
+  <source srcset="images/porto-sosro-5.webp" type="image/webp">
+  <img alt="Proyek instalasi RO PT Sosro TSM" src="images/porto-sosro-5.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Perawatan</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 5 Maret 2025 &nbsp;·&nbsp; ⏱ 4 menit baca &nbsp;·&nbsp; 👁 650</div>
+              <h3><a href="artikel-5-kesalahan-perawatan-ro.html">5 Kesalahan Umum Perawatan Membran RO yang Perlu Dihindari</a></h3>
+              <p>Membran RO adalah komponen paling kritis sekaligus mahal dalam sistem. Kenali kesalahan umum dan cara mencegahnya untuk memaksimalkan usia pakai.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim Teknis TSM</span><a href="artikel-5-kesalahan-perawatan-ro.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="industri" data-title="standar kualitas air farmasi ro edi purified water bpom">
+            <div class="art-img" style="background:linear-gradient(135deg,#0d3a6b,#0d5fa8)"><picture>
+  <source srcset="images/porto-sbawi-2.webp" type="image/webp">
+  <img alt="Proyek sistem RO SBAWI TSM" src="images/porto-sbawi-2.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Industri</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 20 Feb 2025 &nbsp;·&nbsp; ⏱ 7 menit baca &nbsp;·&nbsp; 👁 740</div>
+              <h3><a href="artikel-air-farmasi-ro-edi.html">Standar Kualitas Air untuk Industri Farmasi: Mengapa RO + EDI Wajib?</a></h3>
+              <p>Regulasi BPOM dan standar farmakope internasional menetapkan persyaratan ketat kualitas air untuk produksi obat. RO + EDI menjadi solusi wajib.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-air-farmasi-ro-edi.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="teknologi" data-title="zero liquid discharge zld daur ulang air limbah industri">
+            <div class="art-img" style="background:linear-gradient(135deg,#054a6e,#00b4d8)"><picture>
+  <source srcset="images/porto-kontainer-1.webp" type="image/webp">
+  <img alt="Proyek SWRO kontainer PT TSM" src="images/porto-kontainer-1.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Lingkungan</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 10 Feb 2025 &nbsp;·&nbsp; ⏱ 5 menit baca &nbsp;·&nbsp; 👁 510</div>
+              <h3><a href="artikel-zld-zero-liquid.html">Zero Liquid Discharge (ZLD): Masa Depan Pengelolaan Air Limbah Industri</a></h3>
+              <p>Konsep ZLD mengharuskan industri mendaur ulang seluruh air limbahnya. TSM menghadirkan solusi terintegrasi untuk membantu industri mencapai target ZLD.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-zld-zero-liquid.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="studi-kasus" data-title="studi kasus ro 200 m3 pabrik tekstil karawang hemat air">
+            <div class="art-img" style="background:linear-gradient(135deg,#1a2d42,#0a5c8a)"><picture>
+  <source srcset="images/foto-bengkel.webp" type="image/webp">
+  <img alt="Bengkel dan workshop PT Tirta Sumber Makmur" src="images/foto-bengkel.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Studi Kasus</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 25 Jan 2025 &nbsp;·&nbsp; ⏱ 8 menit baca &nbsp;·&nbsp; 👁 830</div>
+              <h3><a href="artikel-studi-kasus-ro-tekstil.html">Studi Kasus: Sistem RO 200 m³/hari di Pabrik Tekstil Karawang</a></h3>
+              <p>Bagaimana TSM membantu sebuah pabrik tekstil besar mengurangi konsumsi air PDAM hingga 70% dan menghemat biaya operasional secara signifikan.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim Proyek TSM</span><a href="artikel-studi-kasus-ro-tekstil.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="perawatan" data-title="monitoring kualitas air output ro tds meter mandiri">
+            <div class="art-img" style="background:linear-gradient(135deg,#0a4060,#1e90d6)"><picture>
+  <source srcset="images/produk-ro-9m3-a.webp" type="image/webp">
+  <img alt="Sistem RO industri 9 m3 per jam TSM" src="images/produk-ro-9m3-a.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Tips</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 12 Jan 2025 &nbsp;·&nbsp; ⏱ 4 menit baca &nbsp;·&nbsp; 👁 420</div>
+              <h3><a href="artikel-monitoring-kualitas-air-ro.html">Cara Monitoring Kualitas Air Output Sistem RO Secara Mandiri</a></h3>
+              <p>Anda tidak perlu selalu memanggil teknisi untuk memeriksa kualitas output air RO. Berikut cara melakukannya sendiri dengan alat sederhana.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim Teknis TSM</span><a href="artikel-monitoring-kualitas-air-ro.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="desalinasi" data-title="sistem ro kapal offshore platform maritim air tawar laut">
+            <div class="art-img" style="background:linear-gradient(135deg,#093060,#0d5fa8)"><picture>
+  <source srcset="images/porto-kapal-prima-1.webp" type="image/webp">
+  <img alt="Proyek RO kapal PT Prima TSM" src="images/porto-kapal-prima-1.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Maritim</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 3 Jan 2025 &nbsp;·&nbsp; ⏱ 5 menit baca &nbsp;·&nbsp; 👁 380</div>
+              <h3><a href="artikel-ro-kapal-offshore.html">Sistem RO untuk Kapal dan Platform Offshore: Solusi Air Tawar di Laut</a></h3>
+              <p>Industri maritim dan offshore membutuhkan pasokan air tawar yang andal di tengah laut. Sistem RO compact menjadi solusi terbaik untuk lingkungan yang menantang ini.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-ro-kapal-offshore.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="industri" data-title="hotel bintang lima ro sistem air kualitas tamu laundry">
+            <div class="art-img" style="background:linear-gradient(135deg,#1a3050,#0d5fa8)"><picture>
+  <source srcset="images/porto-pulau-ayer-7.webp" type="image/webp">
+  <img alt="Proyek RO Pulau Ayer TSM" src="images/porto-pulau-ayer-7.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Hotel</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 20 Des 2024 &nbsp;·&nbsp; ⏱ 4 menit baca &nbsp;·&nbsp; 👁 295</div>
+              <h3><a href="artikel-ro-hotel-resort.html">Mengapa Hotel Berbintang Wajib Menggunakan Sistem RO?</a></h3>
+              <p>Standar kualitas air di hotel berbintang sangat tinggi, mulai dari air minum, laundry, hingga kolam renang. Sistem RO adalah jawabannya.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-ro-hotel-resort.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <!-- ═══ ARTIKEL BARU BATCH 6 (10 artikel) ═══ -->
+
+          <div class="art-card reveal" data-cat="teknologi" data-title="perbedaan swro bwro twro reverse osmosis air laut payau ledeng">
+            <div class="art-img" style="background:linear-gradient(135deg,#054a6e,#1e90d6)"><picture>
+  <source srcset="images/foto-mesin-swro.webp" type="image/webp">
+  <img alt="Perbedaan SWRO BWRO TWRO" src="images/foto-mesin-swro.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Teknologi</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 8 menit baca</div>
+              <h3><a href="artikel-perbedaan-swro-bwro-twro.html">Perbedaan SWRO, BWRO, dan TWRO: Mana yang Tepat untuk Anda?</a></h3>
+              <p>Panduan lengkap perbedaan teknis SWRO, BWRO, dan TWRO — spesifikasi, tekanan, recovery, biaya, dan cara memilih yang tepat untuk kebutuhan Anda.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-perbedaan-swro-bwro-twro.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="industri" data-title="standar air farmasi bpom cpob ro edi purified water wfi">
+            <div class="art-img" style="background:linear-gradient(135deg,#0d3a6b,#0d5fa8)"><picture>
+  <source srcset="images/foto-mesin-swro.webp" type="image/webp">
+  <img alt="Standar Air Farmasi BPOM CPOB" src="images/foto-mesin-swro.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Farmasi</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 10 menit baca</div>
+              <h3><a href="artikel-standar-air-farmasi-bpom.html">Standar Air Farmasi BPOM CPOB: RO+EDI untuk PW &amp; WFI</a></h3>
+              <p>Pedoman CPOB BPOM 2018, kategori air farmasi, mengapa RO+EDI menjadi standar emas, persyaratan loop distribusi sanitary, dan validasi 3 fase.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-standar-air-farmasi-bpom.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="teknologi" data-title="perbandingan membran ro dow filmtec toray hydranautics">
+            <div class="art-img" style="background:linear-gradient(135deg,#1a3a5c,#1e90d6)"><picture>
+  <source srcset="images/produk-ro-industri-2.webp" type="image/webp">
+  <img alt="Perbandingan Membran Dow vs Toray" src="images/produk-ro-industri-2.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Membran</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 9 menit baca</div>
+              <h3><a href="artikel-perbandingan-membran-dow-toray.html">Perbandingan Membran RO Dow Filmtec vs Toray untuk Indonesia</a></h3>
+              <p>Karakteristik teknis, ketahanan klorin, harga, ketersediaan, dan rekomendasi pemilihan membran untuk SWRO, BWRO, dan TWRO sesuai air baku Indonesia.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-perbandingan-membran-dow-toray.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="industri" data-title="kapasitas swro resort kepulauan pulau hotel sizing kebutuhan">
+            <div class="art-img" style="background:linear-gradient(135deg,#1a3050,#0d5fa8)"><picture>
+  <source srcset="images/porto-pulau-ayer-1.webp" type="image/webp">
+  <img alt="Kapasitas SWRO Resort Kepulauan" src="images/porto-pulau-ayer-1.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Hospitality</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 8 menit baca</div>
+              <h3><a href="artikel-kapasitas-swro-resort.html">Kapasitas SWRO untuk Resort Kepulauan: Cara Menghitungnya</a></h3>
+              <p>Panduan menghitung kapasitas SWRO yang tepat untuk resort 100+ kamar — konsumsi per tamu, peak demand, buffer storage, dan strategi redundancy.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-kapasitas-swro-resort.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="industri" data-title="water treatment pltu pembangkit listrik boiler feed cooling tower">
+            <div class="art-img" style="background:linear-gradient(135deg,#0a2240,#0d5fa8)"><picture>
+  <source srcset="images/foto-pemasangan-lapangan.webp" type="image/webp">
+  <img alt="Water Treatment PLTU" src="images/foto-pemasangan-lapangan.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">PLTU</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 10 menit baca</div>
+              <h3><a href="artikel-water-treatment-pltu.html">Water Treatment PLTU: Boiler Feed Water &amp; Cooling Tower</a></h3>
+              <p>Spesifikasi boiler feed water per tekanan operasi, RO+EDI vs Mixed Bed, optimasi cooling tower cycle of concentration, dan kontrol silica untuk turbin.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-water-treatment-pltu.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="teknologi" data-title="pompa tekanan tinggi high pressure ro grundfos danfoss cat">
+            <div class="art-img" style="background:linear-gradient(135deg,#054a6e,#1e90d6)"><picture>
+  <source srcset="images/foto-bengkel.webp" type="image/webp">
+  <img alt="Pompa Tekanan Tinggi RO" src="images/foto-bengkel.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Komponen</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 8 menit baca</div>
+              <h3><a href="artikel-pompa-tekanan-tinggi-ro.html">Cara Memilih Pompa Tekanan Tinggi untuk Sistem RO Industri</a></h3>
+              <p>Jenis pompa (centrifugal, plunger, axial piston), sizing flow dan tekanan, integrasi dengan ERD, manfaat VFD, dan brand tier-1 yang andal.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-pompa-tekanan-tinggi-ro.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="studi-kasus" data-title="zld zero liquid discharge tekstil dyeing limbah klhk compliance">
+            <div class="art-img" style="background:linear-gradient(135deg,#1a2d42,#0a5c8a)"><picture>
+  <source srcset="images/foto-pemasangan-lapangan.webp" type="image/webp">
+  <img alt="ZLD untuk Industri Tekstil" src="images/foto-pemasangan-lapangan.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Tekstil</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 9 menit baca</div>
+              <h3><a href="artikel-zld-tekstil.html">ZLD untuk Industri Tekstil: Solusi Compliance &amp; Daur Ulang Air</a></h3>
+              <p>Tahapan teknis MBR+RO+evaporator, biaya investasi dan ROI, regulasi KLHK Permen 5/2014, studi kasus Karawang, dan alternatif tier yang lebih ekonomis.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-zld-tekstil.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="desalinasi" data-title="ro kapal perang vessel offshore tni al bki solas marine watermaker">
+            <div class="art-img" style="background:linear-gradient(135deg,#0a2240,#1a3a5c)"><picture>
+  <source srcset="images/porto-kri-amy-1.webp" type="image/webp">
+  <img alt="RO Kapal Perang TNI AL" src="images/porto-kri-amy-1.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Maritim</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 9 menit baca</div>
+              <h3><a href="artikel-ro-kapal-perang-bki.html">RO untuk Kapal Perang &amp; Vessel Offshore: Standar BKI</a></h3>
+              <p>Watermaker SWRO untuk kapal TNI AL dan vessel offshore — persyaratan BKI/SOLAS/IMO, material marine-grade, kondisi operasional ekstrem, studi kasus KRI.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-ro-kapal-perang-bki.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="industri" data-title="water treatment air gambut kalimantan sumatra peat humik fulvik toc">
+            <div class="art-img" style="background:linear-gradient(135deg,#1a3050,#0d5fa8)"><picture>
+  <source srcset="images/foto-pemasangan-lapangan.webp" type="image/webp">
+  <img alt="Water Treatment Air Gambut Kalimantan" src="images/foto-pemasangan-lapangan.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Air Gambut</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 8 menit baca</div>
+              <h3><a href="artikel-water-treatment-kalimantan.html">Water Treatment Air Gambut Kalimantan: Tantangan &amp; Solusi</a></h3>
+              <p>Karakteristik air gambut, tantangan TOC tinggi dan THM precursor, solusi pre-oksidasi + UF + RO, konfigurasi WTP standar, dan studi kasus Kalimantan.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-water-treatment-kalimantan.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="art-card reveal" data-cat="desalinasi" data-title="desalinasi pulau terpencil indonesia bsps spam program pemerintah">
+            <div class="art-img" style="background:linear-gradient(135deg,#0a2240,#0d5fa8)"><picture>
+  <source srcset="images/porto-pulau-ayer-1.webp" type="image/webp">
+  <img alt="Desalinasi Pulau Terpencil" src="images/porto-pulau-ayer-1.jpg" style="width:100%;height:100%;object-fit:cover;opacity:.75" loading="lazy" decoding="async"/>
+</picture><span class="art-badge">Pulau</span></div>
+            <div class="art-body">
+              <div class="art-meta">📅 2 Mei 2026 &nbsp;·&nbsp; ⏱ 9 menit baca</div>
+              <h3><a href="artikel-desalinasi-pulau-terpencil.html">Desalinasi Pulau Terpencil Indonesia: Solusi &amp; Program BSPS</a></h3>
+              <p>Tantangan logistik pulau, solusi SWRO kontainer plug-and-play, program pemerintah (SPAM, BSPS, DAK), model partnership, dan studi kasus pulau Indonesia.</p>
+            </div>
+            <div class="art-footer"><span class="art-author">✍️ Tim TSM</span><a href="artikel-desalinasi-pulau-terpencil.html" class="art-readmore">Baca →</a></div>
+          </div>
+
+          <div class="no-results" id="noResults">Tidak ada artikel yang sesuai dengan pencarian Anda.</div>
+
+        </div><!-- /#artGrid -->
+      </div><!-- /main -->
+
+      <!-- SIDEBAR -->
+      <aside class="sticky-side">
+
+        <div class="sidebar-box reveal">
+          <h4>Cari Artikel</h4>
+          <div class="search-wrap">
+            <span class="search-ico">🔍</span>
+            <input type="text" id="searchInput" placeholder="Kata kunci..." oninput="doSearch(this.value)">
+          </div>
+        </div>
+
+        <div class="sidebar-box reveal">
+          <h4>Artikel Populer</h4>
+          <div class="pop-item">
+            <div class="pop-num">01</div>
+            <div><a href="artikel-ro-prinsip-kerja.html" class="pop-title">Mengenal Teknologi Reverse Osmosis: Prinsip Kerja dan Keunggulannya</a><div class="pop-meta">28 Mar 2025 · 1.2k views</div></div>
+          </div>
+          <div class="pop-item">
+            <div class="pop-num">02</div>
+            <div><a href="artikel-studi-kasus-ro-tekstil.html" class="pop-title">Studi Kasus: RO 200 m³/hari di Pabrik Tekstil Karawang</a><div class="pop-meta">25 Jan 2025 · 830 views</div></div>
+          </div>
+          <div class="pop-item">
+            <div class="pop-num">03</div>
+            <div><a href="artikel-desalinasi-solusi-pulau.html" class="pop-title">Desalinasi Air Laut: Solusi Krisis Air Bersih di Pulau Terpencil</a><div class="pop-meta">15 Mar 2025 · 890 views</div></div>
+          </div>
+          <div class="pop-item">
+            <div class="pop-num">04</div>
+            <div><a href="artikel-air-farmasi-ro-edi.html" class="pop-title">Standar Kualitas Air Farmasi: Mengapa RO + EDI Wajib?</a><div class="pop-meta">20 Feb 2025 · 740 views</div></div>
+          </div>
+          <div class="pop-item">
+            <div class="pop-num">05</div>
+            <div><a href="artikel-5-kesalahan-perawatan-ro.html" class="pop-title">5 Kesalahan Umum Perawatan Membran RO</a><div class="pop-meta">5 Mar 2025 · 650 views</div></div>
+          </div>
+        </div>
+
+        <div class="sidebar-box reveal">
+          <h4>Topik Populer</h4>
+          <div class="tag-cloud">
+            <button class="tag-chip" onclick="doFilter(null,'teknologi')">Reverse Osmosis</button>
+            <button class="tag-chip" onclick="doFilter(null,'desalinasi')">Desalinasi</button>
+            <button class="tag-chip" onclick="doFilter(null,'perawatan')">Perawatan RO</button>
+            <button class="tag-chip" onclick="doFilter(null,'industri')">Farmasi</button>
+            <button class="tag-chip" onclick="doFilter(null,'teknologi')">ZLD</button>
+            <button class="tag-chip" onclick="doFilter(null,'desalinasi')">SWRO</button>
+            <button class="tag-chip" onclick="doFilter(null,'industri')">Membran</button>
+            <button class="tag-chip" onclick="doFilter(null,'studi-kasus')">Studi Kasus</button>
+          </div>
+        </div>
+
+        <div class="sidebar-box sb-cta reveal">
+          <h4>Butuh Bantuan?</h4>
+          <p>Konsultasikan kebutuhan water treatment Anda dengan tim ahli kami secara gratis.</p>
+          <a href="kontak.html" class="btn-white" style="width:100%;justify-content:center">📞 Konsultasi Gratis</a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2>Punya Pertanyaan Teknis?</h2>
+    <p>Tim ahli kami siap menjawab pertanyaan seputar teknologi water treatment.</p>
+    <div class="cta-actions">
+      <a href="kontak.html" class="btn-white">💬 Tanya Tim Ahli</a>
+      <a href="faq.html" class="btn-ghost">❓ Lihat FAQ</a>
+    </div>
+  </div>
+</div>
+
+<script>
+var allCards = document.querySelectorAll('#artGrid .art-card');
+var noRes    = document.getElementById('noResults');
+
+function doFilter(btn, cat) {
+  // update active button
+  if (btn) {
+    document.querySelectorAll('.fb-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+  var query = document.getElementById('searchInput').value.toLowerCase();
+  var shown = 0;
+  allCards.forEach(function(card){
+    var catMatch  = (cat === 'semua' || card.dataset.cat === cat);
+    var textMatch = card.dataset.title.includes(query) || card.innerText.toLowerCase().includes(query);
+    var vis = catMatch && (query === '' || textMatch);
+    card.style.display = vis ? '' : 'none';
+    if (vis) shown++;
+  });
+  noRes.classList.toggle('show', shown === 0);
+}
+
+function doSearch(q) {
+  var activeCat = 'semua';
+  document.querySelectorAll('.fb-btn').forEach(function(b){
+    if (b.classList.contains('active')) activeCat = b.getAttribute('onclick').match(/'([^']+)'\)/)[1];
+  });
+  doFilter(null, activeCat);
+}
+
+// Auto-filter berdasarkan URL hash (untuk dropdown #teknologi, #studi-kasus, #perawatan, dll)
+function applyHashFilter() {
+  var hash = (location.hash || '').replace('#','');
+  if (!hash) return;
+  var btn = document.querySelector('.fb-btn[data-cat="'+hash+'"]');
+  if (btn) {
+    doFilter(btn, hash);
+    // scroll ke filter bar setelah filter aktif
+    setTimeout(function(){
+      var fb = document.getElementById('filter-bar');
+      if (fb) fb.scrollIntoView({behavior:'smooth', block:'start'});
+    }, 50);
+  }
+}
+window.addEventListener('load', applyHashFilter);
+window.addEventListener('hashchange', applyHashFilter);
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>
