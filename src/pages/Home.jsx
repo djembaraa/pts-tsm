@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Trophy, Microscope, Wrench, Focus, Leaf, ScrollText, Droplet, Waves, Building2, Droplets, Ship, Settings } from 'lucide-react';
+import { Trophy, Microscope, Wrench, Focus, Leaf, ScrollText, Droplet, Waves, Building2, Droplets, Ship, Settings, Factory } from 'lucide-react';
 import ClientMarquee from '../components/ui/ClientMarquee';
 
 const Home = () => {
