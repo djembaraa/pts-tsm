@@ -15,9 +15,10 @@ const Button = ({
   const baseClasses = "inline-flex items-center justify-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:-translate-y-[2px]";
   
   const variants = {
-    primary: "border-2 border-blue text-blue hover:bg-blue hover:text-white",
+    primary: "bg-accent text-white shadow-[0_4px_20px_rgba(0,180,216,0.32)] hover:bg-white hover:text-blue",
+    blue: "border-2 border-blue text-blue hover:bg-blue hover:text-white",
     white: "bg-white text-blue shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white",
-    'outline-white': "border-2 border-white/55 text-white hover:bg-white/12 hover:border-white"
+    ghost: "border-2 border-white/55 text-white hover:bg-white/10 hover:border-white"
   };
 
   const finalClasses = `${baseClasses} ${variants[variant] || variants.primary} ${className}`;

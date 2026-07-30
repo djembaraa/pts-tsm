@@ -5,99 +5,25 @@ import Home from './pages/Home';
 import Kontak from './pages/Kontak';
 import Tentang from './pages/Tentang';
 
-// --- GENERATED IMPORTS START ---
-import Artikel5KesalahanPerawatanRo from './pages/generated/Artikel5KesalahanPerawatanRo';
-import ArtikelAirFarmasiRoEdi from './pages/generated/ArtikelAirFarmasiRoEdi';
-import ArtikelBiayaInstalasiRoIndustri from './pages/generated/ArtikelBiayaInstalasiRoIndustri';
-import ArtikelCaraPilihVendorWaterTreatment from './pages/generated/ArtikelCaraPilihVendorWaterTreatment';
-import ArtikelDesalinasiPulauTerpencil from './pages/generated/ArtikelDesalinasiPulauTerpencil';
-import ArtikelDesalinasiSolusiPulau from './pages/generated/ArtikelDesalinasiSolusiPulau';
-import ArtikelJadwalPerawatanRo from './pages/generated/ArtikelJadwalPerawatanRo';
-import ArtikelKapasitasSwroResort from './pages/generated/ArtikelKapasitasSwroResort';
-import ArtikelMonitoringKualitasAirRo from './pages/generated/ArtikelMonitoringKualitasAirRo';
-import ArtikelPerbandinganMembranDowToray from './pages/generated/ArtikelPerbandinganMembranDowToray';
-import ArtikelPerbedaanSwroBwroTwro from './pages/generated/ArtikelPerbedaanSwroBwroTwro';
-import ArtikelPompaTekananTinggiRo from './pages/generated/ArtikelPompaTekananTinggiRo';
-import ArtikelRoHotelResort from './pages/generated/ArtikelRoHotelResort';
-import ArtikelRoKapalOffshore from './pages/generated/ArtikelRoKapalOffshore';
-import ArtikelRoKapalPerangBki from './pages/generated/ArtikelRoKapalPerangBki';
-import ArtikelRoPrinsipKerja from './pages/generated/ArtikelRoPrinsipKerja';
-import ArtikelStandarAirFarmasiBpom from './pages/generated/ArtikelStandarAirFarmasiBpom';
-import ArtikelStudiKasusRoTekstil from './pages/generated/ArtikelStudiKasusRoTekstil';
-import ArtikelWaterTreatmentKalimantan from './pages/generated/ArtikelWaterTreatmentKalimantan';
-import ArtikelWaterTreatmentPltu from './pages/generated/ArtikelWaterTreatmentPltu';
-import ArtikelZldTekstil from './pages/generated/ArtikelZldTekstil';
-import ArtikelZldZeroLiquid from './pages/generated/ArtikelZldZeroLiquid';
-import Artikel from './pages/generated/Artikel';
-import Faq from './pages/generated/Faq';
-import IndustriAgrikultur from './pages/generated/IndustriAgrikultur';
-import IndustriFarmasi from './pages/generated/IndustriFarmasi';
-import IndustriHotel from './pages/generated/IndustriHotel';
-import IndustriManufaktur from './pages/generated/IndustriManufaktur';
-import IndustriMaritim from './pages/generated/IndustriMaritim';
-import IndustriPltu from './pages/generated/IndustriPltu';
-import IndustriProperti from './pages/generated/IndustriProperti';
-import IndustriRs from './pages/generated/IndustriRs';
-import Industri from './pages/generated/Industri';
-import Kalkulator from './pages/generated/Kalkulator';
-import Karir from './pages/generated/Karir';
-import KebijakanPrivasi from './pages/generated/KebijakanPrivasi';
-import LayananAudit from './pages/generated/LayananAudit';
-import LayananDarurat from './pages/generated/LayananDarurat';
-import LayananDesain from './pages/generated/LayananDesain';
-import LayananEpc from './pages/generated/LayananEpc';
-import LayananFeasibility from './pages/generated/LayananFeasibility';
-import LayananInstalasi from './pages/generated/LayananInstalasi';
-import LayananMaintenance from './pages/generated/LayananMaintenance';
-import LayananSertifikasi from './pages/generated/LayananSertifikasi';
-import Layanan from './pages/generated/Layanan';
-import MesinAirAsin from './pages/generated/MesinAirAsin';
-import MesinSulingAirLaut from './pages/generated/MesinSulingAirLaut';
-import PortoAmdkPabrik from './pages/generated/PortoAmdkPabrik';
-import PortoAtmaJaya from './pages/generated/PortoAtmaJaya';
-import PortoEkaHospital from './pages/generated/PortoEkaHospital';
-import PortoHalliburton from './pages/generated/PortoHalliburton';
-import PortoKriFleet from './pages/generated/PortoKriFleet';
-import PortoKri from './pages/generated/PortoKri';
-import PortoPelindo from './pages/generated/PortoPelindo';
-import PortoPendidikan from './pages/generated/PortoPendidikan';
-import PortoPertambanganEnergi from './pages/generated/PortoPertambanganEnergi';
-import PortoPulauAyer from './pages/generated/PortoPulauAyer';
-import PortoRumahSakit from './pages/generated/PortoRumahSakit';
-import PortoSinarmasForestry from './pages/generated/PortoSinarmasForestry';
-import PortoSinarmasGroup from './pages/generated/PortoSinarmasGroup';
-import PortoSosro from './pages/generated/PortoSosro';
-import PortoTniAl from './pages/generated/PortoTniAl';
-import PortoWineBali from './pages/generated/PortoWineBali';
-import Portofolio from './pages/generated/Portofolio';
-import ProdukAmdk from './pages/generated/ProdukAmdk';
-import ProdukBwms from './pages/generated/ProdukBwms';
-import ProdukBwro from './pages/generated/ProdukBwro';
-import ProdukCartridgeMf from './pages/generated/ProdukCartridgeMf';
-import ProdukDemi from './pages/generated/ProdukDemi';
-import ProdukDesalinasi from './pages/generated/ProdukDesalinasi';
-import ProdukFreshWaterGenerator from './pages/generated/ProdukFreshWaterGenerator';
-import ProdukInstrumen from './pages/generated/ProdukInstrumen';
-import ProdukKimia from './pages/generated/ProdukKimia';
-import ProdukLimbah from './pages/generated/ProdukLimbah';
-import ProdukMembran from './pages/generated/ProdukMembran';
-import ProdukMikrofiltrasi from './pages/generated/ProdukMikrofiltrasi';
-import ProdukOzon from './pages/generated/ProdukOzon';
-import ProdukPompa from './pages/generated/ProdukPompa';
-import ProdukRoIndustri from './pages/generated/ProdukRoIndustri';
-import ProdukRoKomersial from './pages/generated/ProdukRoKomersial';
-import ProdukRoLab from './pages/generated/ProdukRoLab';
-import ProdukRoMobile from './pages/generated/ProdukRoMobile';
-import ProdukSwro from './pages/generated/ProdukSwro';
-import ProdukTwro from './pages/generated/ProdukTwro';
-import ProdukUf from './pages/generated/ProdukUf';
-import ProdukUv from './pages/generated/ProdukUv';
-import ProdukWaterFilter from './pages/generated/ProdukWaterFilter';
-import ProdukZincalumeTank from './pages/generated/ProdukZincalumeTank';
-import Produk from './pages/generated/Produk';
-import Sitemap from './pages/generated/Sitemap';
-import SyaratKetentuan from './pages/generated/SyaratKetentuan';
-// --- GENERATED IMPORTS END ---
+// Modular Pages (Index & Dynamic Detail Wrappers)
+import ProdukIndex from './pages/produk/ProdukIndex';
+import ProdukDetail from './pages/produk/ProdukDetail';
+import ArtikelIndex from './pages/artikel/ArtikelIndex';
+import ArtikelDetail from './pages/artikel/ArtikelDetail';
+import IndustriIndex from './pages/industri/IndustriIndex';
+import IndustriDetail from './pages/industri/IndustriDetail';
+import LayananIndex from './pages/layanan/LayananIndex';
+import LayananDetail from './pages/layanan/LayananDetail';
+import PortofolioIndex from './pages/portofolio/PortofolioIndex';
+import PortofolioDetail from './pages/portofolio/PortofolioDetail';
+
+// Static Miscellaneous Pages
+import Faq from './pages/custom/FaqPage';
+import Kalkulator from './pages/custom/KalkulatorPage';
+import Karir from './pages/misc/Karir';
+import KebijakanPrivasi from './pages/misc/KebijakanPrivasi';
+import SyaratKetentuan from './pages/misc/SyaratKetentuan';
+import Sitemap from './pages/misc/Sitemap';
 
 function App() {
   return (
@@ -109,98 +35,30 @@ function App() {
           <Route path="/kontak" element={<Kontak />} />
           <Route path="/tentang" element={<Tentang />} />
 
-          {/* Generated Routes */}
-          <Route path="/artikel/5-kesalahan-perawatan-ro" element={<Artikel5KesalahanPerawatanRo />} />
-          <Route path="/artikel/air-farmasi-ro-edi" element={<ArtikelAirFarmasiRoEdi />} />
-          <Route path="/artikel/biaya-instalasi-ro-industri" element={<ArtikelBiayaInstalasiRoIndustri />} />
-          <Route path="/artikel/cara-pilih-vendor-water-treatment" element={<ArtikelCaraPilihVendorWaterTreatment />} />
-          <Route path="/artikel/desalinasi-pulau-terpencil" element={<ArtikelDesalinasiPulauTerpencil />} />
-          <Route path="/artikel/desalinasi-solusi-pulau" element={<ArtikelDesalinasiSolusiPulau />} />
-          <Route path="/artikel/jadwal-perawatan-ro" element={<ArtikelJadwalPerawatanRo />} />
-          <Route path="/artikel/kapasitas-swro-resort" element={<ArtikelKapasitasSwroResort />} />
-          <Route path="/artikel/monitoring-kualitas-air-ro" element={<ArtikelMonitoringKualitasAirRo />} />
-          <Route path="/artikel/perbandingan-membran-dow-toray" element={<ArtikelPerbandinganMembranDowToray />} />
-          <Route path="/artikel/perbedaan-swro-bwro-twro" element={<ArtikelPerbedaanSwroBwroTwro />} />
-          <Route path="/artikel/pompa-tekanan-tinggi-ro" element={<ArtikelPompaTekananTinggiRo />} />
-          <Route path="/artikel/ro-hotel-resort" element={<ArtikelRoHotelResort />} />
-          <Route path="/artikel/ro-kapal-offshore" element={<ArtikelRoKapalOffshore />} />
-          <Route path="/artikel/ro-kapal-perang-bki" element={<ArtikelRoKapalPerangBki />} />
-          <Route path="/artikel/ro-prinsip-kerja" element={<ArtikelRoPrinsipKerja />} />
-          <Route path="/artikel/standar-air-farmasi-bpom" element={<ArtikelStandarAirFarmasiBpom />} />
-          <Route path="/artikel/studi-kasus-ro-tekstil" element={<ArtikelStudiKasusRoTekstil />} />
-          <Route path="/artikel/water-treatment-kalimantan" element={<ArtikelWaterTreatmentKalimantan />} />
-          <Route path="/artikel/water-treatment-pltu" element={<ArtikelWaterTreatmentPltu />} />
-          <Route path="/artikel/zld-tekstil" element={<ArtikelZldTekstil />} />
-          <Route path="/artikel/zld-zero-liquid" element={<ArtikelZldZeroLiquid />} />
-          <Route path="/artikel" element={<Artikel />} />
+          {/* Modular Dynamic Routes */}
+          <Route path="/produk" element={<ProdukIndex />} />
+          <Route path="/produk/:slug" element={<ProdukDetail />} />
+          
+          <Route path="/artikel" element={<ArtikelIndex />} />
+          <Route path="/artikel/:slug" element={<ArtikelDetail />} />
+          
+          <Route path="/industri" element={<IndustriIndex />} />
+          <Route path="/industri/:slug" element={<IndustriDetail />} />
+          
+          <Route path="/layanan" element={<LayananIndex />} />
+          <Route path="/layanan/:slug" element={<LayananDetail />} />
+          
+          <Route path="/portofolio" element={<PortofolioIndex />} />
+          <Route path="/portofolio/:slug" element={<PortofolioDetail />} />
+
+          {/* Misc Legacy Pages */}
           <Route path="/faq" element={<Faq />} />
-          <Route path="/industri/agrikultur" element={<IndustriAgrikultur />} />
-          <Route path="/industri/farmasi" element={<IndustriFarmasi />} />
-          <Route path="/industri/hotel" element={<IndustriHotel />} />
-          <Route path="/industri/manufaktur" element={<IndustriManufaktur />} />
-          <Route path="/industri/maritim" element={<IndustriMaritim />} />
-          <Route path="/industri/pltu" element={<IndustriPltu />} />
-          <Route path="/industri/properti" element={<IndustriProperti />} />
-          <Route path="/industri/rs" element={<IndustriRs />} />
-          <Route path="/industri" element={<Industri />} />
           <Route path="/kalkulator" element={<Kalkulator />} />
           <Route path="/karir" element={<Karir />} />
           <Route path="/kebijakan/privasi" element={<KebijakanPrivasi />} />
-          <Route path="/layanan/audit" element={<LayananAudit />} />
-          <Route path="/layanan/darurat" element={<LayananDarurat />} />
-          <Route path="/layanan/desain" element={<LayananDesain />} />
-          <Route path="/layanan/epc" element={<LayananEpc />} />
-          <Route path="/layanan/feasibility" element={<LayananFeasibility />} />
-          <Route path="/layanan/instalasi" element={<LayananInstalasi />} />
-          <Route path="/layanan/maintenance" element={<LayananMaintenance />} />
-          <Route path="/layanan/sertifikasi" element={<LayananSertifikasi />} />
-          <Route path="/layanan" element={<Layanan />} />
-          <Route path="/mesin/air-asin" element={<MesinAirAsin />} />
-          <Route path="/mesin/suling-air-laut" element={<MesinSulingAirLaut />} />
-          <Route path="/portofolio/amdk-pabrik" element={<PortoAmdkPabrik />} />
-          <Route path="/portofolio/atma-jaya" element={<PortoAtmaJaya />} />
-          <Route path="/portofolio/eka-hospital" element={<PortoEkaHospital />} />
-          <Route path="/portofolio/halliburton" element={<PortoHalliburton />} />
-          <Route path="/portofolio/kri-fleet" element={<PortoKriFleet />} />
-          <Route path="/portofolio/kri" element={<PortoKri />} />
-          <Route path="/portofolio/pelindo" element={<PortoPelindo />} />
-          <Route path="/portofolio/pendidikan" element={<PortoPendidikan />} />
-          <Route path="/portofolio/pertambangan-energi" element={<PortoPertambanganEnergi />} />
-          <Route path="/portofolio/pulau-ayer" element={<PortoPulauAyer />} />
-          <Route path="/portofolio/rumah-sakit" element={<PortoRumahSakit />} />
-          <Route path="/portofolio/sinarmas-forestry" element={<PortoSinarmasForestry />} />
-          <Route path="/portofolio/sinarmas-group" element={<PortoSinarmasGroup />} />
-          <Route path="/portofolio/sosro" element={<PortoSosro />} />
-          <Route path="/portofolio/tni-al" element={<PortoTniAl />} />
-          <Route path="/portofolio/wine-bali" element={<PortoWineBali />} />
-          <Route path="/portofolio" element={<Portofolio />} />
-          <Route path="/produk/amdk" element={<ProdukAmdk />} />
-          <Route path="/produk/bwms" element={<ProdukBwms />} />
-          <Route path="/produk/bwro" element={<ProdukBwro />} />
-          <Route path="/produk/cartridge-mf" element={<ProdukCartridgeMf />} />
-          <Route path="/produk/demi" element={<ProdukDemi />} />
-          <Route path="/produk/desalinasi" element={<ProdukDesalinasi />} />
-          <Route path="/produk/fresh-water-generator" element={<ProdukFreshWaterGenerator />} />
-          <Route path="/produk/instrumen" element={<ProdukInstrumen />} />
-          <Route path="/produk/kimia" element={<ProdukKimia />} />
-          <Route path="/produk/limbah" element={<ProdukLimbah />} />
-          <Route path="/produk/membran" element={<ProdukMembran />} />
-          <Route path="/produk/mikrofiltrasi" element={<ProdukMikrofiltrasi />} />
-          <Route path="/produk/ozon" element={<ProdukOzon />} />
-          <Route path="/produk/pompa" element={<ProdukPompa />} />
-          <Route path="/produk/ro-industri" element={<ProdukRoIndustri />} />
-          <Route path="/produk/ro-komersial" element={<ProdukRoKomersial />} />
-          <Route path="/produk/ro-lab" element={<ProdukRoLab />} />
-          <Route path="/produk/ro-mobile" element={<ProdukRoMobile />} />
-          <Route path="/produk/swro" element={<ProdukSwro />} />
-          <Route path="/produk/twro" element={<ProdukTwro />} />
-          <Route path="/produk/uf" element={<ProdukUf />} />
-          <Route path="/produk/uv" element={<ProdukUv />} />
-          <Route path="/produk/water-filter" element={<ProdukWaterFilter />} />
-          <Route path="/produk/zincalume-tank" element={<ProdukZincalumeTank />} />
-          <Route path="/produk" element={<Produk />} />
+          <Route path="/syarat-ketentuan" element={<SyaratKetentuan />} />
           <Route path="/sitemap" element={<Sitemap />} />
-          <Route path="/syarat/ketentuan" element={<SyaratKetentuan />} />
+          
         </Routes>
       </Layout>
     </Router>

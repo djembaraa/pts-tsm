@@ -76,12 +76,12 @@ import Button from '../components/ui/Button';
                 Engineered water treatment solutions for industry, marine, hospitality, and infrastructure &mdash; trusted by leading companies across Indonesia.
               </p>
               <div className="flex gap-[0.65rem] flex-wrap opacity-0 animate-[fadeUp_0.7s_0.68s_ease_forwards]">
-                <Link to="/kontak" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-accent text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,180,216,0.32)] hover:bg-white hover:text-blue hover:-translate-y-[2px]">
-                  Konsultasi Gratis
-                </Link>
-                <Link to="/produk" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/10 hover:border-white">
-                  Lihat Produk
-                </Link>
+                <Button to="/kontak" variant="primary">
+                  Minta Penawaran
+                </Button>
+                <Button to="/produk" variant="ghost">
+                  Jelajahi Solusi →
+                </Button>
               </div>
             </div>
           </div>
@@ -179,8 +179,8 @@ import Button from '../components/ui/Button';
           </div>
           
           <div className="text-center mt-[2.5rem]">
-            <Button to="/produk" variant="primary">
-              Lihat Semua Produk &amp; Solusi &rarr;
+            <Button to="/produk" variant="blue">
+              Lihat Semua Produk & Solusi &rarr;
             </Button>
           </div>
         </div>
@@ -249,9 +249,9 @@ import Button from '../components/ui/Button';
                   </li>
                 ))}
               </ul>
-              <Link to="/tentang" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-blue text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-blue hover:text-white hover:-translate-y-[2px]">
-                Pelajari Lebih Lanjut &rarr;
-              </Link>
+              <Button to="/tentang" variant="blue">
+                Selengkapnya Tentang Kami &rarr;
+              </Button>
             </div>
           </div>
         </div>
@@ -298,9 +298,9 @@ import Button from '../components/ui/Button';
           </div>
           
           <div className="text-center mt-[2.5rem]">
-            <Link to="/artikel" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-blue text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-blue hover:text-white hover:-translate-y-[2px]">
+            <Button to="/artikel" variant="blue">
               Lihat Semua Artikel &rarr;
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -389,12 +389,12 @@ import Button from '../components/ui/Button';
           <h2 className="font-condensed text-[clamp(1.5rem,2.4vw,2.1rem)] font-extrabold mb-[0.7rem]">Siap Memulai Proyek Water Treatment Anda?</h2>
           <p className="text-[0.88rem] opacity-90 mb-[1.5rem]">Konsultasikan kebutuhan air bersih Anda dengan tim ahli kami — gratis, tanpa komitmen.</p>
           <div className="flex gap-[1rem] justify-center flex-wrap">
-            <Link to="/kontak" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]">
-              Hubungi Kami Sekarang
-            </Link>
-            <Link to="/produk" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/10 hover:border-white">
-              Lihat Semua Solusi
-            </Link>
+            <Button to="/kontak" variant="white">
+              Konsultasi Gratis
+            </Button>
+            <Button to="/produk" variant="ghost">
+              Lihat Semua Solusi &rarr;
+            </Button>
           </div>
         </div>
       </div>
@@ -403,3 +403,4 @@ import Button from '../components/ui/Button';
 };
 
 export default Home;
+

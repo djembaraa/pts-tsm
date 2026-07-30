@@ -2,6 +2,17 @@
 @config "../tailwind.config.js";
 
 @layer base {
+  :root {
+    --navy: #0a2240;
+    --blue: #0d5fa8;
+    --sky: #1e90d6;
+    --accent: #00b4d8;
+    --ice: #e8f4fd;
+    --gray: #f4f8fc;
+    --text: #1a2d42;
+    --muted: #5c7a96;
+    --border: #cde3f3;
+  }
   html {
     scroll-behavior: smooth;
   }

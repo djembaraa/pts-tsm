@@ -123,6 +123,7 @@ function processHtml(html) {
       classes.split(' ').forEach(cls => {
         cls = cls.trim();
         if (classMap[cls]) {
+          newClasses.push(cls); // Keep legacy class for inline styles to work!
           newClasses.push(classMap[cls]);
         } else {
           newClasses.push(cls);
@@ -339,8 +340,10 @@ function processHtml(html) {
   });
   
   // Fix legacy image paths
+  jsx = jsx.replace(/src="images\//g, 'src="/images/');
+  jsx = jsx.replace(/srcset="images\//gi, 'srcSet="/images/');
   jsx = jsx.replace(/src="assets\//g, 'src="/');
-  jsx = jsx.replace(/srcSet="assets\//g, 'srcSet="/');
+  jsx = jsx.replace(/srcset="assets\//gi, 'srcSet="/');
   
   // Restore ProductCards & Buttons
   productCardsMap.forEach((comp, i) => {
