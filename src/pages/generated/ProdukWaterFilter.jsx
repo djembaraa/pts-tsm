@@ -10,7 +10,21 @@ const ProdukWaterFilter = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.prod-hero{height:300px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:8rem;margin-bottom:2rem;background:linear-gradient(135deg,#0a3d2e,#0d7a5f)}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+.spec-table tr:nth-child(odd) td{background:var(--gray)}
+.spec-table td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.spec-table td:first-child{font-weight:600;color:var(--navy);width:45%}
+.filter-type-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+.filter-card{background:var(--gray);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem}
+.filter-card h4{font-size:.92rem;font-weight:700;color:var(--navy);margin-bottom:.38rem}
+.filter-card p{font-size:.82rem;color:var(--muted);line-height:1.6}
+@media(max-width:640px){.filter-type-grid{grid-template-columns:1fr}}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/produk">Produk &amp; Solusi</Link> › Water Filter</div>
     <h1>Water Filter Industri &amp; Komersial</h1>

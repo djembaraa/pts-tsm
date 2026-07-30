@@ -10,7 +10,23 @@ const ArtikelCaraPilihVendorWaterTreatment = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+.art-hero-img{height:320px;background:linear-gradient(135deg,#054a6e,#1e90d6);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:8rem;margin-bottom:2rem}
+.art-meta-bar{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.am-tag{background:var(--accent);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.26rem .72rem;border-radius:4px}
+.am-info{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:.36rem}
+.checklist-box{background:var(--gray);border-radius:10px;padding:1.5rem;margin:1.5rem 0;border-left:4px solid var(--accent)}
+.checklist-box h4{color:var(--navy);margin-bottom:.75rem;font-size:1rem}
+.checklist-box ul{list-style:none;padding:0;margin:0}
+.checklist-box li{padding:.4rem 0 .4rem 1.6rem;position:relative;font-size:.92rem;color:var(--text)}
+.checklist-box li:before{content:"☐";position:absolute;left:0;color:var(--accent);font-size:1.1rem;font-weight:700}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/artikel">Artikel</Link> › Cara Pilih Vendor</div>
     <h1>Cara Memilih Vendor Water Treatment Industri</h1>

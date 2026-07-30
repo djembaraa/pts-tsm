@@ -10,7 +10,22 @@ const LayananDesain = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+.spec-table th,.spec-table td{padding:.75rem 1rem;border:1px solid var(--border);font-size:.88rem;text-align:left;vertical-align:top}
+.spec-table th{background:var(--navy);color:#fff;font-weight:700}
+.spec-table tr:nth-child(even){background:var(--gray)}
+.process-step{display:flex;gap:1.2rem;margin:1.2rem 0;padding:1.3rem;background:var(--gray);border-radius:10px;border-left:4px solid var(--accent)}
+.process-step .ps-num{flex-shrink:0;width:42px;height:42px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem}
+.process-step h4{color:var(--navy);font-size:1rem;margin-bottom:.4rem}
+.process-step p{font-size:.88rem;color:var(--muted);line-height:1.65;margin:0}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/layanan">Layanan</Link> › Desain &amp; Engineering</div>
     <h1>Layanan Desain &amp; Engineering Sistem Water Treatment</h1>

@@ -10,7 +10,29 @@ const Produk = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.cat-title{font-family:'Barlow Condensed',sans-serif;font-size:1.75rem;font-weight:900;color:var(--navy);margin-bottom:.4rem;display:inline-block}
+.cat-line{display:block;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),transparent);margin-bottom:2rem}
+.cat-section{margin-bottom:4rem}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:1.5rem}
+.pc{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:var(--t);background:var(--white);display:flex;flex-direction:column}
+.pc:hover{transform:translateY(-5px);box-shadow:var(--shh);border-color:var(--accent)}
+.pc-img{height:195px;overflow:hidden;position:relative;flex-shrink:0}.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}.pc:hover .pc-img img{transform:scale(1.05)}
+.pc-badge{position:absolute;top:.9rem;right:.9rem;background:var(--accent);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .68rem;border-radius:4px}
+.pc-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.pc-cat{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.38rem}
+.pc-body h3{font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:.44rem}
+.pc-body p{font-size:.84rem;color:var(--muted);line-height:1.62;flex:1;margin-bottom:.9rem}
+.pc-specs{display:flex;gap:.42rem;flex-wrap:wrap;margin-bottom:.9rem}
+.spec-chip{font-size:.7rem;font-weight:600;padding:.22rem .68rem;background:var(--ice);border:1px solid var(--border);border-radius:20px;color:var(--text)}
+.pc-foot{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-top:1px solid var(--border);margin-top:auto}
+.pc-foot span{font-size:.76rem;color:var(--muted)}
+.pc-lnk{font-size:.78rem;font-weight:700;color:var(--blue);letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.3rem;transition:var(--t)}
+.pc-lnk:hover{gap:.55rem}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › Produk &amp; Solusi</div>
     <h1>Produk &amp; Solusi Water Treatment</h1>
@@ -259,9 +281,9 @@ const Produk = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Tidak Menemukan yang Anda Cari?</h2>
-    <p>Tim kami siap merancang solusi custom sesuai kebutuhan spesifik Anda — dari awal hingga commissioning.</p>
-    <div className="flex gap-4 justify-center flex-wrap">
+    <h2 className="font-condensed text-[clamp(1.5rem,2.4vw,2.1rem)] font-extrabold mb-[0.7rem]">Tidak Menemukan yang Anda Cari?</h2>
+    <p className="text-[0.88rem] opacity-90 mb-[1.5rem]">Tim kami siap merancang solusi custom sesuai kebutuhan spesifik Anda — dari awal hingga commissioning.</p>
+    <div className="flex gap-[1rem] justify-center flex-wrap">
       <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">💬 Konsultasi Produk</Link>
       <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" to="/artikel">📚 Baca Artikel Teknis</Link>
     </div>

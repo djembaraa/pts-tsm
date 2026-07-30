@@ -10,7 +10,27 @@ const ProdukBwms = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.prod-hero{height:auto;border-radius:14px;display:block;margin-bottom:2rem;background:linear-gradient(135deg,#0a2240,#1e90d6);padding:1.5rem}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+.spec-table tr:nth-child(odd) td{background:var(--gray)}
+.spec-table td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.spec-table td:first-child{font-weight:600;color:var(--navy);width:50%}
+.type-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
+@media(max-width:768px){.type-grid{grid-template-columns:1fr}}
+.type-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem;box-shadow:0 4px 16px rgba(10,34,64,.06)}
+.type-card h3{color:var(--navy);font-size:1.1rem;margin-bottom:.6rem}
+.type-card .badge{display:inline-block;font-size:.72rem;padding:.2rem .6rem;background:var(--blue);color:#fff;border-radius:6px;margin-bottom:.8rem}
+.diagram-box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.2rem;margin:1.5rem 0;text-align:center}
+.diagram-box img{max-width:100%;height:auto;border-radius:8px}
+.diagram-box .caption{font-size:.86rem;color:var(--muted);margin-top:.7rem;font-style:italic}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem;margin:1rem 0}
+.comp-item{background:var(--gray);border-left:3px solid var(--blue);padding:.7rem .9rem;border-radius:6px;font-size:.88rem}
+.comp-item strong{color:var(--navy);display:block;font-size:.82rem;margin-bottom:.15rem}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/produk">Produk &amp; Solusi</Link> › Ballast Water Management System</div>
     <h1>Ballast Water Management System (BWMS)</h1>

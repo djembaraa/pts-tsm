@@ -10,7 +10,27 @@ const ArtikelDesalinasiPulauTerpencil = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+.art-hero-img{height:320px;border-radius:12px;overflow:hidden;margin-bottom:2rem;position:relative}
+.art-hero-img img{width:100%;height:100%;object-fit:cover}
+.art-meta-bar{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.am-tag{background:var(--accent);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.26rem .72rem;border-radius:4px}
+.am-info{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:.36rem}
+.author-box{display:flex;align-items:center;gap:.9rem;margin-bottom:.9rem}
+.author-av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;flex-shrink:0}
+.author-av-name{font-weight:700;font-size:.92rem;color:var(--navy)}
+.author-av-role{font-size:.76rem;color:var(--muted)}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+.spec-table th,.spec-table td{padding:.7rem 1rem;border:1px solid var(--border);font-size:.86rem;text-align:left}
+.spec-table th{background:var(--navy);color:#fff;font-weight:700}
+.spec-table tr:nth-child(even){background:var(--gray)}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/artikel">Artikel</Link> › Pulau &amp; Kepulauan</div>
     <h1>Desalinasi untuk Pulau Terpencil Indonesia:<br />Solusi Teknis dan Program Pemerintah</h1>

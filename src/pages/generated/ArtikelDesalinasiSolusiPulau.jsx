@@ -10,7 +10,33 @@ const ArtikelDesalinasiSolusiPulau = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden" style={{"background":"linear-gradient(135deg,#0a2240,#0d5fa8)"}}>
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+.art-hero-img{height:310px;background:linear-gradient(135deg,#0a2240,#0d5fa8,#00b4d8);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:8rem;margin-bottom:2rem}
+.art-meta-bar{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.am-tag{background:var(--navy);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.26rem .72rem;border-radius:4px}
+.am-info{font-size:.8rem;color:var(--muted)}
+.share-row{display:flex;align-items:center;gap:.72rem;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);flex-wrap:wrap}
+.share-row span{font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.sh-btn{padding:.38rem .95rem;border-radius:6px;font-size:.78rem;font-weight:600;color:#fff;transition:var(--t)}
+.sh-btn:hover{opacity:.82}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.stat-box{background:var(--ice);border:1px solid var(--border);border-radius:10px;padding:1.15rem;text-align:center}
+.stat-box .sn{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:900;color:var(--blue);line-height:1}
+.stat-box .sl{font-size:.74rem;color:var(--muted);margin-top:.25rem}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.8rem}
+.rel-card{border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:var(--t);display:block}
+.rel-card:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:var(--accent)}
+.rel-img{height:88px;display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.rel-body{padding:.9rem}
+.rel-body p{font-size:.82rem;font-weight:600;color:var(--navy);line-height:1.4;margin-bottom:.25rem}
+.rel-body span{font-size:.7rem;color:var(--muted)}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}.related-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:1fr 1fr}}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden" style={{"background":"linear-gradient(135deg,#0a2240,#0d5fa8)"}}>
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/artikel">Artikel</Link> › Desalinasi</div>
     <h1>Desalinasi Air Laut: Solusi Krisis Air Bersih<br />di Pulau-Pulau Terpencil Indonesia</h1>

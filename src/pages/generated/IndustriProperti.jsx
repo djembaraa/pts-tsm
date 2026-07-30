@@ -10,7 +10,22 @@ const IndustriProperti = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+.spec-table th,.spec-table td{padding:.75rem 1rem;border:1px solid var(--border);font-size:.88rem;text-align:left;vertical-align:top}
+.spec-table th{background:var(--navy);color:#fff;font-weight:700}
+.spec-table tr:nth-child(even){background:var(--gray)}
+.app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.app-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.2rem;border-top:3px solid var(--accent)}
+.app-card h4{color:var(--navy);font-size:1rem;margin-bottom:.5rem}
+.app-card p{font-size:.85rem;color:var(--muted);margin:0}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/industri">Industri</Link> › Properti &amp; Gedung</div>
     <h1>Water Treatment untuk Apartemen, Gedung Perkantoran &amp; Properti</h1>

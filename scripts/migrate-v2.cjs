@@ -96,6 +96,11 @@ const emojiMap = {
 function processHtml(html) {
   const $ = cheerio.load(html, { decodeEntities: false });
   
+  let extractedStyles = '';
+  $('head style').each((i, el) => {
+    extractedStyles += $(el).html() + '\n';
+  });
+  
   let contentHtml = '';
   $('body').children().each((i, el) => {
     const tagName = (el.tagName || '').toLowerCase();
@@ -249,7 +254,7 @@ function processHtml(html) {
     jsx = jsx.replace(tagRegex, `<${tag}$1 />`);
   });
 
-  return { jsx, usedIcons };
+  return { jsx, usedIcons, extractedStyles };
 }
 
 function processAllFiles() {
@@ -260,7 +265,7 @@ function processAllFiles() {
     if (file === 'index.html' || file === 'tentang.html' || file === 'kontak.html') return;
     
     const html = fs.readFileSync(path.join(legacyDir, file), 'utf8');
-    const { jsx, usedIcons } = processHtml(html);
+    const { jsx, usedIcons, extractedStyles } = processHtml(html);
     
     const componentName = file
       .replace('.html', '')
@@ -271,6 +276,11 @@ function processAllFiles() {
     let iconImportStr = '';
     if (usedIcons.size > 0) {
       iconImportStr = `import { ${Array.from(usedIcons).join(', ')} } from 'lucide-react';\n`;
+    }
+    
+    let styleBlock = '';
+    if (extractedStyles && extractedStyles.trim().length > 0) {
+      styleBlock = `\n      <style dangerouslySetInnerHTML={{ __html: \`${extractedStyles.replace(/`/g, '\\`').replace(/\$/g, '\\$')}\` }} />\n`;
     }
 
     const componentContent = `import React, { useEffect } from 'react';
@@ -284,7 +294,7 @@ const ${componentName} = () => {
 
   return (
     <>
-      ${jsx}
+      ${styleBlock}${jsx}
     </>
   );
 };

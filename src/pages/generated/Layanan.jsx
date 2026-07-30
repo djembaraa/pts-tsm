@@ -10,7 +10,44 @@ const Layanan = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem}
+.svc-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:var(--t);position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--accent));transform:scaleX(0);transform-origin:left;transition:var(--t)}
+.svc-card:hover{transform:translateY(-4px);box-shadow:var(--shh)}.svc-card:hover::before{transform:scaleX(1)}
+.svc-ico{width:56px;height:56px;background:var(--ice);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:1.2rem;transition:var(--t)}
+.svc-card:hover .svc-ico{background:var(--blue)}
+.svc-card h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.svc-card p{font-size:.87rem;color:var(--muted);line-height:1.7;margin-bottom:.8rem}
+.svc-list li{font-size:.83rem;color:var(--text);display:flex;align-items:flex-start;gap:.5rem;margin-bottom:.35rem}
+.svc-list li::before{content:'✔';color:var(--accent);font-weight:700;flex-shrink:0;margin-top:.1rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1rem;counter-reset:step}
+.step{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1rem;text-align:center;position:relative;counter-increment:step;transition:var(--t)}
+.step:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:var(--accent)}
+.step-n{width:28px;height:28px;background:linear-gradient(135deg,var(--blue),var(--accent));color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;margin:0 auto .75rem}
+.step-ico{font-size:2rem;margin-bottom:.6rem}
+.step h4{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.step p{font-size:.78rem;color:var(--muted);line-height:1.55}
+.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.pkg{border:2px solid var(--border);border-radius:12px;overflow:hidden;transition:var(--t)}
+.pkg:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+.pkg.featured{border-color:var(--accent)}
+.pkg-head{padding:1.5rem;background:var(--gray)}
+.pkg.featured .pkg-head{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff}
+.pkg-label{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+.pkg.featured .pkg-label{color:rgba(255,255,255,.7)}
+.pkg-head h3{font-size:1.15rem;font-weight:700;color:var(--navy)}
+.pkg.featured .pkg-head h3{color:#fff}
+.pkg-head p{font-size:.82rem;color:var(--muted);margin-top:.25rem}
+.pkg.featured .pkg-head p{color:rgba(255,255,255,.7)}
+.pkg-body{padding:1.5rem}
+.pkg-list{margin-bottom:1.3rem}
+.pkg-list li{font-size:.84rem;color:var(--text);display:flex;gap:.5rem;margin-bottom:.5rem}
+.pkg-list li::before{content:'✔';color:var(--accent);font-weight:700;flex-shrink:0}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › Layanan</div>
     <h1>Layanan Lengkap Water Treatment</h1>

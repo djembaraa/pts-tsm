@@ -10,7 +10,32 @@ const PortoPertambanganEnergi = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.cs-hero{position:relative;border-radius:14px;overflow:hidden;margin-bottom:2rem;height:380px}
+.cs-hero img{width:100%;height:100%;object-fit:cover}
+.cs-hero .cs-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,34,64,.88),rgba(10,34,64,.2));display:flex;align-items:flex-end;padding:2rem;color:#fff}
+.cs-hero .cs-overlay h2{font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:900;color:#fff;letter-spacing:.01em}
+.cs-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:2rem 0}
+.cs-stat{background:var(--ice);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1rem;text-align:center}
+.cs-stat .num{font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;font-weight:900;color:var(--blue);line-height:1}
+.cs-stat .lbl{font-size:.74rem;color:var(--muted);margin-top:.4rem;text-transform:uppercase;letter-spacing:.04em}
+.proj-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem;background:var(--white)}
+.proj-table th,.proj-table td{padding:.7rem .9rem;border:1px solid var(--border);text-align:left;vertical-align:top}
+.proj-table th{background:var(--navy);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase}
+.proj-table tr:nth-child(even) td{background:var(--ice)}
+.proj-table .yr{font-weight:700;color:var(--blue);white-space:nowrap}
+.cat-section{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem}
+.cat-section h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;color:var(--navy);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid var(--blue)}
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}.cs-hero{height:260px}.proj-table{font-size:.78rem}.proj-table th,.proj-table td{padding:.5rem .55rem}}
+.featured-card{background:linear-gradient(135deg,#0a2240 0%,#1e4a7b 100%);color:#fff;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem}
+.featured-card h4{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;margin-bottom:.5rem}
+.featured-card p{color:rgba(255,255,255,.85);font-size:.9rem;line-height:1.6}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/portofolio">Portofolio</Link> › Pertambangan &amp; Energi</div>
     <h1>Portofolio Pertambangan &amp; Energi — WTP, BWRO &amp; Demineralisasi</h1>

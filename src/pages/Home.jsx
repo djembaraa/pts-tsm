@@ -1,10 +1,18 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Trophy, Microscope, Wrench, Focus, Leaf, ScrollText, Droplet, Waves, Building2, Droplets, Ship, Settings, Factory } from 'lucide-react';
+import { Trophy, Microscope, Wrench, Focus, Leaf, ScrollText, Droplet, Waves, Building2, Droplets, Ship, Settings, Factory, Calendar, Clock, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import ClientMarquee from '../components/ui/ClientMarquee';
 
-const Home = () => {
+  const Home = () => {
   const revealRefs = useRef([]);
+  const testimoRef = useRef(null);
+
+  const scrollTestimo = (direction) => {
+    if (testimoRef.current) {
+      const scrollAmount = 320;
+      testimoRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -119,7 +127,7 @@ const Home = () => {
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
           
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-[1.1rem]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.1rem]">
             {[
               { icon: Trophy, title: 'Berpengalaman Sejak 2002', desc: 'Lebih dari 24 tahun menjadi mitra solusi air bersih terpercaya bagi ratusan industri di seluruh Indonesia.' },
               { icon: Microscope, title: 'Teknologi Mutakhir', desc: 'Menggunakan membran RO dan komponen berteknologi terkini dari produsen terkemuka dunia untuk efisiensi optimal.' },
@@ -150,7 +158,7 @@ const Home = () => {
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
           
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-[1.25rem]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
             {[
               { img: 'foto-mesin-swro.jpg', cat: 'Reverse Osmosis', title: 'Sistem RO Industri', desc: 'Kapasitas 1–500 m³/hari untuk pabrik, pembangkit listrik, dan fasilitas industri besar yang butuh air proses berkualitas tinggi.', url: '/produk/ro-industri' },
               { img: 'porto-pelindo-1.jpg', cat: 'Desalinasi', title: 'SWRO — Desalinasi Air Laut', desc: 'Sea Water Reverse Osmosis berkapasitas tinggi untuk kepulauan, resort pesisir, dan industri maritim.', url: '/produk/desalinasi' },
@@ -192,7 +200,7 @@ const Home = () => {
             <p className="text-[0.88rem] text-white/70 leading-[1.75]">Solusi TSM telah dipercaya oleh beragam sektor industri di seluruh Indonesia.</p>
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
-          <div ref={addToRefs} className="grid grid-cols-[repeat(auto-fill,minmax(145px,1fr))] gap-[0.85rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0">
+          <div ref={addToRefs} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-[0.85rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0">
             {[
               { icon: Factory, title: 'Manufaktur', url: '/industri/manufaktur' },
               { icon: Building2, title: 'Hotel & Pariwisata', url: '/industri/hotel' },
@@ -254,8 +262,106 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ══ KLIEN & BRANDS ══ */}
-      <section className="py-[4rem] bg-gray border-y border-border">
+      {/* ══ ARTICLE PREVIEW ══ */}
+      <section className="py-[4rem] bg-gray">
+        <div className="max-w-[1240px] mx-auto px-6">
+          <div ref={addToRefs} className="text-center max-w-[600px] mx-auto mb-12 opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0">
+            <span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Artikel Terbaru</span>
+            <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Wawasan Dunia Water Treatment</h2>
+            <p className="text-[0.88rem] text-muted leading-[1.75]">Pelajari teknologi terkini, tips perawatan sistem, dan perkembangan industri pengolahan air dari para ahli kami.</p>
+            <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
+            {[
+              { cat: 'Teknologi', img: 'foto-mesin-swro.jpg', bg: 'from-[#054a6e] to-[#1e90d6]', date: '28 Maret 2025', read: '5 menit baca', title: 'Mengenal Teknologi Reverse Osmosis: Prinsip Kerja dan Keunggulannya', desc: 'RO menggunakan tekanan tinggi untuk memaksa air melewati membran semi-permeabel, menyisihkan kontaminan hingga 99%. Simak cara kerjanya secara mendalam.', url: '/artikel/ro-prinsip-kerja', author: 'Tim TSM' },
+              { cat: 'Desalinasi', img: 'porto-pulau-ayer-1.jpg', bg: 'from-[#0a2240] to-[#0d5fa8]', date: '15 Maret 2025', read: '6 menit baca', title: 'Desalinasi Air Laut: Solusi Krisis Air Bersih di Pulau-Pulau Terpencil', desc: 'Kawasan pesisir dan kepulauan Indonesia menghadapi tantangan air tawar yang serius. Sistem SWRO hadir sebagai jawaban yang kini semakin terjangkau.', url: '/artikel/desalinasi-solusi-pulau', author: 'Tim TSM' },
+              { cat: 'Perawatan', img: 'porto-sosro-1.jpg', bg: 'from-[#1a3a5c] to-[#1e90d6]', date: '5 Maret 2025', read: '4 menit baca', title: '5 Kesalahan Umum Perawatan Membran RO yang Perlu Dihindari', desc: 'Membran RO adalah komponen paling kritis sekaligus mahal. Kenali kesalahan umum dan cara mencegahnya untuk memaksimalkan usia pakai membran.', url: '/artikel/5-kesalahan-perawatan-ro', author: 'Tim Teknis TSM' }
+            ].map((art, idx) => (
+              <div key={idx} ref={addToRefs} className="bg-white border border-border rounded-[10px] overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] hover:border-accent group opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0">
+                <div className={`h-[192px] bg-gradient-to-br ${art.bg} relative overflow-hidden shrink-0`}>
+                  <img src={`/images/${art.img}`} alt={art.cat} className="w-full h-full object-cover opacity-70 transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <span className="absolute top-[0.88rem] left-[0.88rem] bg-accent text-white text-[0.62rem] font-bold tracking-[0.1em] uppercase py-[0.26rem] px-[0.68rem] rounded-[4px] z-10">{art.cat}</span>
+                </div>
+                <div className="p-[1.25rem] flex-1 flex flex-col">
+                  <div className="text-[0.72rem] text-muted mb-[0.52rem] flex items-center gap-[0.35rem]">
+                    <Calendar size={13} className="text-accent" /> {art.date} &nbsp;·&nbsp; <Clock size={13} className="text-accent" /> {art.read}
+                  </div>
+                  <h3 className="text-[0.96rem] font-bold text-navy leading-[1.42] mb-[0.52rem]">
+                    <Link to={art.url} className="hover:text-blue transition-colors">{art.title}</Link>
+                  </h3>
+                  <p className="text-[0.83rem] text-muted leading-[1.65] flex-1">{art.desc}</p>
+                </div>
+                <div className="flex items-center justify-between p-[0.82rem_1.25rem] border-t border-border mt-auto">
+                  <span className="text-[0.72rem] text-muted font-medium flex items-center gap-[0.25rem]">
+                    <User size={13} /> {art.author}
+                  </span>
+                  <Link to={art.url} className="text-[0.72rem] font-bold text-blue tracking-[0.05em] uppercase flex items-center gap-[0.28rem] transition-all duration-300 group-hover:gap-[0.52rem]">Baca &rarr;</Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-[2.5rem]">
+            <Link to="/artikel" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-blue text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-blue hover:text-white hover:-translate-y-[2px]">
+              Lihat Semua Artikel &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ TESTIMONIALS ══ */}
+      <section className="py-[4rem] bg-gradient-to-br from-navy to-[#0d3a6b]">
+        <div className="max-w-[1240px] mx-auto px-6">
+          <div ref={addToRefs} className="text-center max-w-[600px] mx-auto mb-12 opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0">
+            <span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-white/10 border-white/20 px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border">Testimoni Klien</span>
+            <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-white leading-[1.15] mb-[0.65rem]">Dipercaya Ratusan Klien</h2>
+            <p className="text-[0.88rem] text-white/70 leading-[1.75]">Kepercayaan klien adalah amanah terbesar kami dalam setiap proyek yang kami kerjakan.</p>
+            <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
+          </div>
+          
+          <div ref={testimoRef} className="flex gap-[1.2rem] overflow-x-auto snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] scroll-smooth">
+            {[
+              { quote: '"Sistem RO industri yang dipasang TSM sudah berjalan 3 tahun tanpa masalah berarti. Tim teknisnya responsif dan profesional. Sangat merekomendasikan untuk kebutuhan water treatment industri."', initial: 'PM', name: 'Plant Manager', company: 'PT Maju Jaya Industri' },
+              { quote: '"Kami menggunakan sistem desalinasi TSM untuk resort di kepulauan. Kualitas air sangat baik, dan layanan purna jualnya luar biasa. Investasi terbaik untuk operasional resort kami."', initial: 'GM', name: 'GM Operations', company: 'Raja Ampat Resort' },
+              { quote: '"TSM membantu rumah sakit kami memenuhi standar air untuk instalasi farmasi sesuai regulasi BPOM. Proses dari survei hingga commissioning sangat terstruktur dan profesional."', initial: 'KI', name: 'Kepala IFRS', company: 'RSUD Bekasi' },
+              { quote: '"Filter air TSM sangat membantu efisiensi penggunaan air tanah di pabrik makanan kami. Hasil air jernih dan sesuai baku mutu kesehatan."', initial: 'DA', name: 'Direktur Operasional', company: 'PT Food Makmur' },
+              { quote: '"Kami sangat puas dengan layanan maintenance rutin dari tim TSM. Kapasitas RO kami tetap stabil meskipun sudah bertahun-tahun beroperasi."', initial: 'EN', name: 'Chief Engineer', company: 'Hotel Bintang Lima Jakarta' },
+              { quote: '"Instalasi Sewage Treatment Plant (STP) dari TSM bekerja sangat baik. Limbah yang dihasilkan sudah aman dan lolos uji KLHK."', initial: 'HS', name: 'HSE Manager', company: 'PT Manufaktur Global' },
+              { quote: '"Sistem ultrafiltrasi yang disediakan TSM berhasil mengatasi masalah kekeruhan air sungai yang kami gunakan sebagai sumber baku."', initial: 'TM', name: 'Technical Manager', company: 'PLTU Jawa' },
+              { quote: '"Sangat membantu! Respon tim emergency TSM sangat cepat saat kami mengalami kendala pompa RO jam 2 pagi. Produksi tidak terganggu lama."', initial: 'SP', name: 'Supervisor Produksi', company: 'Pabrik Tekstil Nasional' },
+              { quote: '"Kualitas membran dan suku cadang yang digunakan TSM terbukti original dan tahan lama. Biaya operasional kami jadi lebih hemat."', initial: 'PA', name: 'Procurement', company: 'PT Kimia Farma' },
+              { quote: '"Water treatment mobile dari TSM sangat praktis dan diandalkan untuk proyek konstruksi lepas pantai kami. Tangguh di segala cuaca."', initial: 'PM', name: 'Project Manager', company: 'Offshore Construction Inc.' }
+            ].map((tc, idx) => (
+              <div key={idx} ref={addToRefs} className="bg-white/5 border border-white/10 rounded-[8px] p-[1.5rem] transition-all duration-300 hover:bg-white/10 hover:-translate-y-[3px] opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 min-w-[300px] max-w-[320px] snap-center shrink-0 flex flex-col">
+                <div className="text-[#ffd700] mb-[0.65rem] tracking-[0.08em] text-[0.82rem]">★★★★★</div>
+                <p className="text-[0.82rem] leading-[1.75] opacity-80 mb-[1rem] italic text-white flex-1">{tc.quote}</p>
+                <div className="flex items-center gap-[0.65rem] mt-auto">
+                  <div className="w-[34px] h-[34px] rounded-full bg-gradient-to-br from-sky to-accent flex items-center justify-center font-bold text-[0.76rem] text-white shrink-0">
+                    {tc.initial}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-[0.82rem] text-white">{tc.name}</div>
+                    <div className="text-[0.68rem] opacity-60 text-white">{tc.company}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center gap-4 mt-6">
+            <button onClick={() => scrollTestimo('left')} aria-label="Previous testimonial" className="w-[42px] h-[42px] rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:-translate-y-[2px] transition-all duration-300">
+              <ChevronLeft size={22} />
+            </button>
+            <button onClick={() => scrollTestimo('right')} aria-label="Next testimonial" className="w-[42px] h-[42px] rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:-translate-y-[2px] transition-all duration-300">
+              <ChevronRight size={22} />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ KLIEN ══ */}
+      <section className="py-[4rem] bg-gray">
         <div className="max-w-[1240px] mx-auto px-6 mb-12">
           <div ref={addToRefs} className="text-center max-w-[600px] mx-auto opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0">
             <span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Klien &amp; Mitra</span>
@@ -266,6 +372,20 @@ const Home = () => {
         </div>
         <ClientMarquee />
         <p className="text-center text-[0.8rem] text-muted mt-[1.5rem] italic">dan masih banyak klien lainnya di seluruh Indonesia</p>
+      </section>
+
+      {/* ══ BRANDS ══ */}
+      <section className="py-10 bg-white border-t border-border">
+        <div className="max-w-[1240px] mx-auto px-6">
+          <p className="text-center text-[0.72rem] font-bold tracking-[0.14em] uppercase text-muted mb-[1.65rem]">Brand Komponen yang Kami Gunakan</p>
+          <div className="flex flex-wrap justify-center items-center gap-[2.5rem] max-[768px]:gap-[1.5rem]">
+            {['Dow Filmtec', 'Toray', 'Grundfos', 'Hydranautics', 'Koch Membrane', 'Pentair', 'Veolia'].map((brand, idx) => (
+              <div key={idx} className="text-[1.1rem] font-condensed font-bold text-muted/60 tracking-wider hover:text-blue transition-colors duration-300">
+                {brand}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ══ CTA ══ */}

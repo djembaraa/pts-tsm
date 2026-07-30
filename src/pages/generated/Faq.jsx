@@ -10,7 +10,29 @@ const Faq = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.faq-layout{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start}
+.faq-sticky{position:sticky;top:88px}
+.faq-cat{margin-bottom:3rem}
+.faq-cat-title{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:900;color:var(--navy);margin-bottom:1.2rem;padding-bottom:.6rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.6rem}
+.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:.8rem;overflow:hidden;transition:var(--t)}
+.faq-item.open{border-color:var(--blue);box-shadow:0 2px 12px rgba(13,95,168,.1)}
+.faq-q{padding:1.1rem 1.3rem;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;background:var(--white);transition:var(--t)}
+.faq-item.open .faq-q{background:var(--ice)}
+.faq-q span{font-size:.93rem;font-weight:600;color:var(--text);line-height:1.4}
+.faq-item.open .faq-q span{color:var(--blue)}
+.faq-icon{width:22px;height:22px;border-radius:50%;background:var(--ice);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;transition:var(--t);margin-top:.1rem}
+.faq-item.open .faq-icon{background:var(--blue);color:#fff;border-color:var(--blue);transform:rotate(45deg)}
+.faq-a{display:none;padding:0 1.3rem 1.2rem;font-size:.88rem;color:var(--muted);line-height:1.78;background:var(--white)}
+.faq-item.open .faq-a{display:block}
+.cat-nav-list li{margin-bottom:.4rem}
+.cat-nav-list a{font-size:.86rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:.5rem;padding:.38rem .6rem;border-radius:6px;transition:var(--t)}
+.cat-nav-list a:hover{background:var(--ice);color:var(--blue)}
+.cat-nav-list a.active{background:var(--ice);color:var(--blue)}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › FAQ</div>
     <h1>Pertanyaan yang Sering Ditanyakan</h1>

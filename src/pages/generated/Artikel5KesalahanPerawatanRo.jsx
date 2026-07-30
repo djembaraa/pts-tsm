@@ -10,7 +10,41 @@ const Artikel5KesalahanPerawatanRo = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden" style={{"background":"linear-gradient(135deg,#1a3a5c,#0d5fa8)"}}>
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+.art-hero-img{height:300px;background:linear-gradient(135deg,#1a3a5c,#1e90d6);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:8rem;margin-bottom:2rem}
+.art-meta-bar{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.am-tag{background:var(--sky);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.26rem .72rem;border-radius:4px}
+.am-info{font-size:.8rem;color:var(--muted)}
+.share-row{display:flex;align-items:center;gap:.72rem;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);flex-wrap:wrap}
+.share-row span{font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.sh-btn{padding:.38rem .95rem;border-radius:6px;font-size:.78rem;font-weight:600;color:#fff;transition:var(--t)}
+.sh-btn:hover{opacity:.82;transform:translateY(-1px)}
+/* Numbered mistake cards */
+.mk-card{border:1px solid var(--border);border-radius:12px;padding:1.75rem;margin-bottom:1.5rem;position:relative;overflow:hidden;transition:var(--t)}
+.mk-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,var(--blue),var(--accent))}
+.mk-card:hover{box-shadow:var(--shh);border-color:var(--accent)}
+.mk-num{font-family:'Barlow Condensed',sans-serif;font-size:3.5rem;font-weight:900;color:var(--ice);position:absolute;top:.5rem;right:1.1rem;line-height:1;pointer-events:none}
+.mk-card h3{font-size:1.08rem;font-weight:700;color:var(--navy);margin-bottom:.55rem;padding-right:3.5rem}
+.mk-labels{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}
+.mk-bad{font-size:.78rem;font-weight:700;color:#dc2626;background:#fef2f2;padding:.26rem .72rem;border-radius:4px;display:inline-flex;align-items:center;gap:.3rem}
+.mk-good{font-size:.78rem;font-weight:700;color:#16a34a;background:#f0fdf4;padding:.26rem .72rem;border-radius:4px;display:inline-flex;align-items:center;gap:.3rem}
+.mk-card p{font-size:.9rem;color:var(--text);line-height:1.78}
+.mk-tip{background:var(--ice);border:1px solid var(--border);border-radius:8px;padding:.82rem 1rem;margin-top:.88rem;font-size:.86rem;color:var(--text);line-height:1.65}
+.mk-tip strong{color:var(--blue)}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.8rem}
+.rel-card{border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:var(--t);display:block}
+.rel-card:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:var(--accent)}
+.rel-img{height:88px;display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.rel-body{padding:.9rem}
+.rel-body p{font-size:.82rem;font-weight:600;color:var(--navy);line-height:1.4;margin-bottom:.25rem}
+.rel-body span{font-size:.7rem;color:var(--muted)}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}.related-grid{grid-template-columns:1fr}}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden" style={{"background":"linear-gradient(135deg,#1a3a5c,#0d5fa8)"}}>
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/artikel">Artikel</Link> › Perawatan</div>
     <h1>5 Kesalahan Umum Perawatan Membran RO<br />yang Perlu Dihindari</h1>

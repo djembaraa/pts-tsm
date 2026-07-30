@@ -10,7 +10,36 @@ const Industri = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.ind-detail-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2rem}
+.ind-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:var(--t)}
+.ind-card:hover{transform:translateY(-5px);box-shadow:var(--shh);border-color:var(--accent)}
+.ind-card-head{padding:2rem 2rem 1.2rem;display:flex;align-items:center;gap:1rem}
+.ind-ico-big{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}
+.ind-card-head h3{font-size:1.1rem;font-weight:700;color:var(--navy);line-height:1.3}
+.ind-card-head span{font-size:.78rem;color:var(--muted)}
+.ind-card-body{padding:0 2rem 1.5rem}
+.ind-card-body p{font-size:.88rem;color:var(--muted);line-height:1.72;margin-bottom:1rem}
+.ind-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.ind-tag{font-size:.72rem;font-weight:600;padding:.22rem .68rem;background:var(--ice);border:1px solid var(--border);border-radius:20px;color:var(--text)}
+.ind-card-foot{padding:1rem 2rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.ind-card-foot span{font-size:.78rem;color:var(--muted)}
+.ind-card-foot a{font-size:.78rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:.3rem;transition:var(--t)}
+.ind-card-foot a:hover{gap:.55rem}
+.case-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.case-card{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:12px;padding:1.8rem;color:#fff;transition:var(--t)}
+.case-card:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+.case-cat{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+.case-card h3{font-size:1rem;font-weight:700;margin-bottom:.6rem;line-height:1.4}
+.case-card p{font-size:.84rem;opacity:.8;line-height:1.65;margin-bottom:1rem}
+.case-stat{display:flex;gap:1.5rem;flex-wrap:wrap}
+.case-stat div{text-align:center}
+.case-stat .sn{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;color:var(--accent);line-height:1}
+.case-stat .sl{font-size:.68rem;opacity:.7;margin-top:.15rem}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › Industri</div>
     <h1>Solusi Water Treatment untuk Setiap Industri</h1>

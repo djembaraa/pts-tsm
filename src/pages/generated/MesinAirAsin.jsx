@@ -10,7 +10,32 @@ const MesinAirAsin = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.prod-hero{height:300px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:8rem;margin-bottom:2rem;background:linear-gradient(135deg,#0a2240,#1a6b8a)}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+.spec-table tr:nth-child(odd) td{background:var(--gray)}
+.spec-table td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.spec-table td:first-child{font-weight:600;color:var(--navy);width:45%}
+.compare-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem}
+.compare-table th{background:var(--navy);color:#fff;padding:.65rem 1rem;text-align:left;font-weight:600}
+.compare-table td{padding:.62rem 1rem;border-bottom:1px solid var(--border)}
+.compare-table tr:nth-child(even) td{background:var(--gray)}
+.compare-table td:first-child{font-weight:600;color:var(--navy)}
+.prod-layout{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;align-items:start}
+.prod-sticky{position:sticky;top:90px}
+.prod-h2{font-family:'Barlow Condensed',sans-serif;font-size:1.55rem;font-weight:800;color:var(--navy);margin-bottom:.75rem}
+.mt{margin-top:2.2rem}
+.feat-list{padding-left:0;list-style:none;margin:.75rem 0}
+.feat-list li{padding:.55rem 0 .55rem 1.2rem;border-bottom:1px solid var(--border);font-size:.92rem;line-height:1.65;position:relative}
+.feat-list li::before{content:'✔';position:absolute;left:0;color:var(--accent);font-weight:700}
+.related-link{font-size:.86rem;color:var(--blue);font-weight:600;transition:var(--t);display:block}
+.related-link:hover{color:var(--navy);padding-left:.3rem}
+.seo-note{background:var(--ice);border-left:4px solid var(--accent);padding:1rem 1.4rem;border-radius:0 8px 8px 0;font-size:.88rem;color:var(--muted);margin:1.5rem 0;line-height:1.7}
+@media(max-width:900px){.prod-layout{grid-template-columns:1fr}.prod-sticky{position:static}}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/produk">Produk &amp; Solusi</Link> › Mesin Air Asin</div>
     <h1>Mesin Air Asin</h1>

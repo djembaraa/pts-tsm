@@ -10,7 +10,51 @@ const Artikel = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.layout-2col{display:grid;grid-template-columns:1fr 308px;gap:2.8rem;align-items:start}
+.sticky-side{position:sticky;top:88px}
+
+/* Filter bar */
+.filter-bar{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap;margin-bottom:2.4rem}
+.fb-btn{padding:.42rem 1rem;border:2px solid var(--border);border-radius:20px;font-size:.8rem;font-weight:600;color:var(--muted);background:var(--white);cursor:pointer;transition:var(--t);font-family:inherit}
+.fb-btn:hover,.fb-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Article grid */
+.art-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.6rem}
+
+/* No results */
+.no-results{text-align:center;padding:3rem;color:var(--muted);font-size:.95rem;grid-column:1/-1;display:none}
+.no-results.show{display:block}
+
+/* Search box */
+.search-wrap{position:relative;margin-bottom:.6rem}
+.search-wrap input{width:100%;padding:.68rem 1rem .68rem 2.4rem;border:1px solid var(--border);border-radius:var(--r);font-family:inherit;font-size:.88rem;color:var(--text);outline:none;transition:var(--t);background:var(--white)}
+.search-wrap input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(13,95,168,.1)}
+.search-ico{position:absolute;left:.78rem;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.9rem;pointer-events:none}
+
+/* Popular list */
+.pop-item{display:flex;gap:.75rem;align-items:flex-start;padding:.72rem 0;border-bottom:1px solid var(--border)}
+.pop-item:last-child{border-bottom:none}
+.pop-num{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:900;color:var(--accent);line-height:1;flex-shrink:0;width:22px}
+.pop-title{font-size:.84rem;font-weight:600;color:var(--text);line-height:1.4;transition:var(--t)}
+.pop-title:hover,.pop-title:focus{color:var(--blue)}
+.pop-meta{font-size:.7rem;color:var(--muted);margin-top:.18rem}
+
+/* Tags */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:.48rem}
+.tag-chip{font-size:.76rem;font-weight:600;padding:.28rem .78rem;background:var(--ice);border:1px solid var(--border);border-radius:20px;color:var(--text);transition:var(--t);cursor:pointer;font-family:inherit}
+.tag-chip:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* Sidebar CTA box */
+.sb-cta{background:linear-gradient(145deg,var(--navy),var(--blue));color:#fff;border:none!important}
+.sb-cta h4{color:rgba(255,255,255,.5)!important;border-color:rgba(255,255,255,.15)!important}
+.sb-cta p{font-size:.86rem;line-height:1.65;margin-bottom:1rem;opacity:.84}
+
+@media(max-width:1024px){.layout-2col{grid-template-columns:1fr}.sticky-side{position:static}}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › Artikel</div>
     <h1>Artikel &amp; Edukasi</h1>

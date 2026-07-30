@@ -10,7 +10,30 @@ const Karir = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.job-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+.job-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.8rem;transition:var(--t);position:relative}
+.job-card:hover{transform:translateY(-4px);box-shadow:var(--shh);border-color:var(--accent)}
+.job-type{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:.22rem .7rem;border-radius:4px;display:inline-block;margin-bottom:.8rem}
+.job-card h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.job-dept{font-size:.8rem;color:var(--muted);margin-bottom:.9rem;display:flex;align-items:center;gap:.4rem}
+.job-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.job-tag{font-size:.72rem;font-weight:600;padding:.2rem .65rem;background:var(--ice);border:1px solid var(--border);border-radius:20px;color:var(--text)}
+.job-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--border)}
+.job-footer span{font-size:.76rem;color:var(--muted)}
+.benefit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem}
+.ben-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center;transition:var(--t)}
+.ben-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.ben-ico{font-size:2rem;margin-bottom:.7rem}
+.ben-card h4{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:.35rem}
+.ben-card p{font-size:.8rem;color:var(--muted);line-height:1.6}
+.apply-form{background:var(--gray);border:1px solid var(--border);border-radius:14px;padding:2.5rem;max-width:700px;margin:0 auto}
+.apply-form h3{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.apply-form p{font-size:.88rem;color:var(--muted);margin-bottom:1.8rem}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › Perusahaan › Karir</div>
     <h1>Bergabunglah dengan Tim TSM</h1>

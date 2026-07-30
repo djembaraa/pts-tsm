@@ -10,7 +10,21 @@ const ProdukBwro = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.prod-hero{height:300px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:8rem;margin-bottom:2rem;background:linear-gradient(135deg,#0a2240,#1a6b8a)}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+.spec-table tr:nth-child(odd) td{background:var(--gray)}
+.spec-table td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.spec-table td:first-child{font-weight:600;color:var(--navy);width:45%}
+.compare-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem}
+.compare-table th{background:var(--navy);color:#fff;padding:.65rem 1rem;text-align:left;font-weight:600}
+.compare-table td{padding:.62rem 1rem;border-bottom:1px solid var(--border)}
+.compare-table tr:nth-child(even) td{background:var(--gray)}
+.compare-table td:first-child{font-weight:600;color:var(--navy)}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/produk">Produk &amp; Solusi</Link> › BWRO Air Payau</div>
     <h1>BWRO – Brackish Water Reverse Osmosis</h1>

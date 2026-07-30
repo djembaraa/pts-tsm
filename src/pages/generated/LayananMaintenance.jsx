@@ -10,7 +10,29 @@ const LayananMaintenance = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+.spec-table th,.spec-table td{padding:.75rem 1rem;border:1px solid var(--border);font-size:.88rem;text-align:left;vertical-align:top}
+.spec-table th{background:var(--navy);color:#fff;font-weight:700}
+.spec-table tr:nth-child(even){background:var(--gray)}
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin:1.8rem 0}
+.tier-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:var(--t)}
+.tier-card:hover{border-color:var(--accent);box-shadow:var(--shh);transform:translateY(-3px)}
+.tier-card.featured{border:2px solid var(--accent);position:relative}
+.tier-card.featured::before{content:'PALING DIPILIH';position:absolute;top:-10px;right:1rem;background:var(--accent);color:#fff;padding:.2rem .7rem;border-radius:4px;font-size:.65rem;font-weight:700;letter-spacing:.1em}
+.tier-card h4{color:var(--navy);font-size:1.05rem;margin-bottom:.5rem}
+.tier-card .tier-tag{font-size:.7rem;color:var(--accent);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
+.tier-card ul{list-style:none;padding:0;margin:0}
+.tier-card li{font-size:.85rem;padding:.45rem 0;border-bottom:1px dashed var(--border);color:var(--text)}
+.tier-card li:last-child{border-bottom:none}
+.tier-card li::before{content:'✓';color:var(--accent);font-weight:700;margin-right:.5rem}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/layanan">Layanan</Link> › Pemeliharaan Preventif</div>
     <h1>Kontrak Perawatan &amp; Maintenance Sistem RO Industri</h1>

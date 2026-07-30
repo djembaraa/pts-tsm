@@ -10,7 +10,13 @@ const SyaratKetentuan = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.legal-wrap{max-width:860px;margin:0 auto}
+.legal-wrap .updated{font-size:.84rem;color:var(--muted);margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › Syarat &amp; Ketentuan</div>
     <h1>Syarat &amp; Ketentuan</h1>

@@ -10,7 +10,23 @@ const LayananDarurat = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}}
+.spec-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+.spec-table th,.spec-table td{padding:.75rem 1rem;border:1px solid var(--border);font-size:.88rem;text-align:left;vertical-align:top}
+.spec-table th{background:var(--navy);color:#fff;font-weight:700}
+.spec-table tr:nth-child(even){background:var(--gray)}
+.alert-box{background:#fef2f2;border:1px solid #fecaca;border-left:4px solid #dc2626;padding:1.5rem;border-radius:8px;margin:1.5rem 0}
+.alert-box strong{color:#991b1b}
+.hotline-box{background:linear-gradient(135deg,#dc2626,#991b1b);color:#fff;padding:2rem;border-radius:12px;text-align:center;margin:2rem 0}
+.hotline-box h3{color:#fff;margin-bottom:.5rem}
+.hotline-num{font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;font-weight:900;letter-spacing:.02em;display:block;margin:.5rem 0}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/layanan">Layanan</Link> › Servis Darurat 24/7</div>
     <h1>Servis Darurat 24/7 Sistem Water Treatment</h1>

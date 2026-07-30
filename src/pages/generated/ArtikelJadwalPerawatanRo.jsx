@@ -10,7 +10,25 @@ const ArtikelJadwalPerawatanRo = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.art-layout{display:grid;grid-template-columns:1fr 290px;gap:3rem;align-items:start}
+.art-sticky{position:sticky;top:88px}
+.art-meta-bar{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.am-tag{background:var(--accent);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.26rem .72rem;border-radius:4px}
+.am-info{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:.36rem}
+.maint-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.88rem}
+.maint-table th,.maint-table td{padding:.7rem .9rem;border:1px solid var(--border);text-align:left;vertical-align:top}
+.maint-table th{background:var(--navy);color:#fff;font-weight:700}
+.maint-table tr:nth-child(even){background:var(--gray)}
+.freq-badge{display:inline-block;padding:.2rem .6rem;background:var(--accent);color:#fff;border-radius:4px;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.warn-box{background:#fff4e5;border-left:4px solid #f39c12;padding:1.25rem;border-radius:8px;margin:1.5rem 0}
+.warn-box h4{color:#9c5510;margin-bottom:.5rem;font-size:1rem}
+.warn-box p{margin:0;font-size:.92rem;color:#7a4408}
+@media(max-width:1024px){.art-layout{grid-template-columns:1fr}.art-sticky{position:static}}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › <Link to="/artikel">Artikel</Link> › Jadwal Perawatan RO</div>
     <h1>Jadwal Perawatan Sistem RO Industri yang Lengkap</h1>

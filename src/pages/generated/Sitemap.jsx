@@ -10,7 +10,21 @@ const Sitemap = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.sitemap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:1rem}
+.sm-col{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1.75rem;transition:var(--t)}
+.sm-col:hover{box-shadow:var(--sh);border-color:var(--accent)}
+.sm-col h3{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:900;color:var(--navy);margin-bottom:.2rem;padding-bottom:.65rem;border-bottom:2px solid var(--ice)}
+.sm-col .sm-ico{font-size:1.5rem;margin-right:.35rem;vertical-align:middle}
+.sm-col ul{margin-top:.9rem}
+.sm-col ul li{margin-bottom:.42rem}
+.sm-col ul li a{font-size:.88rem;color:var(--text);display:flex;align-items:center;gap:.4rem;padding:.22rem 0;transition:var(--t)}
+.sm-col ul li a:hover{color:var(--blue);padding-left:.35rem}
+.sm-col ul li a::before{content:'›';color:var(--accent);font-weight:700;flex-shrink:0}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › Peta Situs</div>
     <h1>Peta Situs</h1>
@@ -135,9 +149,9 @@ const Sitemap = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Tidak Menemukan yang Anda Cari?</h2>
-    <p>Hubungi langsung tim kami — kami senang membantu mengarahkan Anda ke informasi yang tepat.</p>
-    <div className="flex gap-4 justify-center flex-wrap">
+    <h2 className="font-condensed text-[clamp(1.5rem,2.4vw,2.1rem)] font-extrabold mb-[0.7rem]">Tidak Menemukan yang Anda Cari?</h2>
+    <p className="text-[0.88rem] opacity-90 mb-[1.5rem]">Tim kami siap merancang solusi custom sesuai kebutuhan spesifik Anda — dari awal hingga commissioning.</p>
+    <div className="flex gap-[1rem] justify-center flex-wrap">
       <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">📞 Hubungi Kami</Link>
       <Link href="https://wa.me/62818719119" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" target="_blank" rel="noopener noreferrer">💬 Chat WhatsApp</Link>
     </div>

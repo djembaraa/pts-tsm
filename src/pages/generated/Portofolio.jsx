@@ -10,7 +10,42 @@ const Portofolio = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+.filter-bar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.fb{padding:.42rem 1rem;border:2px solid var(--border);border-radius:20px;font-size:.8rem;font-weight:600;color:var(--muted);background:var(--white);cursor:pointer;transition:var(--t);font-family:inherit}
+.fb:hover,.fb.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.porto-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+.porto-card{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:var(--t);cursor:pointer}
+.porto-card:hover{transform:translateY(-5px);box-shadow:var(--shh);border-color:var(--accent)}
+.porto-img{height:220px;overflow:hidden;position:relative}
+.porto-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.porto-card:hover .porto-img img{transform:scale(1.05)}
+.porto-cat{position:absolute;top:.8rem;left:.8rem;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:.26rem .72rem;border-radius:4px}
+.porto-body{padding:1.3rem}
+.porto-client{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+.porto-body h3{font-size:.98rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.4}
+.porto-body p{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:.8rem}
+.porto-stats{display:flex;gap:1rem;flex-wrap:wrap}
+.ps{font-size:.78rem;color:var(--text);display:flex;align-items:center;gap:.3rem}
+.ps span{font-weight:700;color:var(--navy)}
+/* LIGHTBOX */
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb-inner{position:relative;max-width:92vw;max-height:92vh}
+.lb-inner img{max-width:100%;max-height:88vh;border-radius:8px;object-fit:contain}
+.lb-close{position:absolute;top:-2.5rem;right:0;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1;opacity:.8}
+.lb-close:hover{opacity:1}
+.lb-caption{position:absolute;bottom:-2.2rem;left:0;right:0;text-align:center;color:rgba(255,255,255,.75);font-size:.85rem}
+/* Gallery multi-photo */
+.photo-grid{display:grid;gap:4px}
+.photo-grid.g2{grid-template-columns:1fr 1fr}
+.photo-grid.g3{grid-template-columns:1fr 1fr 1fr}
+.photo-grid img{width:100%;height:160px;object-fit:cover;cursor:pointer;transition:var(--t)}
+.photo-grid img:hover{opacity:.85}
+
+` }} />
+<div className="bg-gradient-to-br from-navy to-blue text-white py-[3rem] pb-[2.5rem] relative overflow-hidden">
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-[0.72rem] opacity-55 mb-[0.65rem] flex items-center gap-[0.42rem] flex-wrap"><Link to="/index">Beranda</Link> › Portofolio</div>
     <h1>Portofolio Proyek</h1>
