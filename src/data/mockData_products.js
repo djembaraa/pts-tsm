@@ -3,7 +3,7 @@ export const products = [
     "id": "amdk",
     "slug": "amdk",
     "title": "Mesin AMDK — Lini Produksi Air Minum Dalam Kemasan Indonesia",
-    "category": "Produk TSM",
+    "category": "Mesin AMDK",
     "image": "produk-ro-9m3-a.jpg",
     "description": "Mesin AMDK lengkap untuk Air Minum Dalam Kemasan: cup, botol PET, gallon. Lini produksi turnkey dengan RO, ozon, UV, filling. Sertifikasi BPOM & SNI. TSM Bekasi.",
     "specs": [
@@ -44,7 +44,7 @@ export const products = [
     "id": "bwms",
     "slug": "bwms",
     "title": "Ballast Water Management System (BWMS)",
-    "category": "Produk TSM",
+    "category": "Maritim & Kapal",
     "image": "bwms-integrated.jpg",
     "description": "Sistem BWMS Ballast Water Management 100 m³/h untuk kapal niaga, tanker & offshore. Tipe Integrated & Distributed BSKY100. Sesuai IMO BWM Convention & BKI.",
     "specs": [
@@ -98,7 +98,7 @@ export const products = [
     "id": "bwro",
     "slug": "bwro",
     "title": "BWRO – Brackish Water Reverse Osmosis",
-    "category": "Produk TSM",
+    "category": "Reverse Osmosis",
     "image": "porto-sosro-1.jpg",
     "description": "Sistem BWRO Brackish Water Reverse Osmosis untuk mengolah air payau, air sumur TDS tinggi, dan air tanah asin menjadi air bersih layak pakai. Kapasitas 1–500 m³/hari. TSM Bekasi.",
     "specs": [
@@ -140,7 +140,7 @@ export const products = [
     "id": "cartridge-mf",
     "slug": "cartridge-mf",
     "title": "Cartridge MF – Filter Cartridge Mikrofiltrasi",
-    "category": "Produk TSM",
+    "category": "Filtrasi",
     "image": "produk-ro-industri.webp",
     "description": "Cartridge MF (Microfiltration Cartridge Filter) untuk filtrasi presisi partikel, bakteri, dan padatan halus pada sistem air industri, farmasi, makanan-minuman, dan pre-treatment RO. Berbagai ukuran pori dan material. TSM Bekasi.",
     "specs": [
@@ -164,8 +164,8 @@ export const products = [
     "id": "demi",
     "slug": "demi",
     "title": "Demineralisasi & EDI",
-    "category": "Produk TSM",
-    "image": "produk-swro-15tpd-b.png",
+    "category": "Demineralisasi",
+    "image": "porto-sbawi-1.jpg",
     "description": "Sistem demineralisasi dan EDI untuk Purified Water farmasi, boiler PLTU, dan elektronik. Resistivitas 15–18 MΩ·cm. Memenuhi standar CPOB BPOM. TSM Bekasi.",
     "specs": [
       "Resistivitas: 1 – 18 MΩ·cm",
@@ -203,7 +203,7 @@ export const products = [
     "id": "desalinasi",
     "slug": "desalinasi",
     "title": "SWRO — Desalinasi Air Laut",
-    "category": "Produk TSM",
+    "category": "Desalinasi",
     "image": "produk-swro-15tpd-a.png",
     "description": "Sistem SWRO desalinasi air laut untuk kepulauan, resort pesisir, kapal, dan offshore Indonesia. Kapasitas 1–1.000 m³/hari. Engineering lokal, standar internasional.",
     "specs": [
@@ -242,8 +242,8 @@ export const products = [
     "id": "fresh-water-generator",
     "slug": "fresh-water-generator",
     "title": "Fresh Water Generator (FWG)",
-    "category": "Produk TSM",
-    "image": "porto-kri-fleet-1.jpg",
+    "category": "Desalinasi",
+    "image": "bwms-distributed.jpg",
     "description": "Fresh Water Generator (FWG) sistem pembuat air tawar dari air laut untuk kapal, platform offshore, dan industri. Teknologi evaporasi vakum kapasitas 1–100 ton/hari. TSM Bekasi.",
     "specs": [
       "Prinsip Kerja: Evaporasi vakum (single/multi-effect)",
@@ -283,8 +283,8 @@ export const products = [
     "id": "instrumen",
     "slug": "instrumen",
     "title": "Instrumen & Sensor Monitoring Kualitas Air",
-    "category": "Produk TSM",
-    "image": "foto-bengkel.jpg",
+    "category": "Instrumen",
+    "image": "produk-ro-9m3-b.jpg",
     "description": "Instrumen monitoring kualitas air industri: TDS meter, conductivity, pH meter, flow meter, pressure transmitter, online analyzer. Integrasi PLC & SCADA.",
     "specs": [
       "Parameter: TDS, Conductivity, pH, DO, Flow, Pressure, Turbidity",
@@ -322,7 +322,7 @@ export const products = [
     "id": "kimia",
     "slug": "kimia",
     "title": "Kimia Water Treatment Indonesia",
-    "category": "Produk TSM",
+    "category": "Suku Cadang & Kimia",
     "image": "foto-bengkel.jpg",
     "description": "Kimia water treatment industri: antiscalant, biocide, CIP cleaner, pH adjustment, koagulan, flokulan. Sertifikat MSDS lengkap. Distributor resmi merek terkemuka.",
     "specs": [
@@ -361,8 +361,8 @@ export const products = [
     "id": "limbah",
     "slug": "limbah",
     "title": "Pengolahan Air Limbah Industri & ZLD Indonesia",
-    "category": "Produk TSM",
-    "image": "porto-sosro-5.jpg",
+    "category": "Pengolahan Air Limbah",
+    "image": "porto-sbawi-2.jpg",
     "description": "Sistem pengolahan air limbah industri, daur ulang air, MBR, ZLD (Zero Liquid Discharge). Solusi compliance baku mutu, hemat biaya, ramah lingkungan.",
     "specs": [
       "Teknologi: MBR + UF + RO",
@@ -400,8 +400,8 @@ export const products = [
     "id": "membran",
     "slug": "membran",
     "title": "Membran RO, NF & UF — Distributor Indonesia",
-    "category": "Produk TSM",
-    "image": "produk-bwro-industri.jpg",
+    "category": "Suku Cadang & Kimia",
+    "image": "produk-swro-15tpd-a.png",
     "description": "Distributor resmi membran RO, NF, UF Dow Filmtec, Toray, Hydranautics, Koch. Stok lengkap ukuran 4040, 8040 untuk SWRO, BWRO, LPRO. Pengiriman se-Indonesia.",
     "specs": [
       "Ukuran Standar: 2521, 4040, 4021, 8040",
@@ -439,8 +439,8 @@ export const products = [
     "id": "mikrofiltrasi",
     "slug": "mikrofiltrasi",
     "title": "Mikrofiltrasi (MF) – Membran Filter 0,1–10 Mikron",
-    "category": "Produk TSM",
-    "image": "produk-ro-industri.webp",
+    "category": "Ultrafiltrasi",
+    "image": "porto-sosro-5.jpg",
     "description": "Sistem Mikrofiltrasi (MF) membran 0,1–10 mikron untuk menyaring bakteri, padatan tersuspensi, dan partikel halus dari air industri, air minum, dan air proses. Kapasitas 1–500 m³/hari. TSM Bekasi.",
     "specs": [
       "Ukuran Pori Membran: 0,1 – 10 mikron (µm)",
@@ -465,7 +465,7 @@ export const products = [
     "id": "ozon",
     "slug": "ozon",
     "title": "Ozon Generator — Disinfeksi Air Industri Indonesia",
-    "category": "Produk TSM",
+    "category": "Disinfeksi",
     "image": "produk-ro-industri-2.jpg",
     "description": "Ozon generator untuk disinfeksi air AMDK, kolam renang, water treatment industri. Produksi ozon 1 g/jam – 10 kg/jam, integrasi PLC, oksigen atau udara. TSM Bekasi.",
     "specs": [
@@ -506,8 +506,8 @@ export const products = [
     "id": "pompa",
     "slug": "pompa",
     "title": "Pompa Tekanan Tinggi & Pressure Vessel RO",
-    "category": "Produk TSM",
-    "image": "foto-bengkel.jpg",
+    "category": "Mekanikal",
+    "image": "porto-pelindo-2.jpg",
     "description": "Pompa tekanan tinggi (high-pressure pump) dan pressure vessel untuk sistem RO industri, SWRO, BWRO. Grundfos, Danfoss, CAT Pumps. Stok siap kirim seluruh Indonesia.",
     "specs": [
       "Pompa Merek: Grundfos, Danfoss, CAT Pumps, Pentair",
@@ -545,8 +545,8 @@ export const products = [
     "id": "ro-industri",
     "slug": "ro-industri",
     "title": "Sistem RO Industri Skala Besar",
-    "category": "Produk TSM",
-    "image": "produk-ro-industri.jpg",
+    "category": "Reverse Osmosis",
+    "image": "foto-mesin-swro.jpg",
     "description": "Sistem Reverse Osmosis industri kapasitas 1–500 m³/hari. Custom untuk pabrik, PLTU, dan fasilitas besar di Bekasi dan seluruh Indonesia. Konsultasi gratis.",
     "specs": [
       "Kapasitas: 1 – 500 m³/hari",
@@ -584,7 +584,7 @@ export const products = [
     "id": "ro-komersial",
     "slug": "ro-komersial",
     "title": "RO Komersial & Gedung",
-    "category": "Produk TSM",
+    "category": "Reverse Osmosis",
     "image": "produk-ro-9m3-a.jpg",
     "description": "Sistem RO komersial untuk hotel berbintang, gedung, & rumah sakit. Air bersih konsisten untuk hospitality premium — TSM Bekasi se-Indonesia.",
     "specs": [
@@ -623,8 +623,8 @@ export const products = [
     "id": "ro-lab",
     "slug": "ro-lab",
     "title": "RO Laboratorium",
-    "category": "Produk TSM",
-    "image": "produk-ro-industri-2.jpg",
+    "category": "Reverse Osmosis",
+    "image": "produk-ro-9m3-d.jpg",
     "description": "Sistem RO laboratorium untuk penelitian, QC, & produksi air ultra-murni Type I–III sesuai USP/ASTM. Untuk RS, universitas, & industri farmasi.",
     "specs": [
       "Kapasitas: 10 – 200 L/jam",
@@ -662,7 +662,7 @@ export const products = [
     "id": "ro-mobile",
     "slug": "ro-mobile",
     "title": "RO Mobile / Portable",
-    "category": "Produk TSM",
+    "category": "Reverse Osmosis",
     "image": "porto-kontainer-1.jpg",
     "description": "Sistem RO mobile dalam kontainer untuk offshore, kepulauan, dan situasi darurat. Kapasitas 1–50 m³/hari. Siap kirim ke seluruh Indonesia dari TSM Bekasi.",
     "specs": [
@@ -701,8 +701,8 @@ export const products = [
     "id": "swro",
     "slug": "swro",
     "title": "SWRO – Sea Water Reverse Osmosis",
-    "category": "Produk TSM",
-    "image": "porto-kapal-prima-1.jpg",
+    "category": "Desalinasi",
+    "image": "porto-pelindo-1.jpg",
     "description": "Sistem SWRO Sea Water Reverse Osmosis untuk desalinasi air laut menjadi air tawar berkualitas tinggi. Kapasitas 1–1.000 m³/hari. Cocok untuk pulau terpencil, offshore, industri pesisir. TSM Bekasi.",
     "specs": [
       "TDS Air Baku: 30.000 – 45.000 ppm (air laut)",
@@ -725,8 +725,8 @@ export const products = [
     "id": "twro",
     "slug": "twro",
     "title": "TWRO – Tap Water Reverse Osmosis",
-    "category": "Produk TSM",
-    "image": "produk-ro-industri.webp",
+    "category": "Reverse Osmosis",
+    "image": "porto-sosro-2.jpg",
     "description": "Sistem TWRO Tap Water Reverse Osmosis untuk mengolah air PDAM, air sumur, dan air tanah TDS rendah menjadi air murni berkualitas tinggi. Kapasitas 0,5–200 m³/hari. Hemat energi, mudah dirawat. TSM Bekasi.",
     "specs": [
       "TDS Air Baku: 200 – 1.000 ppm",
@@ -749,8 +749,8 @@ export const products = [
     "id": "uf",
     "slug": "uf",
     "title": "Ultrafiltrasi (UF) & Microfiltration",
-    "category": "Produk TSM",
-    "image": "porto-sosro-1.jpg",
+    "category": "Ultrafiltrasi",
+    "image": "porto-sosro-5.jpg",
     "description": "Sistem ultrafiltrasi (UF) dan mikrofiltrasi untuk pre-treatment RO, air minum, dan pengolahan mandiri. Efisien menyaring bakteri dan partikel. TSM Bekasi.",
     "specs": [
       "Ukuran Pori UF: 0,01 – 0,1 µm",
@@ -788,7 +788,7 @@ export const products = [
     "id": "uv",
     "slug": "uv",
     "title": "UV Sterilizer — Disinfeksi Air Ultraviolet Indonesia",
-    "category": "Produk TSM",
+    "category": "Disinfeksi",
     "image": "produk-ro-9m3-d.jpg",
     "description": "UV sterilizer untuk disinfeksi air minum, AMDK, RO output, kolam renang, dan air limbah. Lampu UV Trojan, Atlantic, Wedeco. Dosis 40-100 mJ/cm². TSM Bekasi.",
     "specs": [
@@ -829,8 +829,8 @@ export const products = [
     "id": "water-filter",
     "slug": "water-filter",
     "title": "Water Filter Industri & Komersial",
-    "category": "Produk TSM",
-    "image": "porto-sosro-1.jpg",
+    "category": "Filtrasi",
+    "image": "porto-sosro-3.jpg",
     "description": "Water filter industri dan komersial: sand filter, carbon filter, multimedia filter, bag filter, dan cartridge filter untuk pre-treatment RO dan pengolahan air baku. TSM Bekasi.",
     "specs": [
       "Kapasitas Tersedia: 0,5 – 200 m³/jam",
@@ -870,8 +870,8 @@ export const products = [
     "id": "zincalume-tank",
     "slug": "zincalume-tank",
     "title": "Zincalume Water Tank",
-    "category": "Produk TSM",
-    "image": "porto-sosro-1.jpg",
+    "category": "Mekanikal",
+    "image": "porto-kontainer-1.jpg",
     "description": "Zincalume water tank tangki air baja panel berlapis Zincalume untuk penyimpanan air bersih industri, gedung, dan komunitas. Kapasitas 5.000–5.000.000 liter, tahan karat, rakitan cepat. TSM Bekasi.",
     "specs": [
       "Material Panel: Baja G550 lapis Zincalume AZ150 (150 g/m²)",

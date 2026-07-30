@@ -6,26 +6,31 @@ import { products } from '../../data/mockData_products';
 
 const ProdukIndex = () => {
   const [activeCat, setActiveCat] = useState('Semua');
-  const revealRefs = useRef([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+  const observerRef = useRef(null);
   
   const addToRefs = (el) => {
-    if (el && !revealRefs.current.includes(el)) {
-      revealRefs.current.push(el);
+    if (el && observerRef.current) {
+      // Small delay to ensure styles are ready before observing
+      setTimeout(() => observerRef.current.observe(el), 50);
     }
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const observer = new IntersectionObserver((entries) => {
+    observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          observerRef.current.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
 
-    revealRefs.current.forEach(ref => observer.observe(ref));
-    return () => observer.disconnect();
+    return () => {
+      if (observerRef.current) observerRef.current.disconnect();
+    };
   }, []);
 
   const categories = ['Semua', ...new Set(products.map(p => p.category))].filter(Boolean);
@@ -33,6 +38,14 @@ const ProdukIndex = () => {
   const filteredProducts = activeCat === 'Semua' 
     ? products 
     : products.filter(p => p.category === activeCat);
+
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  const currentProducts = filteredProducts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 300, behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -63,7 +76,10 @@ const ProdukIndex = () => {
             {categories.map((cat) => (
               <Button
                 key={cat}
-                onClick={() => setActiveCat(cat)}
+                onClick={() => {
+                  setActiveCat(cat);
+                  setCurrentPage(1);
+                }}
                 variant={activeCat === cat ? 'solid-blue' : 'blue'}
                 className="!py-2 !px-5 !rounded-full !text-[0.75rem]"
               >
@@ -73,9 +89,9 @@ const ProdukIndex = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.5rem]">
-            {filteredProducts.map(item => (
+            {currentProducts.map(item => (
               <ProductCard 
-                key={item.id}
+                key={`${item.id}-${currentPage}`}
                 ref={addToRefs}
                 className="opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0"
                 img={item.image || 'placeholder.webp'}
@@ -87,6 +103,40 @@ const ProdukIndex = () => {
               />
             ))}
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-2 mt-[3rem]">
+              <button 
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className={`w-[40px] h-[40px] rounded-full flex items-center justify-center font-bold transition-all cursor-pointer ${currentPage === 1 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-ice text-navy hover:bg-blue hover:text-white'}`}
+              >
+                &larr;
+              </button>
+              
+              {[...Array(totalPages)].map((_, idx) => {
+                const page = idx + 1;
+                return (
+                  <button
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className={`w-[40px] h-[40px] rounded-full flex items-center justify-center font-bold transition-all cursor-pointer ${currentPage === page ? 'bg-navy text-white' : 'bg-ice text-navy hover:bg-blue hover:text-white'}`}
+                  >
+                    {page}
+                  </button>
+                );
+              })}
+
+              <button 
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className={`w-[40px] h-[40px] rounded-full flex items-center justify-center font-bold transition-all cursor-pointer ${currentPage === totalPages ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-ice text-navy hover:bg-blue hover:text-white'}`}
+              >
+                &rarr;
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
