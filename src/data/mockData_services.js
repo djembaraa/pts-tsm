@@ -2,7 +2,7 @@ export const services = [
   {
     "id": "audit",
     "slug": "audit",
-    "title": "Audit Kualitas Air Industri & Sistem RO – TSM",
+    "title": "Audit Kualitas Air & Sistem Water Treatment",
     "category": "Layanan Profesional",
     "image": "foto-mesin-swro.jpg",
     "description": "Audit kualitas air industri dan inspeksi sistem RO oleh TSM: water analysis, performance benchmarking, gap analysis, rekomendasi optimasi.",
@@ -18,7 +18,7 @@ export const services = [
   {
     "id": "darurat",
     "slug": "darurat",
-    "title": "Servis Darurat 24/7 Sistem Water Treatment – TSM",
+    "title": "Servis Darurat 24/7 Sistem Water Treatment",
     "category": "Layanan Profesional",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Servis darurat 24/7 untuk sistem RO industri Indonesia: response cepat, diagnostic remote, dispatch teknisi, perbaikan kritis untuk produksi non-stop.",
@@ -33,7 +33,7 @@ export const services = [
   {
     "id": "desain",
     "slug": "desain",
-    "title": "Layanan Desain & Engineering Sistem RO Industri – TSM",
+    "title": "Layanan Desain & Engineering Sistem Water Treatment",
     "category": "Layanan Profesional",
     "image": "foto-mesin-swro.jpg",
     "description": "Layanan desain & engineering sistem RO industri TSM: site survey, hydraulic calculation, P&ID, datasheet, BoM, dan technical spec untuk water treatment.",
@@ -52,7 +52,7 @@ export const services = [
   {
     "id": "epc",
     "slug": "epc",
-    "title": "Turnkey EPC Project Water Treatment Indonesia – TSM",
+    "title": "Turnkey EPC Project Water Treatment",
     "category": "Layanan Profesional",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Layanan EPC turnkey water treatment project Indonesia: engineering, procurement, construction, commissioning. Single point responsibility dari TSM.",
@@ -69,7 +69,7 @@ export const services = [
   {
     "id": "feasibility",
     "slug": "feasibility",
-    "title": "Studi Kelayakan Proyek Water Treatment – TSM",
+    "title": "Studi Kelayakan Proyek Water Treatment",
     "category": "Layanan Profesional",
     "image": "foto-mesin-swro.jpg",
     "description": "Studi kelayakan teknis dan ekonomi proyek RO, SWRO, ZLD, atau water reuse di Indonesia: technical assessment, financial modeling, ROI analysis.",
@@ -85,7 +85,7 @@ export const services = [
   {
     "id": "instalasi",
     "slug": "instalasi",
-    "title": "Instalasi & Komisioning Sistem RO Industri – TSM",
+    "title": "Instalasi & Komisioning Sistem RO Industri",
     "category": "Layanan Profesional",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Layanan instalasi dan komisioning sistem reverse osmosis industri Indonesia: pre-commissioning, FAT, SAT, performance test, dan training operator.",
@@ -101,7 +101,7 @@ export const services = [
   {
     "id": "maintenance",
     "slug": "maintenance",
-    "title": "Kontrak Perawatan & Maintenance Sistem RO Industri – TSM",
+    "title": "Kontrak Perawatan & Maintenance Sistem RO Industri",
     "category": "Layanan Profesional",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Layanan kontrak perawatan sistem RO industri TSM: pemeriksaan rutin, penggantian membran, kalibrasi sensor, prioritas response, dan audit kualitas air.",
@@ -116,7 +116,7 @@ export const services = [
   {
     "id": "sertifikasi",
     "slug": "sertifikasi",
-    "title": "Sertifikasi & Compliance Water Treatment Sistem – TSM",
+    "title": "Sertifikasi & Compliance Sistem Water Treatment",
     "category": "Layanan Profesional",
     "image": "foto-mesin-swro.jpg",
     "description": "Layanan sertifikasi sistem water treatment: kompatibilitas BPOM CPOB, KLHK, BKI, ISO. Validasi IQ/OQ/PQ untuk farmasi & kapal — TSM Bekasi se-Indonesia.",

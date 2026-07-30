@@ -2,7 +2,7 @@ export const portfolios = [
   {
     "id": "amdk-pabrik",
     "slug": "amdk-pabrik",
-    "title": "Portofolio AMDK — Sistem RO untuk 25+ Brand Air Minum Kemasan",
+    "title": "Portofolio AMDK & F&B — Sistem RO untuk 25+ Brand di Indonesia",
     "category": "Studi Kasus",
     "image": "porto-sosro-1.jpg",
     "description": "Portofolio TSM untuk industri Air Minum Dalam Kemasan: 25+ pabrik AMDK di seluruh Indonesia, dari Sosro, Wine Bali, hingga AMDK lokal di Aceh, NTT, Papua.",
@@ -11,7 +11,7 @@ export const portfolios = [
   {
     "id": "atma-jaya",
     "slug": "atma-jaya",
-    "title": "Studi Kasus: RO Multi-Kampus Universitas Atma Jaya – TSM",
+    "title": "Universitas Atma Jaya:RO Drinking Water & Drinking Fountain untuk Multi-Kampus",
     "category": "Studi Kasus",
     "image": "foto-mesin-swro.jpg",
     "description": "Studi kasus RO Drinking Water & Drinking Fountain untuk Universitas Atma Jaya BSD, Sudirman, dan Pluit. Air minum untuk ribuan mahasiswa & staff.",
@@ -20,7 +20,7 @@ export const portfolios = [
   {
     "id": "eka-hospital",
     "slug": "eka-hospital",
-    "title": "Studi Kasus: RO Hemodialisis Eka Hospital Cibubur – TSM",
+    "title": "Eka Hospital Cibubur & Bekasi:Sistem RO Medical-Grade untuk Layanan Hemodialisis",
     "category": "Studi Kasus",
     "image": "foto-mesin-swro.jpg",
     "description": "Studi kasus RO hemodialisis Eka Hospital Cibubur & Bekasi: air RO medical-grade untuk treatment ginjal, compliance ANSI/AAMI RD52, audit-ready.",
@@ -29,7 +29,7 @@ export const portfolios = [
   {
     "id": "halliburton",
     "slug": "halliburton",
-    "title": "Studi Kasus: UF System 47.000 LPD Halliburton Sarulla – TSM",
+    "title": "PT Halliburton Sarulla:UF System 47.000 LPD × 7 Set untuk Proyek Geothermal SUMUT",
     "category": "Studi Kasus",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Studi kasus UF System 47.000 LPD × 7 set untuk Halliburton di proyek geothermal Sarulla, Sumut — salah satu proyek UF terbesar yang TSM kerjakan.",
@@ -38,7 +38,7 @@ export const portfolios = [
   {
     "id": "kri-fleet",
     "slug": "kri-fleet",
-    "title": "Studi Kasus: SWRO 30 TPD untuk KRI Kelas Kombatan TNI AL – TSM",
+    "title": "KRI Kelas Kombatan TNI AL:Watermaker SWRO 30 TPD untuk 4 Unit Kapal Perang",
     "category": "Studi Kasus",
     "image": "porto-kri-amy-1.jpg",
     "description": "Studi kasus SWRO watermaker 30 TPD untuk KRI kelas kombatan: KRI Sultan Iskandar Muda 367, KRI Kambani, KRI TSR 542. Dipasok TSM tahun 2024.",
@@ -47,7 +47,7 @@ export const portfolios = [
   {
     "id": "kri",
     "slug": "kri",
-    "title": "Studi Kasus: SWRO Watermaker KRI AMY TNI AL – TSM",
+    "title": "Watermaker SWRO untuk Kapal Perang TNI AL:KRI AMY dan Armada Indonesia",
     "category": "Studi Kasus",
     "image": "porto-kri-amy-1.jpg",
     "description": "Studi kasus watermaker SWRO KRI TNI AL — KRI AMY Surabaya 20 TPD. TSM memasok SWRO untuk 12+ unit KRI: compact, tahan getaran, sesuai BKI.",
@@ -56,7 +56,7 @@ export const portfolios = [
   {
     "id": "pelindo",
     "slug": "pelindo",
-    "title": "Studi Kasus: SWRO 1.100 m³/hari di Pelindo Jakarta – TSM",
+    "title": "Pelindo Jakarta: Sistem SWRO 1.100 m³/hari untuk Pelabuhan Terbesar Indonesia",
     "category": "Studi Kasus",
     "image": "porto-pelindo-1.jpg",
     "description": "Studi kasus SWRO desalinasi 1.100 m³/hari untuk PT EPI–Pelindo Jakarta — salah satu instalasi SWRO terbesar yang TSM kerjakan di Indonesia.",
@@ -65,7 +65,7 @@ export const portfolios = [
   {
     "id": "pendidikan",
     "slug": "pendidikan",
-    "title": "Portofolio Pendidikan — Universitas Airlangga & Atma Jaya",
+    "title": "Portofolio Sektor Pendidikan — Air Minum Sehat untuk Kampus",
     "category": "Studi Kasus",
     "image": "foto-mesin-swro.jpg",
     "description": "Portofolio TSM untuk dunia pendidikan: RO drinking water dan drinking fountain di Universitas Airlangga (multi kampus), Atma Jaya, dan Sekolah Tinggi Sandi Negara.",
@@ -74,7 +74,7 @@ export const portfolios = [
   {
     "id": "pertambangan-energi",
     "slug": "pertambangan-energi",
-    "title": "Portofolio Pertambangan & Energi — Water Treatment untuk Tambang & PLTD",
+    "title": "Portofolio Pertambangan & Energi — WTP, BWRO & Demineralisasi",
     "category": "Studi Kasus",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Portofolio TSM untuk sektor pertambangan dan energi: WTP, BWRO, demineralisasi untuk Halliburton, Pertamina, Hillconjaya, KPUC, dan PLTD seluruh Indonesia.",
@@ -83,7 +83,7 @@ export const portfolios = [
   {
     "id": "pulau-ayer",
     "slug": "pulau-ayer",
-    "title": "Studi Kasus: SWRO 76 m³/hari Resort Pulau Ayer – TSM",
+    "title": "Resort Pulau Ayer: SWRO 76 m³/hari untuk Kemandirian Air di Kepulauan Seribu",
     "category": "Studi Kasus",
     "image": "porto-pulau-ayer-1.jpg",
     "description": "Studi kasus pembangunan sistem SWRO 76 m³/hari di Resort Pulau Ayer Kepulauan Seribu. Solusi air tawar mandiri untuk pulau resort dengan kontainer plug-and-play.",
@@ -92,7 +92,7 @@ export const portfolios = [
   {
     "id": "rumah-sakit",
     "slug": "rumah-sakit",
-    "title": "Portofolio Rumah Sakit & Hemodialisis — RO Medical Grade",
+    "title": "Portofolio Rumah Sakit & Hemodialisis — Sistem RO Medical Grade",
     "category": "Studi Kasus",
     "image": "foto-mesin-swro.jpg",
     "description": "Portofolio TSM untuk rumah sakit: RO untuk hemodialisis, sterilisasi, dan air minum di Eka Hospital, RS Melinda, RSUD Cengkareng, RSUD Cianjur, dan rumah sakit lainnya.",
@@ -101,7 +101,7 @@ export const portfolios = [
   {
     "id": "sinarmas-forestry",
     "slug": "sinarmas-forestry",
-    "title": "Studi Kasus: WTP & BWRO Sinarmas Forestry Palembang – TSM",
+    "title": "Sinarmas Forestry Group:20+ Sistem Water Treatment untuk Nursery Reforestation Palembang",
     "category": "Studi Kasus",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Studi kasus 20+ sistem WTP, Clarifier, & BWRO untuk Sinarmas Forestry Group (BAP, BMH, SBAWI) di nursery Sugihan-OKI Palembang.",
@@ -110,7 +110,7 @@ export const portfolios = [
   {
     "id": "sinarmas-group",
     "slug": "sinarmas-group",
-    "title": "Portofolio Sinarmas Forestry — BWRO Nursery Skala Besar",
+    "title": "Portofolio Sinarmas Forestry — BWRO & Clarifier untuk Nursery Skala Besar",
     "category": "Studi Kasus",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Portofolio TSM untuk grup Sinarmas Forestry: BWRO & clarifier untuk nursery skala besar di Palembang & Kalimantan. Total 15+ unit RO 15-20 m³/jam.",
@@ -119,7 +119,7 @@ export const portfolios = [
   {
     "id": "sosro",
     "slug": "sosro",
-    "title": "Studi Kasus: BWRO + UF 30 m³/jam di PT Sosro – TSM",
+    "title": "PT Sosro: BWRO + UF 30 m³/jam untuk Industri Minuman Berskala Nasional",
     "category": "Studi Kasus",
     "image": "porto-sosro-1.jpg",
     "description": "Studi kasus pembangunan sistem BWRO + UF 30 m³/jam untuk produksi minuman teh botol di pabrik PT Sosro. Air proses food-grade konsisten untuk lini produksi 24/7.",
@@ -128,7 +128,7 @@ export const portfolios = [
   {
     "id": "tni-al",
     "slug": "tni-al",
-    "title": "Portofolio TNI AL — SWRO Watermaker untuk KRI & Pangkalan",
+    "title": "Portofolio TNI AL — Watermaker SWRO untuk KRI & Pangkalan",
     "category": "Studi Kasus",
     "image": "porto-kri-amy-1.jpg",
     "description": "Portofolio TSM untuk TNI AL: SWRO watermaker untuk 15+ unit KRI, pangkalan, dan Dislitbang TNI. Compact, tahan getaran, sesuai standar BKI.",
@@ -137,7 +137,7 @@ export const portfolios = [
   {
     "id": "wine-bali",
     "slug": "wine-bali",
-    "title": "Studi Kasus: RO Food-Grade Pabrik Wine Bali – TSM",
+    "title": "Pabrik Wine Bali:Sistem RO Food-Grade untuk Produksi Wine Premium di Gianyar & Singaraja",
     "category": "Studi Kasus",
     "image": "foto-pemasangan-sosro.jpg",
     "description": "Studi kasus RO food-grade untuk pabrik wine Bali: PT Karya Bali Indah Gianyar (5 m³/jam) & PT Balindo Mitra Perkasa Singaraja (2,5 m³/jam).",

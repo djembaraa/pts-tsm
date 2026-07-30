@@ -2,7 +2,7 @@ export const industries = [
   {
     "id": "agrikultur",
     "slug": "agrikultur",
-    "title": "Water Treatment Hidroponik, Hatchery & Perkebunan – TSM",
+    "title": "Water Treatment untuk Hidroponik, Hatchery, & Perkebunan",
     "category": "Sektor Industri",
     "image": "foto-mesin-swro.jpg",
     "description": "Water treatment agrikultur Indonesia: hidroponik komersial, hatchery udang/perikanan, irigasi perkebunan, sistem RO multi-site untuk reforestation.",
@@ -11,7 +11,7 @@ export const industries = [
   {
     "id": "farmasi",
     "slug": "farmasi",
-    "title": "Sistem PW & WFI Farmasi: RO+EDI CPOB BPOM – TSM",
+    "title": "Sistem Air Farmasi: Purified Water, WFI & Pure Steam",
     "category": "Sektor Industri",
     "image": "foto-mesin-swro.jpg",
     "description": "Sistem Purified Water, WFI, dan Pure Steam untuk industri farmasi Indonesia. Standar CPOB BPOM, USP, EP, JP. Validasi IQ/OQ/PQ & sertifikasi lengkap.",
@@ -26,7 +26,7 @@ export const industries = [
   {
     "id": "hotel",
     "slug": "hotel",
-    "title": "Water Treatment Hotel & Resort: SWRO Desalinasi – TSM",
+    "title": "Water Treatment untuk Hotel & Resort",
     "category": "Sektor Industri",
     "image": "foto-mesin-swro.jpg",
     "description": "Sistem RO untuk hotel berbintang, resort pantai, dan resort kepulauan. SWRO desalinasi air laut untuk pulau terpencil dan kawasan wisata di seluruh Indonesia.",
@@ -46,7 +46,7 @@ export const industries = [
   {
     "id": "manufaktur",
     "slug": "manufaktur",
-    "title": "RO Industri Manufaktur Bekasi",
+    "title": "Water Treatment untuk Industri Manufaktur",
     "category": "Sektor Industri",
     "image": "foto-mesin-swro.jpg",
     "description": "Solusi water treatment untuk industri manufaktur: boiler feed water, cooling tower, air proses. Sistem RO industri Bekasi, Karawang, Cikarang dan seluruh Indonesia.",
@@ -66,7 +66,7 @@ export const industries = [
   {
     "id": "maritim",
     "slug": "maritim",
-    "title": "SWRO Kapal & Maritim: RO Marine Sertifikasi BKI – TSM",
+    "title": "SWRO Marine untuk Kapal & Industri Maritim",
     "category": "Sektor Industri",
     "image": "foto-mesin-swro.jpg",
     "description": "Sistem SWRO marine untuk kapal niaga, kapal perang KRI, kapal offshore, dan rig pengeboran. Sertifikasi BKI, ABS, DNV. TSM telah memasok puluhan kapal di Indonesia.",
@@ -88,7 +88,7 @@ export const industries = [
   {
     "id": "pltu",
     "slug": "pltu",
-    "title": "Water Treatment PLTU: Demin RO+EDI Boiler Feed – TSM",
+    "title": "Water Treatment untuk PLTU & Pembangkit Listrik",
     "category": "Sektor Industri",
     "image": "foto-mesin-swro.jpg",
     "description": "Sistem demineralisasi RO+EDI untuk PLTU dan pembangkit listrik. Boiler feed water, cooling tower makeup, demin plant Indonesia. Standar ASME & IAPWS.",
@@ -105,7 +105,7 @@ export const industries = [
   {
     "id": "properti",
     "slug": "properti",
-    "title": "Water Treatment Apartemen, Gedung & Properti – TSM",
+    "title": "Water Treatment untuk Apartemen, Gedung Perkantoran & Properti",
     "category": "Sektor Industri",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Sistem RO, drinking water, dan STP untuk apartemen, gedung perkantoran, dan kompleks properti. Solusi end-to-end dari TSM untuk developer dan property manager.",
@@ -120,7 +120,7 @@ export const industries = [
   {
     "id": "rs",
     "slug": "rs",
-    "title": "RO Hemodialisis & Sistem Air Rumah Sakit – TSM",
+    "title": "RO Hemodialisis & Water Treatment Rumah Sakit",
     "category": "Sektor Industri",
     "image": "foto-mesin-swro.jpg",
     "description": "Sistem RO hemodialisis sesuai ANSI/AAMI RD52 untuk rumah sakit dan klinik dialisis di Indonesia. Validasi IQ/OQ/PQ dengan dokumentasi akreditasi KARS & JCI.",

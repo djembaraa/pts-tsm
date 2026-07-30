@@ -2,7 +2,7 @@ export const articles = [
   {
     "id": "5-kesalahan-perawatan-ro",
     "slug": "5-kesalahan-perawatan-ro",
-    "title": "5 Kesalahan Perawatan Membran RO – PT Tirta Sumber Makmur",
+    "title": "5 Kesalahan Umum Perawatan Membran ROyang Perlu Dihindari",
     "category": "Edukasi",
     "image": "porto-sosro-1.jpg",
     "description": "5 kesalahan umum dalam perawatan membran Reverse Osmosis yang harus dihindari. Tips dari tim teknis TSM untuk memaksimalkan usia pakai membran RO Anda.",
@@ -11,7 +11,7 @@ export const articles = [
   {
     "id": "air-farmasi-ro-edi",
     "slug": "air-farmasi-ro-edi",
-    "title": "Standar Air Farmasi Indonesia: RO + EDI CPOB BPOM – TSM",
+    "title": "Standar Kualitas Air untuk Industri Farmasi:Mengapa RO + EDI Wajib?",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Mengapa industri farmasi Indonesia wajib gunakan RO + EDI. Standar BPOM CPOB, USP, Ph.Eur untuk Purified Water dan WFI. Panduan lengkap dari TSM.",
@@ -20,7 +20,7 @@ export const articles = [
   {
     "id": "biaya-instalasi-ro-industri",
     "slug": "biaya-instalasi-ro-industri",
-    "title": "Biaya Instalasi Sistem RO Industri di Indonesia 2026 – TSM",
+    "title": "Biaya Instalasi Sistem RO Industri di Indonesia 2026",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Breakdown biaya sistem RO industri di Indonesia: capex, opex, payback. Range Rp 250 juta hingga Rp 8 miliar tergantung kapasitas dan kompleksitas.",
@@ -29,7 +29,7 @@ export const articles = [
   {
     "id": "cara-pilih-vendor-water-treatment",
     "slug": "cara-pilih-vendor-water-treatment",
-    "title": "Cara Memilih Vendor Water Treatment Industri – TSM",
+    "title": "Cara Memilih Vendor Water Treatment Industri",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Panduan lengkap memilih vendor water treatment industri di Indonesia. 8 kriteria penting: pengalaman, sertifikasi, after-sales, harga, dan checklist evaluasi.",
@@ -38,7 +38,7 @@ export const articles = [
   {
     "id": "desalinasi-pulau-terpencil",
     "slug": "desalinasi-pulau-terpencil",
-    "title": "Desalinasi Pulau Terpencil Indonesia: Solusi & Program BSPS – TSM",
+    "title": "Desalinasi untuk Pulau Terpencil Indonesia:Solusi Teknis dan Program Pemerintah",
     "category": "Edukasi",
     "image": "porto-pulau-ayer-1.jpg",
     "description": "Desalinasi air laut untuk pulau terpencil Indonesia: solusi SWRO kontainer, program BSPS, dan studi kasus Kepulauan Seribu hingga NTT.",
@@ -54,7 +54,7 @@ export const articles = [
   {
     "id": "desalinasi-solusi-pulau",
     "slug": "desalinasi-solusi-pulau",
-    "title": "Desalinasi SWRO untuk Pulau Terpencil Indonesia – TSM",
+    "title": "Desalinasi Air Laut: Solusi Krisis Air Bersihdi Pulau-Pulau Terpencil Indonesia",
     "category": "Edukasi",
     "image": "porto-pulau-ayer-1.jpg",
     "description": "SWRO sebagai solusi krisis air bersih di kepulauan Indonesia. Biaya, teknologi, dan pengalaman lapangan TSM. Investasi mulai Rp 500 juta untuk komunitas kecil.",
@@ -63,7 +63,7 @@ export const articles = [
   {
     "id": "jadwal-perawatan-ro",
     "slug": "jadwal-perawatan-ro",
-    "title": "Jadwal Perawatan Sistem RO Industri Lengkap – TSM",
+    "title": "Jadwal Perawatan Sistem RO Industri yang Lengkap",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Jadwal perawatan harian, mingguan, bulanan, dan tahunan untuk sistem RO industri. Checklist preventive maintenance untuk umur sistem optimal.",
@@ -72,7 +72,7 @@ export const articles = [
   {
     "id": "kapasitas-swro-resort",
     "slug": "kapasitas-swro-resort",
-    "title": "Kapasitas SWRO untuk Resort Kepulauan: Cara Menghitungnya – TSM",
+    "title": "Berapa Kapasitas SWRO yang Dibutuhkanuntuk Resort Kepulauan 100 Kamar?",
     "category": "Edukasi",
     "image": "porto-pulau-ayer-1.jpg",
     "description": "Cara menghitung kapasitas SWRO untuk resort kepulauan: konsumsi per tamu, peak demand, buffer storage. Studi kasus resort 100 kamar.",
@@ -88,7 +88,7 @@ export const articles = [
   {
     "id": "monitoring-kualitas-air-ro",
     "slug": "monitoring-kualitas-air-ro",
-    "title": "Cara Monitoring Kualitas Air RO Mandiri",
+    "title": "Cara Monitoring Kualitas Air OutputSistem RO Secara Mandiri",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Panduan praktis memantau sistem RO secara mandiri: TDS meter, rejection rate, normalisasi data. Deteksi masalah lebih awal, hemat biaya perawatan.",
@@ -97,7 +97,7 @@ export const articles = [
   {
     "id": "perbandingan-membran-dow-toray",
     "slug": "perbandingan-membran-dow-toray",
-    "title": "Perbandingan Membran Dow Filmtec vs Toray untuk Indonesia – TSM",
+    "title": "Membran RO Dow Filmtec vs Toray:Perbandingan untuk Aplikasi Indonesia",
     "category": "Edukasi",
     "image": "produk-ro-industri.jpg",
     "description": "Perbandingan teknis membran RO Dow Filmtec vs Toray: karakteristik, ketahanan klorin, harga, dan rekomendasi untuk SWRO, BWRO, TWRO Indonesia.",
@@ -118,7 +118,7 @@ export const articles = [
   {
     "id": "perbedaan-swro-bwro-twro",
     "slug": "perbedaan-swro-bwro-twro",
-    "title": "Perbedaan SWRO, BWRO, dan TWRO: Mana yang Tepat untuk Anda? – TSM",
+    "title": "Perbedaan SWRO, BWRO, dan TWRO:Mana yang Tepat untuk Kebutuhan Anda?",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Perbedaan SWRO (Sea Water RO), BWRO (Brackish Water), dan TWRO (Tap Water): spesifikasi teknis, aplikasi, biaya, dan cara memilih yang tepat.",
@@ -157,7 +157,7 @@ export const articles = [
   {
     "id": "pompa-tekanan-tinggi-ro",
     "slug": "pompa-tekanan-tinggi-ro",
-    "title": "Cara Memilih Pompa Tekanan Tinggi untuk Sistem RO Industri – TSM",
+    "title": "Cara Memilih Pompa Tekanan Tinggiuntuk Sistem RO Industri",
     "category": "Edukasi",
     "image": "foto-bengkel.jpg",
     "description": "Cara memilih high-pressure pump untuk RO industri: jenis pompa (centrifugal, plunger, axial piston), sizing flow & tekanan, ERD integration.",
@@ -166,7 +166,7 @@ export const articles = [
   {
     "id": "ro-hotel-resort",
     "slug": "ro-hotel-resort",
-    "title": "Mengapa Hotel Berbintang Wajib RO – PT Tirta Sumber Makmur",
+    "title": "Mengapa Hotel Berbintang WajibMenggunakan Sistem RO?",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Standar kualitas air hotel berbintang sangat tinggi, mulai dari air minum, laundry, hingga kolam renang. Pelajari mengapa sistem Reverse Osmosis menjadi jawabannya.",
@@ -175,7 +175,7 @@ export const articles = [
   {
     "id": "ro-kapal-offshore",
     "slug": "ro-kapal-offshore",
-    "title": "Sistem SWRO Marine untuk Kapal & Offshore Indonesia – TSM",
+    "title": "Sistem RO untuk Kapal dan Platform Offshore:Solusi Air Tawar di Laut",
     "category": "Edukasi",
     "image": "porto-kapal-prima-1.jpg",
     "description": "Sistem RO compact marine-grade untuk kapal dan platform offshore. Sertifikasi BKI, DNV. Referensi KRI dan Wintermar. Marine Specialist TSM siap konsultasi.",
@@ -184,7 +184,7 @@ export const articles = [
   {
     "id": "ro-kapal-perang-bki",
     "slug": "ro-kapal-perang-bki",
-    "title": "RO untuk Kapal Perang & Vessel Offshore: Standar BKI – TSM",
+    "title": "RO untuk Kapal Perang & Vessel Offshore:Memenuhi Standar BKI dan SOLAS",
     "category": "Edukasi",
     "image": "porto-kri-amy-1.jpg",
     "description": "Sistem RO kapal perang TNI AL & vessel offshore: persyaratan BKI, SOLAS, IMO, material marine-grade, dan studi kasus watermaker di Indonesia.",
@@ -204,7 +204,7 @@ export const articles = [
   {
     "id": "ro-prinsip-kerja",
     "slug": "ro-prinsip-kerja",
-    "title": "Mengenal Teknologi Reverse Osmosis – PT Tirta Sumber Makmur",
+    "title": "Mengenal Teknologi Reverse Osmosis:Prinsip Kerja dan Keunggulannya",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Panduan lengkap memahami cara kerja sistem Reverse Osmosis, komponen utama, dan mengapa RO menjadi standar emas pengolahan air industri global.",
@@ -213,7 +213,7 @@ export const articles = [
   {
     "id": "standar-air-farmasi-bpom",
     "slug": "standar-air-farmasi-bpom",
-    "title": "Standar Air Farmasi BPOM CPOB: RO+EDI untuk PW & WFI – TSM",
+    "title": "Standar Air Farmasi Indonesia:RO+EDI untuk Memenuhi BPOM CPOB",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Standar air farmasi Indonesia: pedoman CPOB BPOM 2018, USP, EP, JP. Spesifikasi PW, WFI, Pure Steam. RO+EDI sebagai standar emas & validasi.",
@@ -229,7 +229,7 @@ export const articles = [
   {
     "id": "studi-kasus-ro-tekstil",
     "slug": "studi-kasus-ro-tekstil",
-    "title": "Studi Kasus RO 200 m³/hari Pabrik Tekstil Karawang – TSM",
+    "title": "Studi Kasus: Sistem RO 200 m³/haridi Pabrik Tekstil Karawang",
     "category": "Edukasi",
     "image": "porto-sosro-1.jpg",
     "description": "Studi kasus nyata: sistem RO industri berhasil hemat 70% air PDAM di pabrik tekstil Karawang. ROI 20 bulan. Penghematan Rp 80 juta/bulan.",
@@ -238,7 +238,7 @@ export const articles = [
   {
     "id": "water-treatment-kalimantan",
     "slug": "water-treatment-kalimantan",
-    "title": "Water Treatment Air Gambut Kalimantan: Tantangan & Solusi – TSM",
+    "title": "Water Treatment Air Gambut Kalimantan:Tantangan dan Solusi Teknologis",
     "category": "Edukasi",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Cara mengolah air gambut Kalimantan jadi air bersih layak minum/industri: karakteristik, tantangan TOC tinggi, solusi RO+UF dengan pre-oksidasi.",
@@ -258,7 +258,7 @@ export const articles = [
   {
     "id": "water-treatment-pltu",
     "slug": "water-treatment-pltu",
-    "title": "Water Treatment PLTU: Boiler Feed Water & Cooling Tower – TSM",
+    "title": "Water Treatment untuk PLTU:Boiler Feed Water & Cooling Tower",
     "category": "Edukasi",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Water treatment PLTU: spesifikasi boiler feed water per tekanan operasi, RO+EDI vs demineralisasi, dan optimasi cooling tower cycle of concentration.",
@@ -276,7 +276,7 @@ export const articles = [
   {
     "id": "zld-tekstil",
     "slug": "zld-tekstil",
-    "title": "ZLD Tekstil: Compliance KLHK & Daur Ulang Air – TSM",
+    "title": "ZLD untuk Industri Tekstil:Solusi Compliance dan Daur Ulang Air",
     "category": "Edukasi",
     "image": "foto-pemasangan-lapangan.jpg",
     "description": "Implementasi Zero Liquid Discharge (ZLD) pabrik tekstil Indonesia: tahapan teknis, biaya investasi, ROI, & compliance KLHK Permen 5/2014.",
@@ -297,7 +297,7 @@ export const articles = [
   {
     "id": "zld-zero-liquid",
     "slug": "zld-zero-liquid",
-    "title": "Zero Liquid Discharge (ZLD) – PT Tirta Sumber Makmur",
+    "title": "Zero Liquid Discharge (ZLD):Masa Depan Pengelolaan Air Limbah Industri",
     "category": "Edukasi",
     "image": "foto-mesin-swro.jpg",
     "description": "Zero Liquid Discharge (ZLD) adalah konsep industri mendaur ulang 100% air limbah. Pelajari teknologi, manfaat, dan implementasi ZLD untuk industri Indonesia.",

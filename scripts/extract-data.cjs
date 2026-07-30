@@ -17,8 +17,8 @@ function extractCategoryFiles(prefix) {
     
     const slug = file.replace('.html', '').replace(prefix + '-', '');
     
-    // Title is usually in .prod-hero, .cs-hero h1, or title
-    let title = $('.prod-hero, .cs-hero h1').first().text().trim();
+    // Title is usually in .page-hero h1, .cs-hero h1, or title
+    let title = $('.page-hero h1, .cs-hero h1').first().text().trim();
     if (!title) {
        title = $('title').first().text().trim().split('|')[0].trim();
     }
@@ -50,18 +50,57 @@ function extractCategoryFiles(prefix) {
 
     // Content extraction
     let content = '';
-    const mainArea = $('.container .grid > div').first();
-    if (mainArea.length && !mainArea.hasClass('sidebar-box')) {
-       // if there is a grid, the first div is usually the main content
-       const cloned = mainArea.clone();
-       cloned.find('.prod-hero, .spec-table, h2:contains("Spesifikasi Teknis")').remove(); 
-       content = cloned.html();
-    } else if ($('.prod-content').length) content = $('.prod-content').html();
-    else if ($('.cs-content').length) content = $('.cs-content').html();
-    else if ($('.article-content').length) content = $('.article-content').html();
-    else if ($('article').length) content = $('article').html();
-    else if ($('.container main').length) content = $('.container main').html();
-    else content = $('main').html() || '';
+    const gridArea = $('.container .grid > div').first();
+    const prodLayoutArea = $('.prod-layout > div').first();
+    
+    let cloned = null;
+    if (prodLayoutArea.length && !prodLayoutArea.hasClass('prod-sticky')) {
+       cloned = prodLayoutArea.clone();
+    } else if (gridArea.length && !gridArea.hasClass('sidebar-box')) {
+       cloned = gridArea.clone();
+    } else if ($('.prod-content').length) {
+       cloned = $('.prod-content').clone();
+    } else if ($('.cs-content').length) {
+       cloned = $('.cs-content').clone();
+    } else if ($('.article-content').length) {
+       cloned = $('.article-content').clone();
+    } else if ($('article').length) {
+       cloned = $('article').clone();
+    } else if ($('.container main').length) {
+       cloned = $('.container main').clone();
+    } else {
+       cloned = $('main').clone();
+    }
+
+    const faqs = [];
+    if (cloned) {
+      cloned.find('.prod-hero').remove(); 
+      
+      // Find FAQ section
+      const faqH2 = cloned.find('h2:contains("Pertanyaan yang Sering Ditanyakan")');
+      if (faqH2.length) {
+        const faqDiv = faqH2.next('div.reveal');
+        if (faqDiv.length) {
+           faqDiv.find('h3').each((i, el) => {
+             const question = $(el).text().trim();
+             let answer = '';
+             let nextEl = $(el).next();
+             while (nextEl.length && nextEl[0].name !== 'h3') {
+               // extract outerHTML of answer elements
+               answer += $.html(nextEl);
+               nextEl = nextEl.next();
+             }
+             if (question && answer) {
+               faqs.push({ question, answer });
+             }
+           });
+           faqH2.remove();
+           faqDiv.remove();
+        }
+      }
+      
+      content = cloned.html() || '';
+    }
 
     // Clean up content HTML to remove scripts, styles, and unwanted wrappers
     if (content) {
@@ -79,6 +118,7 @@ function extractCategoryFiles(prefix) {
       image,
       description,
       specs: specs.length ? specs : undefined,
+      faqs: faqs.length ? faqs : undefined,
       content
     });
   }

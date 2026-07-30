@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Trophy, Microscope, Wrench, Focus, Leaf, ScrollText, Droplet, Waves, Building2, Droplets, Ship, Settings, Factory, Calendar, Clock, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import ClientMarquee from '../components/ui/ClientMarquee';
 import ProductCard from '../components/ui/ProductCard';
+import ArticleCard from '../components/ui/ArticleCard';
 import Button from '../components/ui/Button';
 
   const Home = () => {
@@ -162,12 +163,12 @@ import Button from '../components/ui/Button';
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
             {[
-              { img: 'foto-mesin-swro.jpg', cat: 'Reverse Osmosis', title: 'Sistem RO Industri', desc: 'Kapasitas 1–500 m³/hari untuk pabrik, pembangkit listrik, dan fasilitas industri besar yang butuh air proses berkualitas tinggi.', url: '/produk/ro-industri' },
-              { img: 'porto-pelindo-1.jpg', cat: 'Desalinasi', title: 'SWRO — Desalinasi Air Laut', desc: 'Sea Water Reverse Osmosis berkapasitas tinggi untuk kepulauan, resort pesisir, dan industri maritim.', url: '/produk/desalinasi' },
-              { img: 'produk-ro-9m3-a.jpg', cat: 'Komersial', title: 'RO Gedung & Hotel', desc: 'Sistem RO terintegrasi untuk gedung bertingkat, hotel berbintang, pusat perbelanjaan, dan rumah sakit.', url: '/produk/ro-komersial' },
-              { img: 'porto-sosro-5.jpg', cat: 'Ultrafiltrasi', title: 'Sistem UF & MF', desc: 'Penyaringan Ultrafiltration dan Microfiltration sebagai pre-treatment RO maupun unit pengolahan air mandiri.', url: '/produk/uf' },
-              { img: 'porto-kontainer-1.jpg', cat: 'Mobile / Portable', title: 'RO Mobile — Sistem Kontainer', desc: 'Unit RO dalam kontainer atau mobile yang dapat dipindah, ideal untuk offshore, kepulauan, dan lokasi terpencil.', url: '/produk/ro-mobile' },
-              { img: 'foto-bengkel.jpg', cat: 'Produksi & Workshop', title: 'Bengkel Produksi TSM', desc: 'Setiap sistem dirancang, dirakit, dan diuji di bengkel sendiri di Bekasi sebelum dikirim ke lokasi klien.', url: '/tentang' }
+              { img: 'foto-mesin-swro.jpg', cat: 'Reverse Osmosis', title: 'Sistem RO Industri', desc: 'Kapasitas 1–500 m³/hari untuk pabrik, pembangkit listrik, dan fasilitas industri besar yang butuh air proses berkualitas tinggi.', url: '/produk/ro-industri', specs: ['1-500 m³/hari', 'RO Membrane', 'Otomasi PLC'] },
+              { img: 'porto-pelindo-1.jpg', cat: 'Desalinasi', title: 'SWRO — Desalinasi Air Laut', desc: 'Sea Water Reverse Osmosis berkapasitas tinggi untuk kepulauan, resort pesisir, dan industri maritim.', url: '/produk/desalinasi', specs: ['TDS > 10.000 ppm', 'Anti-Korosi', 'High Recovery'] },
+              { img: 'produk-ro-9m3-a.jpg', cat: 'Komersial', title: 'RO Gedung & Hotel', desc: 'Sistem RO terintegrasi untuk gedung bertingkat, hotel berbintang, pusat perbelanjaan, dan rumah sakit.', url: '/produk/ro-komersial', specs: ['Hemat Ruang', 'Rendah Bising', 'Skid Mounted'] },
+              { img: 'porto-sosro-5.jpg', cat: 'Ultrafiltrasi', title: 'Sistem UF & MF', desc: 'Penyaringan Ultrafiltration dan Microfiltration sebagai pre-treatment RO maupun unit pengolahan air mandiri.', url: '/produk/uf', specs: ['0.01 Mikron', 'Pre-treatment', 'Self-cleaning'] },
+              { img: 'porto-kontainer-1.jpg', cat: 'Mobile / Portable', title: 'RO Mobile — Sistem Kontainer', desc: 'Unit RO dalam kontainer atau mobile yang dapat dipindah, ideal untuk offshore, kepulauan, dan lokasi terpencil.', url: '/produk/ro-mobile', specs: ['Plug & Play', 'Kontainer 20/40ft', 'Customizable'] },
+              { img: 'foto-bengkel.jpg', cat: 'Produksi & Workshop', title: 'Bengkel Produksi TSM', desc: 'Setiap sistem dirancang, dirakit, dan diuji di bengkel sendiri di Bekasi sebelum dikirim ke lokasi klien.', url: '/tentang', specs: ['In-house', 'Quality Control', 'Skid-Mounted'] }
             ].map((pc, idx) => (
               <ProductCard 
                 key={idx}
@@ -269,31 +270,16 @@ import Button from '../components/ui/Button';
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
             {[
-              { cat: 'Teknologi', img: 'foto-mesin-swro.jpg', bg: 'from-[#054a6e] to-[#1e90d6]', date: '28 Maret 2025', read: '5 menit baca', title: 'Mengenal Teknologi Reverse Osmosis: Prinsip Kerja dan Keunggulannya', desc: 'RO menggunakan tekanan tinggi untuk memaksa air melewati membran semi-permeabel, menyisihkan kontaminan hingga 99%. Simak cara kerjanya secara mendalam.', url: '/artikel/ro-prinsip-kerja', author: 'Tim TSM' },
-              { cat: 'Desalinasi', img: 'porto-pulau-ayer-1.jpg', bg: 'from-[#0a2240] to-[#0d5fa8]', date: '15 Maret 2025', read: '6 menit baca', title: 'Desalinasi Air Laut: Solusi Krisis Air Bersih di Pulau-Pulau Terpencil', desc: 'Kawasan pesisir dan kepulauan Indonesia menghadapi tantangan air tawar yang serius. Sistem SWRO hadir sebagai jawaban yang kini semakin terjangkau.', url: '/artikel/desalinasi-solusi-pulau', author: 'Tim TSM' },
-              { cat: 'Perawatan', img: 'porto-sosro-1.jpg', bg: 'from-[#1a3a5c] to-[#1e90d6]', date: '5 Maret 2025', read: '4 menit baca', title: '5 Kesalahan Umum Perawatan Membran RO yang Perlu Dihindari', desc: 'Membran RO adalah komponen paling kritis sekaligus mahal. Kenali kesalahan umum dan cara mencegahnya untuk memaksimalkan usia pakai membran.', url: '/artikel/5-kesalahan-perawatan-ro', author: 'Tim Teknis TSM' }
+              { cat: 'Teknologi', img: 'foto-mesin-swro.jpg', bg: 'from-[#054a6e] to-[#1e90d6]', date: '28 Maret 2025', read: '5 menit baca', title: 'Mengenal Teknologi Reverse Osmosis: Prinsip Kerja dan Keunggulannya', desc: 'RO menggunakan tekanan tinggi untuk memaksa air melewati membran semi-permeabel, menyisihkan kontaminan hingga 99%. Simak cara kerjanya secara mendalam.', url: '/artikel/ro-prinsip-kerja', author: 'Tim TSM', tags: ['Teknologi RO', 'Membran', 'Edukasi'] },
+              { cat: 'Desalinasi', img: 'porto-pulau-ayer-1.jpg', bg: 'from-[#0a2240] to-[#0d5fa8]', date: '15 Maret 2025', read: '6 menit baca', title: 'Desalinasi Air Laut: Solusi Krisis Air Bersih di Pulau-Pulau Terpencil', desc: 'Kawasan pesisir dan kepulauan Indonesia menghadapi tantangan air tawar yang serius. Sistem SWRO hadir sebagai jawaban yang kini semakin terjangkau.', url: '/artikel/desalinasi-solusi-pulau', author: 'Tim TSM', tags: ['SWRO', 'Maritim', 'Krisis Air'] },
+              { cat: 'Perawatan', img: 'porto-sosro-1.jpg', bg: 'from-[#1a3a5c] to-[#1e90d6]', date: '5 Maret 2025', read: '4 menit baca', title: '5 Kesalahan Umum Perawatan Membran RO yang Perlu Dihindari', desc: 'Membran RO adalah komponen paling kritis sekaligus mahal. Kenali kesalahan umum dan cara mencegahnya untuk memaksimalkan usia pakai membran.', url: '/artikel/5-kesalahan-perawatan-ro', author: 'Tim Teknis TSM', tags: ['Maintenance', 'Tips', 'Operasional'] }
             ].map((art, idx) => (
-              <div key={idx} ref={addToRefs} className="bg-white border border-border rounded-[10px] overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] hover:border-accent group opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0">
-                <div className={`h-[192px] bg-gradient-to-br ${art.bg} relative overflow-hidden shrink-0`}>
-                  <img src={`/images/${art.img}`} alt={art.cat} className="w-full h-full object-cover opacity-70 transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                  <span className="absolute top-[0.88rem] left-[0.88rem] bg-accent text-white text-[0.62rem] font-bold tracking-[0.1em] uppercase py-[0.26rem] px-[0.68rem] rounded-[4px] z-10">{art.cat}</span>
-                </div>
-                <div className="p-[1.25rem] flex-1 flex flex-col">
-                  <div className="text-[0.72rem] text-muted mb-[0.52rem] flex items-center gap-[0.35rem]">
-                    <Calendar size={13} className="text-accent" /> {art.date} &nbsp;·&nbsp; <Clock size={13} className="text-accent" /> {art.read}
-                  </div>
-                  <h3 className="text-[0.96rem] font-bold text-navy leading-[1.42] mb-[0.52rem]">
-                    <Link to={art.url} className="hover:text-blue transition-colors">{art.title}</Link>
-                  </h3>
-                  <p className="text-[0.83rem] text-muted leading-[1.65] flex-1">{art.desc}</p>
-                </div>
-                <div className="flex items-center justify-between p-[0.82rem_1.25rem] border-t border-border mt-auto">
-                  <span className="text-[0.72rem] text-muted font-medium flex items-center gap-[0.25rem]">
-                    <User size={13} /> {art.author}
-                  </span>
-                  <Link to={art.url} className="text-[0.72rem] font-bold text-blue tracking-[0.05em] uppercase flex items-center gap-[0.28rem] transition-all duration-300 group-hover:gap-[0.52rem]">Baca &rarr;</Link>
-                </div>
-              </div>
+              <ArticleCard 
+                key={idx}
+                ref={addToRefs}
+                className="opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0"
+                {...art}
+              />
             ))}
           </div>
           

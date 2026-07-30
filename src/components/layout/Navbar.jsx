@@ -234,9 +234,11 @@ const Navbar = () => {
 
           {/* CTA & Hamburger */}
           <div className="flex items-center gap-3 shrink-0">
-            <Button to="/kontak" variant="solid-blue" className="hidden lg:inline-flex px-[1.2rem] py-[0.65rem] text-[0.78rem]" icon={<Phone size={16} />}>
-              Konsultasi Gratis
-            </Button>
+            <div className="hidden lg:block">
+              <Button to="/kontak" variant="solid-blue" className="px-[1.2rem] py-[0.65rem] text-[0.78rem]" icon={<Phone size={16} />}>
+                Konsultasi Gratis
+              </Button>
+            </div>
             <button 
               className="lg:hidden flex flex-col items-center justify-center p-2 cursor-pointer shrink-0 text-navy hover:text-blue transition-colors" 
               onClick={() => setIsMobileMenuOpen(true)}
@@ -270,7 +272,13 @@ const Navbar = () => {
             <Link to="/kontak" onClick={() => setIsMobileMenuOpen(false)} className="block py-4 border-b border-white/10 text-white/90 text-lg font-bold hover:text-accent hover:pl-2 transition-all">Kontak</Link>
           </div>
           
-          <div className="mt-10 pt-8 border-t border-white/10">
+          <div className="mt-8">
+            <Button to="/kontak" variant="solid-blue" className="w-full justify-center" onClick={() => setIsMobileMenuOpen(false)} icon={<Phone size={18} />}>
+              Konsultasi Gratis
+            </Button>
+          </div>
+
+          <div className="mt-8 pt-8 border-t border-white/10">
             <p className="text-white/60 text-sm mb-4">Hubungi Kami:</p>
             <a href={CONTACT_INFO.phone1Link} className="text-accent text-xl font-bold block mb-2">{CONTACT_INFO.phone1}</a>
             <a href={CONTACT_INFO.emailLink} className="text-white/80 block">{CONTACT_INFO.email}</a>

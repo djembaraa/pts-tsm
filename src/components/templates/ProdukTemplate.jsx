@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import RichText from '../ui/RichText';
+import Accordion from '../ui/Accordion';
+import ProductCard from '../ui/ProductCard';
+import { products } from '../../data/mockData_products';
 
 const ProdukTemplate = ({ data }) => {
   return (
@@ -33,6 +36,10 @@ const ProdukTemplate = ({ data }) => {
               )}
               
               <RichText content={data.content} />
+              
+              {data.faqs && data.faqs.length > 0 && (
+                <Accordion items={data.faqs} />
+              )}
             </div>
 
             <aside className="lg:sticky lg:top-[120px]">
@@ -48,7 +55,7 @@ const ProdukTemplate = ({ data }) => {
                 </ul>
               </div>
               
-              <div className="bg-gradient-to-br from-gray to-white border border-border rounded-2xl p-6 text-center">
+              <div className="bg-gradient-to-br from-gray to-white border border-border rounded-2xl p-6 text-center mb-6">
                 <h4 className="font-bold text-navy mb-2">Tertarik dengan produk ini?</h4>
                 <p className="text-sm text-muted mb-4">Tim ahli kami siap membantu mencarikan solusi terbaik untuk kebutuhan Anda.</p>
                 <Link to="/kontak" className="block w-full py-3 bg-blue text-white font-bold rounded-lg hover:bg-navy transition-colors mb-3">
@@ -57,6 +64,27 @@ const ProdukTemplate = ({ data }) => {
                 <a href="https://wa.me/62818719119" className="block w-full py-3 bg-white border-2 border-blue text-blue font-bold rounded-lg hover:bg-blue hover:text-white transition-colors">
                   WhatsApp Kami
                 </a>
+              </div>
+
+              <div className="bg-transparent mt-8">
+                <h3 className="font-condensed text-xl font-bold text-navy mb-5 border-b border-border pb-3 uppercase tracking-wider">Produk Terkait</h3>
+                <div className="flex flex-col gap-6">
+                  {products
+                    .filter(p => p.category === data.category && p.slug !== data.slug)
+                    .slice(0, 5)
+                    .map((related, i) => (
+                      <ProductCard
+                        key={i}
+                        img={related.image}
+                        badge="TERKAIT"
+                        cat={related.category}
+                        title={related.title}
+                        desc={related.description?.substring(0, 80) + '...'}
+                        specs={related.specs ? related.specs.slice(0, 3).map(s => s.split(':')[0]) : []}
+                        url={`/produk/${related.slug}`}
+                      />
+                  ))}
+                </div>
               </div>
             </aside>
             
