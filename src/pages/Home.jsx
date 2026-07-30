@@ -9,11 +9,35 @@ import Button from '../components/ui/Button';
   const Home = () => {
   const revealRefs = useRef([]);
   const testimoRef = useRef(null);
+  const keunggulanRef = useRef(null);
 
   const scrollTestimo = (direction) => {
     if (testimoRef.current) {
       const scrollAmount = 320;
       testimoRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const scrollKeunggulan = (direction) => {
+    if (keunggulanRef.current) {
+      const scrollAmount = 280;
+      keunggulanRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const produkRef = useRef(null);
+  const scrollProduk = (direction) => {
+    if (produkRef.current) {
+      const scrollAmount = 280;
+      produkRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const artikelRef = useRef(null);
+  const scrollArtikel = (direction) => {
+    if (artikelRef.current) {
+      const scrollAmount = 280;
+      artikelRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
     }
   };
 
@@ -130,7 +154,7 @@ import Button from '../components/ui/Button';
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.1rem]">
+          <div ref={keunggulanRef} className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-[1.1rem] overflow-x-auto snap-x snap-mandatory pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] scroll-smooth">
             {[
               { icon: Trophy, title: 'Berpengalaman Sejak 2002', desc: 'Lebih dari 24 tahun menjadi mitra solusi air bersih terpercaya bagi ratusan industri di seluruh Indonesia.' },
               { icon: Microscope, title: 'Teknologi Mutakhir', desc: 'Menggunakan membran RO dan komponen berteknologi terkini dari produsen terkemuka dunia untuk efisiensi optimal.' },
@@ -139,7 +163,7 @@ import Button from '../components/ui/Button';
               { icon: Leaf, title: 'Ramah Lingkungan', desc: 'Solusi hemat energi dan sistem recovery air tinggi untuk meminimalkan dampak lingkungan dan biaya operasional.' },
               { icon: ScrollText, title: 'Bersertifikasi Resmi', desc: 'Seluruh produk dan layanan memenuhi standar nasional dan internasional dengan sertifikasi yang diakui.' }
             ].map((hl, idx) => (
-              <div key={idx} ref={addToRefs} className="bg-white border border-border rounded-lg p-[1.5rem_1.35rem] transition-all duration-300 relative overflow-hidden group hover:-translate-y-[3px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-blue before:to-accent before:scale-x-0 before:origin-left before:transition-all before:duration-300 group-hover:before:scale-x-100">
+              <div key={idx} ref={addToRefs} className="bg-white border border-border rounded-lg p-[1.5rem_1.35rem] transition-all duration-300 relative overflow-hidden group hover:-translate-y-[3px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-blue before:to-accent before:scale-x-0 before:origin-left before:transition-all before:duration-300 group-hover:before:scale-x-100 min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
                 <div className="w-[40px] h-[40px] bg-ice rounded-lg flex items-center justify-center text-[1.2rem] text-accent mb-[0.85rem] transition-all duration-300 group-hover:bg-blue group-hover:text-white">
                   <hl.icon size={20} />
                 </div>
@@ -147,6 +171,16 @@ import Button from '../components/ui/Button';
                 <p className="text-[0.79rem] text-muted leading-[1.65]">{hl.desc}</p>
               </div>
             ))}
+          </div>
+
+          {/* Keunggulan Arrows (Mobile Only) */}
+          <div className="flex sm:hidden justify-center gap-4 mt-2">
+            <button onClick={() => scrollKeunggulan('left')} aria-label="Previous card" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronLeft size={22} />
+            </button>
+            <button onClick={() => scrollKeunggulan('right')} aria-label="Next card" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronRight size={22} />
+            </button>
           </div>
         </div>
       </section>
@@ -161,7 +195,7 @@ import Button from '../components/ui/Button';
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
+          <div ref={produkRef} className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem] overflow-x-auto snap-x snap-mandatory pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] scroll-smooth">
             {[
               { img: 'foto-mesin-swro.jpg', cat: 'Reverse Osmosis', title: 'Sistem RO Industri', desc: 'Kapasitas 1–500 m³/hari untuk pabrik, pembangkit listrik, dan fasilitas industri besar yang butuh air proses berkualitas tinggi.', url: '/produk/ro-industri', specs: ['1-500 m³/hari', 'RO Membrane', 'Otomasi PLC'] },
               { img: 'porto-pelindo-1.jpg', cat: 'Desalinasi', title: 'SWRO — Desalinasi Air Laut', desc: 'Sea Water Reverse Osmosis berkapasitas tinggi untuk kepulauan, resort pesisir, dan industri maritim.', url: '/produk/desalinasi', specs: ['TDS > 10.000 ppm', 'Anti-Korosi', 'High Recovery'] },
@@ -173,10 +207,20 @@ import Button from '../components/ui/Button';
               <ProductCard 
                 key={idx}
                 ref={addToRefs}
-                className="opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0"
+                className="opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto"
                 {...pc}
               />
             ))}
+          </div>
+
+          {/* Produk Arrows (Mobile Only) */}
+          <div className="flex sm:hidden justify-center gap-4 mt-2">
+            <button onClick={() => scrollProduk('left')} aria-label="Previous product" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronLeft size={22} />
+            </button>
+            <button onClick={() => scrollProduk('right')} aria-label="Next product" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronRight size={22} />
+            </button>
           </div>
           
           <div className="text-center mt-[2.5rem]">
@@ -268,7 +312,7 @@ import Button from '../components/ui/Button';
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
+          <div ref={artikelRef} className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-[1.25rem] overflow-x-auto snap-x snap-mandatory pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] scroll-smooth">
             {[
               { cat: 'Teknologi', img: 'foto-mesin-swro.jpg', bg: 'from-[#054a6e] to-[#1e90d6]', date: '28 Maret 2025', read: '5 menit baca', title: 'Mengenal Teknologi Reverse Osmosis: Prinsip Kerja dan Keunggulannya', desc: 'RO menggunakan tekanan tinggi untuk memaksa air melewati membran semi-permeabel, menyisihkan kontaminan hingga 99%. Simak cara kerjanya secara mendalam.', url: '/artikel/ro-prinsip-kerja', author: 'Tim TSM', tags: ['Teknologi RO', 'Membran', 'Edukasi'] },
               { cat: 'Desalinasi', img: 'porto-pulau-ayer-1.jpg', bg: 'from-[#0a2240] to-[#0d5fa8]', date: '15 Maret 2025', read: '6 menit baca', title: 'Desalinasi Air Laut: Solusi Krisis Air Bersih di Pulau-Pulau Terpencil', desc: 'Kawasan pesisir dan kepulauan Indonesia menghadapi tantangan air tawar yang serius. Sistem SWRO hadir sebagai jawaban yang kini semakin terjangkau.', url: '/artikel/desalinasi-solusi-pulau', author: 'Tim TSM', tags: ['SWRO', 'Maritim', 'Krisis Air'] },
@@ -277,10 +321,20 @@ import Button from '../components/ui/Button';
               <ArticleCard 
                 key={idx}
                 ref={addToRefs}
-                className="opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0"
+                className="opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto"
                 {...art}
               />
             ))}
+          </div>
+
+          {/* Artikel Arrows (Mobile Only) */}
+          <div className="flex sm:hidden justify-center gap-4 mt-2">
+            <button onClick={() => scrollArtikel('left')} aria-label="Previous article" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronLeft size={22} />
+            </button>
+            <button onClick={() => scrollArtikel('right')} aria-label="Next article" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronRight size={22} />
+            </button>
           </div>
           
           <div className="text-center mt-[2.5rem]">

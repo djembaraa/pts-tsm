@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Mail, ChevronDown, Menu, X, Droplet, Waves, Ship, Truck, CheckCircle2, Shield, Settings, Factory, Calculator, FileText, FlaskConical, Award } from 'lucide-react';
+import { Phone, Mail, ChevronDown, Menu, X, Droplet, Waves, Ship, Truck, CheckCircle2, Shield, Settings, Factory, Calculator, FileText, FlaskConical, Award, Building2, Activity, Pill, Leaf, Zap, Building, Clock, Gem, Handshake, Briefcase, Newspaper, BookOpen, Folder, FolderOpen, HelpCircle } from 'lucide-react';
 import Button from '../ui/Button';
 
 const CONTACT_INFO = {
@@ -115,7 +115,7 @@ const Navbar = () => {
                   <ul className="flex flex-col gap-3">
                     <li><Link to="/produk/membran" className="text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:text-blue hover:pl-[0.25rem] transition-all"><FlaskConical size={16} /> Membrane RO</Link></li>
                     <li><Link to="/produk/membran" className="text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:text-blue hover:pl-[0.25rem] transition-all"><Settings size={16} /> Housing Membrane RO</Link></li>
-                    <li><Link to="/produk/uf" className="text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:text-blue hover:pl-[0.25rem] transition-all">🔬 Ultrafiltration Membrane</Link></li>
+                    <li><Link to="/produk/uf" className="text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:text-blue hover:pl-[0.25rem] transition-all"><FlaskConical size={16} /> Ultrafiltration Membrane</Link></li>
                     <li><Link to="/produk/frp-tank" className="text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:text-blue hover:pl-[0.25rem] transition-all"><Droplet size={16} /> FRP Tank (Tabung Filter)</Link></li>
                     <li><Link to="/produk/zincalume-tank" className="text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:text-blue hover:pl-[0.25rem] transition-all"><FileText size={16} /> Stainless Steel Tank</Link></li>
                     <li><Link to="/produk/instrumen" className="text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:text-blue hover:pl-[0.25rem] transition-all"><Calculator size={16} /> Media Filter</Link></li>
@@ -173,11 +173,11 @@ const Navbar = () => {
               </Link>
               <div className="hidden group-hover:flex flex-col absolute top-full left-0 bg-white border border-border border-t-[3px] border-t-blue shadow-[0_18px_56px_rgba(10,34,64,0.18)] min-w-[280px] rounded-b-[10px] z-[9999] animate-in fade-in slide-in-from-top-2 duration-200 py-[0.8rem]">
                 <Link to="/industri/manufaktur" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Factory size={16} /> Industri Manufaktur</Link>
-                <Link to="/industri/hotel" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">🏨 Hotel &amp; Resort</Link>
-                <Link to="/industri/rs" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">⚕️ Rumah Sakit &amp; Hemodialisis</Link>
-                <Link to="/industri/farmasi" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">💊 Farmasi (CPOB BPOM)</Link>
-                <Link to="/industri/agrikultur" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">🌾 Agrikultur &amp; Perkebunan</Link>
-                <Link to="/industri/pltu" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">⚡ PLTU &amp; Pembangkit Listrik</Link>
+                <Link to="/industri/hotel" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Building2 size={16} /> Hotel &amp; Resort</Link>
+                <Link to="/industri/rs" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Activity size={16} /> Rumah Sakit &amp; Hemodialisis</Link>
+                <Link to="/industri/farmasi" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Pill size={16} /> Farmasi (CPOB BPOM)</Link>
+                <Link to="/industri/agrikultur" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Leaf size={16} /> Agrikultur &amp; Perkebunan</Link>
+                <Link to="/industri/pltu" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Zap size={16} /> PLTU &amp; Pembangkit Listrik</Link>
                 <Link to="/industri/properti" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Factory size={16} /> Properti &amp; Apartemen</Link>
                 <Link to="/industri/maritim" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Ship size={16} /> Maritim &amp; Offshore</Link>
               </div>
@@ -189,15 +189,15 @@ const Navbar = () => {
                 Perusahaan <ChevronDown size={14} className="mt-[1px] group-hover:rotate-180 transition-transform duration-250" />
               </Link>
               <div className="hidden group-hover:flex flex-col absolute top-full left-0 bg-white border border-border border-t-[3px] border-t-blue shadow-[0_18px_56px_rgba(10,34,64,0.18)] min-w-[260px] rounded-b-[10px] z-[9999] animate-in fade-in slide-in-from-top-2 duration-200 py-[0.8rem]">
-                <Link to="/tentang" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">🏢 Tentang Kami</Link>
-                <Link to="/tentang#sejarah" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">🕰️ Sejarah Perusahaan</Link>
-                <Link to="/tentang#nilai" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">💎 Visi, Misi &amp; Nilai</Link>
+                <Link to="/tentang" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Building size={16} /> Tentang Kami</Link>
+                <Link to="/tentang#sejarah" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Clock size={16} /> Sejarah Perusahaan</Link>
+                <Link to="/tentang#nilai" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Gem size={16} /> Visi, Misi &amp; Nilai</Link>
                 <Link to="/tentang#sertifikasi" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Award size={16} /> Sertifikasi &amp; Penghargaan</Link>
-                <Link to="/tentang#csr" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">🌱 CSR &amp; Lingkungan</Link>
-                <Link to="/tentang#klien" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">🤝 Klien &amp; Mitra</Link>
+                <Link to="/tentang#csr" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Leaf size={16} /> CSR &amp; Lingkungan</Link>
+                <Link to="/tentang#klien" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Handshake size={16} /> Klien &amp; Mitra</Link>
                 <div className="h-[1px] bg-border my-[0.4rem] mx-[1.5rem]"></div>
-                <Link to="/karir" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">💼 Karir</Link>
-                <Link to="/kontak" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">📞 Kontak Kami</Link>
+                <Link to="/karir" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Briefcase size={16} /> Karir</Link>
+                <Link to="/kontak" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Phone size={16} /> Kontak Kami</Link>
               </div>
             </li>
 
@@ -207,15 +207,15 @@ const Navbar = () => {
                 Artikel <ChevronDown size={14} className="mt-[1px] group-hover:rotate-180 transition-transform duration-250" />
               </Link>
               <div className="hidden group-hover:flex flex-col absolute top-full left-0 bg-white border border-border border-t-[3px] border-t-blue shadow-[0_18px_56px_rgba(10,34,64,0.18)] min-w-[260px] rounded-b-[10px] z-[9999] animate-in fade-in slide-in-from-top-2 duration-200 py-[0.8rem]">
-                <Link to="/artikel" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">📰 Semua Artikel</Link>
-                <Link to="/artikel#teknologi" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">📚 Artikel Teknologi</Link>
+                <Link to="/artikel" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Newspaper size={16} /> Semua Artikel</Link>
+                <Link to="/artikel#teknologi" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><BookOpen size={16} /> Artikel Teknologi</Link>
                 <Link to="/artikel#desalinasi" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Waves size={16} /> Artikel Desalinasi</Link>
                 <Link to="/artikel#perawatan" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Settings size={16} /> Tips &amp; Perawatan</Link>
                 <Link to="/artikel#industri" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Factory size={16} /> Aplikasi Industri</Link>
-                <Link to="/artikel#studi-kasus" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">📂 Studi Kasus Teknis</Link>
+                <Link to="/artikel#studi-kasus" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><Folder size={16} /> Studi Kasus Teknis</Link>
                 <div className="h-[1px] bg-border my-[0.4rem] mx-[1.5rem]"></div>
-                <Link to="/portofolio" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">📁 Portofolio Proyek</Link>
-                <Link to="/faq" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all">❓ FAQ</Link>
+                <Link to="/portofolio" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><FolderOpen size={16} /> Portofolio Proyek</Link>
+                <Link to="/faq" className="px-[1.5rem] py-[0.6rem] text-[0.85rem] font-medium text-text flex items-center gap-[0.6rem] hover:bg-ice hover:text-blue hover:pl-[1.8rem] transition-all"><HelpCircle size={16} /> FAQ</Link>
               </div>
             </li>
             
