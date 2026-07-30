@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ClipboardList } from 'lucide-react';
 
-
 const PortoKriFleet = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

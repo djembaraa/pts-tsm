@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ClipboardList, Calculator, Droplet, Waves } from 'lucide-react';
-
+import { ArrowRight, Calculator, Droplet, Waves } from 'lucide-react';
+import Button from '../../components/ui/Button';
 
 const ProdukTwro = () => {
   useEffect(() => {
@@ -148,8 +148,8 @@ const ProdukTwro = () => {
         <div className="bg-white border border-border rounded-[10px] p-[1.35rem] mb-[1.35rem] ">
           <h4>Minta Penawaran</h4>
           <p style={{"fontSize":".86rem","color":"var(--muted)","lineHeight":"1.65","marginBottom":"1rem"}}>Dapatkan spesifikasi detail dan harga terbaik dari tim kami.</p>
-          <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-accent text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,180,216,0.32)] hover:bg-white hover:text-blue hover:-translate-y-[2px]" style={{"width":"100%","justifyContent":"center","marginBottom":".6rem"}} to="/kontak"><ClipboardList className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /> Minta Penawaran</Link>
-          <Link href="https://wa.me/62818719119" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-blue text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-blue hover:text-white hover:-translate-y-[2px]" style={{"width":"100%","justifyContent":"center"}} target="_blank" rel="noopener noreferrer">💬 WhatsApp Kami</Link>
+          <Button variant="primary" to="/kontak" >📋 Minta Penawaran</Button>
+          <Button variant="primary" href="https://wa.me/62818719119" >💬 WhatsApp Kami</Button>
         </div>
         <div className="bg-white border border-border rounded-[10px] p-[1.35rem] mb-[1.35rem] ">
           <h4>Produk Terkait</h4>
@@ -167,7 +167,7 @@ const ProdukTwro = () => {
         <div className="bg-white border border-border rounded-[10px] p-[1.35rem] mb-[1.35rem]" style={{"background":"linear-gradient(145deg,var(--navy),var(--blue))","border":"none"}}>
           <h4 style={{"color":"rgba(255,255,255,.45)","borderColor":"rgba(255,255,255,.15)"}}>Uji Kualitas Air Gratis</h4>
           <p style={{"fontSize":".86rem","opacity":".84","color":"#fff","lineHeight":"1.65","marginBottom":"1rem"}}>Kirimkan sampel air PDAM atau air sumur Anda untuk dianalisis tim engineer TSM — gratis, tanpa syarat.</p>
-          <Link href="tel:+62818719119" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" style={{"width":"100%","justifyContent":"center","fontSize":".82rem"}}>📞 021-88871689</Link>
+          <Button variant="white" to="/tel:+62818719119" >📞 021-88871689</Button>
         </div>
       </aside>
     </div>
@@ -187,9 +187,9 @@ const ProdukTwro = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Air PDAM atau Sumur Anda Perlu Dimurnikan?</h2>
-    <p>TWRO adalah solusi paling hemat energi dan paling ekonomis untuk mengolah air PDAM atau sumur tawar menjadi air murni berkualitas tinggi. TSM merancang sistem TWRO dari 0,5 hingga 200 m³/hari — tepat untuk kebutuhan Anda.</p>
-    <div className="flex gap-4 justify-center flex-wrap"><Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak"><ClipboardList className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /> Konsultasi TWRO Gratis</Link><Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" to="/kalkulator"><Calculator className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /> Hitung Kebutuhan Air Anda</Link></div>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Air PDAM atau Sumur Anda Perlu Dimurnikan?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">TWRO adalah solusi paling hemat energi dan paling ekonomis untuk mengolah air PDAM atau sumur tawar menjadi air murni berkualitas tinggi. TSM merancang sistem TWRO dari 0,5 hingga 200 m³/hari — tepat untuk kebutuhan Anda.</p>
+    <div className="flex gap-4 justify-center flex-wrap"><Button variant="white" to="/kontak" >📋 Konsultasi TWRO Gratis</Button><Button variant="outline-white" to="/kalkulator" >🧮 Hitung Kebutuhan Air Anda</Button></div>
   </div>
 </div>
 

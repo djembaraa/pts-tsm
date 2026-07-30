@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Factory, Ship } from 'lucide-react';
 
-
 const Kalkulator = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

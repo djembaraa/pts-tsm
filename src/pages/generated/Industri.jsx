@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Factory, Building, Ship } from 'lucide-react';
-
+import Button from '../../components/ui/Button';
 
 const Industri = () => {
   useEffect(() => {
@@ -48,7 +48,7 @@ const Industri = () => {
 </div>
 <section className="py-16">
   <div className="max-w-[1240px] mx-auto px-6">
-    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Sektor yang Kami Layani</span><h2>Industri yang Kami Tangani</h2><p>Setiap industri memiliki standar kualitas air yang berbeda. Kami memahami dan memenuhi semua kebutuhan tersebut.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
+    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Sektor yang Kami Layani</span><h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Industri yang Kami Tangani</h2><p className="text-[0.88rem] text-muted leading-[1.75]">Setiap industri memiliki standar kualitas air yang berbeda. Kami memahami dan memenuhi semua kebutuhan tersebut.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
     <div className="ind-detail-grid">
 
       <div className="ind-card " id="manufaktur">
@@ -166,8 +166,8 @@ const Industri = () => {
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-center max-w-[600px] mx-auto mb-[3rem] " style={{"color":"#fff"}}>
       <span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border" style={{"background":"rgba(255,255,255,.1)","borderColor":"rgba(255,255,255,.18)","color":"var(--accent)"}}>Portofolio</span>
-      <h2 style={{"color":"#fff"}}>Proyek yang Telah Kami Kerjakan</h2>
-      <p style={{"color":"rgba(255,255,255,.7)"}}>Sekilas beberapa proyek nyata yang berhasil kami selesaikan untuk klien di berbagai industri.</p>
+      <h2 style={{"color":"#fff"}} className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Proyek yang Telah Kami Kerjakan</h2>
+      <p style={{"color":"rgba(255,255,255,.7)"}} className="text-[0.88rem] text-muted leading-[1.75]">Sekilas beberapa proyek nyata yang berhasil kami selesaikan untuk klien di berbagai industri.</p>
       <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
     </div>
     <div className="case-grid">
@@ -192,7 +192,7 @@ const Industri = () => {
       </div>
     </div>
     <div style={{"textAlign":"center","marginTop":"2.5rem"}}>
-      <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/artikel">📂 Lihat Semua Studi Kasus</Link>
+      <Button variant="white" to="/artikel" >📂 Lihat Semua Studi Kasus</Button>
     </div>
   </div>
 </div></section>
@@ -200,8 +200,8 @@ const Industri = () => {
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-center max-w-[600px] mx-auto mb-[3rem] ">
       <span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Klien &amp; Mitra</span>
-      <h2>Dipercaya oleh Perusahaan Terkemuka</h2>
-      <p>Lebih dari 24 tahun kami telah melayani berbagai perusahaan besar, institusi, dan lembaga pemerintah di seluruh Indonesia.</p>
+      <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Dipercaya oleh Perusahaan Terkemuka</h2>
+      <p className="text-[0.88rem] text-muted leading-[1.75]">Lebih dari 24 tahun kami telah melayani berbagai perusahaan besar, institusi, dan lembaga pemerintah di seluruh Indonesia.</p>
       <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
     </div>
     <div className="client-marquee-wrap">
@@ -295,9 +295,9 @@ const Industri = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Industri Anda Belum Terdaftar?</h2>
-    <p>Kami melayani hampir semua sektor yang membutuhkan air berkualitas. Konsultasikan kebutuhan spesifik Anda.</p>
-    <div className="flex gap-4 justify-center flex-wrap"><Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">💬 Konsultasi Sekarang</Link><Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" to="/produk">🔍 Lihat Produk Kami</Link></div>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Industri Anda Belum Terdaftar?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">Kami melayani hampir semua sektor yang membutuhkan air berkualitas. Konsultasikan kebutuhan spesifik Anda.</p>
+    <div className="flex gap-4 justify-center flex-wrap"><Button variant="white" to="/kontak" >💬 Konsultasi Sekarang</Button><Button variant="outline-white" to="/produk" >🔍 Lihat Produk Kami</Button></div>
   </div>
 </div>
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Activity } from 'lucide-react';
-
+import Button from '../../components/ui/Button';
 
 const PortoRumahSakit = () => {
   useEffect(() => {
@@ -171,11 +171,11 @@ const PortoRumahSakit = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Membutuhkan RO Medical Grade?</h2>
-    <p>TSM siap membantu desain sistem hemodialisis, sterilisasi, dan air minum pasien sesuai standar AAMI dan Permenkes.</p>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Membutuhkan RO Medical Grade?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">TSM siap membantu desain sistem hemodialisis, sterilisasi, dan air minum pasien sesuai standar AAMI dan Permenkes.</p>
     <div className="flex gap-4 justify-center flex-wrap">
-      <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">📞 Konsultasi RS</Link>
-      <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" to="/layanan/sertifikasi">🎓 Sertifikasi &amp; Validasi</Link>
+      <Button variant="white" to="/kontak" >📞 Konsultasi RS</Button>
+      <Button variant="outline-white" to="/layanan/sertifikasi" >🎓 Sertifikasi &amp; Validasi</Button>
     </div>
   </div>
 </div>

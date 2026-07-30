@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
+import ProductCard from '../../components/ui/ProductCard';
+import Button from '../../components/ui/Button';
 
 const Produk = () => {
   useEffect(() => {
@@ -47,58 +48,10 @@ const Produk = () => {
       <span className="cat-title">Sistem Reverse Osmosis</span>
       <span className="cat-line"></span>
       <div className="prod-grid">
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0a2240,#0d5fa8)"}}><picture>
-  <source srcSet="images/foto-mesin-swro.webp" type="image/webp" />
-  <img alt="Mesin SWRO PT Tirta Sumber Makmur" src="images/foto-mesin-swro.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} />
-</picture><span className="pc-badge">Terlaris</span></div>
-          <div className="pc-body">
-            <div className="pc-cat">Reverse Osmosis</div>
-            <h3>RO Industri Skala Besar</h3>
-            <p>Sistem RO berkapasitas tinggi untuk pabrik, pembangkit listrik, dan fasilitas industri yang membutuhkan air proses berkualitas tinggi dalam volume besar.</p>
-            <div className="pc-specs"><span className="spec-chip">1–500 m³/hari</span><span className="spec-chip">Otomasi Penuh</span><span className="spec-chip">Hemat Energi</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/ro-industri">Detail →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0d3a6b,#1e90d6)"}}><picture>
-  <source srcSet="images/produk-ro-9m3-a.webp" type="image/webp" />
-  <img alt="Sistem RO industri 9 m3 per jam TSM" src="images/produk-ro-9m3-a.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Reverse Osmosis</div>
-            <h3>RO Komersial &amp; Gedung</h3>
-            <p>Sistem RO terintegrasi untuk gedung bertingkat, hotel berbintang, pusat perbelanjaan, dan rumah sakit dengan desain compact dan efisien.</p>
-            <div className="pc-specs"><span className="spec-chip">100–5.000 L/hari</span><span className="spec-chip">Compact</span><span className="spec-chip">Low Maintenance</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/ro-komersial">Detail →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#1a3a5c,#0d5fa8)"}}><picture>
-  <source srcSet="images/porto-kontainer-1.webp" type="image/webp" />
-  <img alt="Proyek SWRO kontainer PT TSM" src="images/porto-kontainer-1.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Reverse Osmosis</div>
-            <h3>RO Mobile / Portable</h3>
-            <p>Unit RO mobile yang dapat dipindah-pindah, ideal untuk proyek konstruksi, bencana alam, event, dan lokasi temporer yang membutuhkan air bersih segera.</p>
-            <div className="pc-specs"><span className="spec-chip">Portabel</span><span className="spec-chip">Plug &amp; Play</span><span className="spec-chip">Diesel / Solar</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/ro-mobile">Detail →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#1a2d42,#1e90d6)"}}><picture>
-  <source srcSet="images/produk-ro-9m3-d.webp" type="image/webp" />
-  <img alt="Sistem RO industri 9 m3 per jam TSM" src="images/produk-ro-9m3-d.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Reverse Osmosis</div>
-            <h3>RO Laboratorium</h3>
-            <p>Sistem penghasil air ultra-murni Type I, II, dan III untuk kebutuhan laboratorium analitik, penelitian, dan kalibrasi instrumen ilmiah presisi.</p>
-            <div className="pc-specs"><span className="spec-chip">Type I/II/III</span><span className="spec-chip">Resistivitas Tinggi</span><span className="spec-chip">TOC Rendah</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/ro-lab">Detail →</Link></div>
-        </div>
+        <ProductCard img="foto-mesin-swro.jpg" badge="Terlaris" cat="Reverse Osmosis" title="RO Industri Skala Besar" desc="Sistem RO berkapasitas tinggi untuk pabrik, pembangkit listrik, dan fasilitas industri yang membutuhkan air proses berkualitas tinggi dalam volume besar." url="/produk/ro-industri" specs={["1–500 m³/hari", "Otomasi Penuh", "Hemat Energi"]} />
+        <ProductCard img="produk-ro-9m3-a.jpg" cat="Reverse Osmosis" title="RO Komersial & Gedung" desc="Sistem RO terintegrasi untuk gedung bertingkat, hotel berbintang, pusat perbelanjaan, dan rumah sakit dengan desain compact dan efisien." url="/produk/ro-komersial" specs={["100–5.000 L/hari", "Compact", "Low Maintenance"]} />
+        <ProductCard img="porto-kontainer-1.jpg" cat="Reverse Osmosis" title="RO Mobile / Portable" desc="Unit RO mobile yang dapat dipindah-pindah, ideal untuk proyek konstruksi, bencana alam, event, dan lokasi temporer yang membutuhkan air bersih segera." url="/produk/ro-mobile" specs={["Portabel", "Plug & Play", "Diesel / Solar"]} />
+        <ProductCard img="produk-ro-9m3-d.jpg" cat="Reverse Osmosis" title="RO Laboratorium" desc="Sistem penghasil air ultra-murni Type I, II, dan III untuk kebutuhan laboratorium analitik, penelitian, dan kalibrasi instrumen ilmiah presisi." url="/produk/ro-lab" specs={["Type I/II/III", "Resistivitas Tinggi", "TOC Rendah"]} />
       </div>
     </div>
 
@@ -107,71 +60,11 @@ const Produk = () => {
       <span className="cat-title">Desalinasi &amp; Pengolahan Air</span>
       <span className="cat-line"></span>
       <div className="prod-grid">
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0a2240,#00b4d8)"}}><picture>
-  <source srcSet="images/porto-pelindo-1.webp" type="image/webp" />
-  <img alt="Proyek sistem RO Pelindo TSM" src="images/porto-pelindo-1.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture><span className="pc-badge">Unggulan</span></div>
-          <div className="pc-body">
-            <div className="pc-cat">Desalinasi</div>
-            <h3>SWRO — Desalinasi Air Laut</h3>
-            <p>Sea Water Reverse Osmosis berkapasitas tinggi untuk kepulauan, resort pesisir, industri maritim, dan kawasan yang jauh dari sumber air tawar.</p>
-            <div className="pc-specs"><span className="spec-chip">5–1000+ m³/hari</span><span className="spec-chip">TDS &lt;500 ppm</span><span className="spec-chip">Energy Recovery</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/desalinasi">Detail →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0a2240,#1e90d6)"}}><picture>
-  <source srcSet="images/bwms-integrated.webp" type="image/webp" />
-  <img alt="Ballast Water Management System BWMS PT TSM" src="images/bwms-integrated.jpg" style={{"width":"100%","height":"100%","objectFit":"contain","background":"#f4f7fb","padding":".5rem"}} loading="lazy" decoding="async" />
-</picture><span className="pc-badge">Maritim</span></div>
-          <div className="pc-body">
-            <div className="pc-cat">Maritim &amp; Kapal</div>
-            <h3>Ballast Water Management System (BWMS)</h3>
-            <p>Sistem pengolahan air ballast kapal sesuai IMO BWM Convention 2004. Tipe Integrated &amp; Distributed BSKY100, teknologi hydrocyclone + UV chemical-free.</p>
-            <div className="pc-specs"><span className="spec-chip">100 m³/h</span><span className="spec-chip">IMO D-2 Standard</span><span className="spec-chip">BKI Compatible</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/bwms">Detail →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#1a3050,#0d5fa8)"}}><picture>
-  <source srcSet="images/porto-sbawi-2.webp" type="image/webp" />
-  <img alt="Proyek sistem RO SBAWI TSM" src="images/porto-sbawi-2.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Pengolahan Air Limbah</div>
-            <h3>Sistem Daur Ulang Air Limbah</h3>
-            <p>Sistem daur ulang air limbah industri menggunakan kombinasi teknologi membran UF, MBR, dan RO untuk mencapai standar buang atau Zero Liquid Discharge.</p>
-            <div className="pc-specs"><span className="spec-chip">MBR + RO</span><span className="spec-chip">ZLD Ready</span><span className="spec-chip">Recovery 80%+</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/limbah">Detail →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0d3a6b,#1e90d6)"}}><picture>
-  <source srcSet="images/porto-sbawi-1.webp" type="image/webp" />
-  <img alt="Proyek sistem RO SBAWI TSM" src="images/porto-sbawi-1.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Demineralisasi</div>
-            <h3>Demineralisasi &amp; EDI</h3>
-            <p>Sistem Electrodeionization dan DI resin untuk produksi air ultra-murni kebutuhan farmasi, laboratorium, elektronik, dan boiler bertekanan tinggi.</p>
-            <div className="pc-specs"><span className="spec-chip">18 MΩ·cm</span><span className="spec-chip">Pharma Grade</span><span className="spec-chip">Continuous</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/demi">Detail →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#054a6e,#0d5fa8)"}}><picture>
-  <source srcSet="images/porto-sosro-5.webp" type="image/webp" />
-  <img alt="Proyek instalasi RO PT Sosro TSM" src="images/porto-sosro-5.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Ultrafiltrasi</div>
-            <h3>Sistem UF &amp; Microfiltration</h3>
-            <p>Penyaringan membran UF dan MF untuk pre-treatment RO, pengolahan air minum, dan aplikasi industri makanan &amp; minuman dengan standar tinggi.</p>
-            <div className="pc-specs"><span className="spec-chip">0,01–0,1 µm</span><span className="spec-chip">Hollow Fiber</span><span className="spec-chip">Backwash Auto</span></div>
-          </div>
-          <div className="pc-foot"><span>Mulai dari konsultasi</span><Link className="pc-lnk" to="/produk/uf">Detail →</Link></div>
-        </div>
+        <ProductCard img="porto-pelindo-1.jpg" badge="Unggulan" cat="Desalinasi" title="SWRO — Desalinasi Air Laut" desc="Sea Water Reverse Osmosis berkapasitas tinggi untuk kepulauan, resort pesisir, industri maritim, dan kawasan yang jauh dari sumber air tawar." url="/produk/desalinasi" specs={["5–1000+ m³/hari", "TDS <500 ppm", "Energy Recovery"]} />
+        <ProductCard img="bwms-integrated.jpg" badge="Maritim" cat="Maritim & Kapal" title="Ballast Water Management System (BWMS)" desc="Sistem pengolahan air ballast kapal sesuai IMO BWM Convention 2004. Tipe Integrated & Distributed BSKY100, teknologi hydrocyclone + UV chemical-free." url="/produk/bwms" specs={["100 m³/h", "IMO D-2 Standard", "BKI Compatible"]} />
+        <ProductCard img="porto-sbawi-2.jpg" cat="Pengolahan Air Limbah" title="Sistem Daur Ulang Air Limbah" desc="Sistem daur ulang air limbah industri menggunakan kombinasi teknologi membran UF, MBR, dan RO untuk mencapai standar buang atau Zero Liquid Discharge." url="/produk/limbah" specs={["MBR + RO", "ZLD Ready", "Recovery 80%+"]} />
+        <ProductCard img="porto-sbawi-1.jpg" cat="Demineralisasi" title="Demineralisasi & EDI" desc="Sistem Electrodeionization dan DI resin untuk produksi air ultra-murni kebutuhan farmasi, laboratorium, elektronik, dan boiler bertekanan tinggi." url="/produk/demi" specs={["18 MΩ·cm", "Pharma Grade", "Continuous"]} />
+        <ProductCard img="porto-sosro-5.jpg" cat="Ultrafiltrasi" title="Sistem UF & Microfiltration" desc="Penyaringan membran UF dan MF untuk pre-treatment RO, pengolahan air minum, dan aplikasi industri makanan & minuman dengan standar tinggi." url="/produk/uf" specs={["0,01–0,1 µm", "Hollow Fiber", "Backwash Auto"]} />
       </div>
     </div>
 
@@ -180,100 +73,16 @@ const Produk = () => {
       <span className="cat-title">Suku Cadang &amp; Kimia</span>
       <span className="cat-line"></span>
       <div className="prod-grid">
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#1a3a5c,#0d5fa8)"}}><picture>
-  <source srcSet="images/produk-swro-15tpd-a.webp" type="image/webp" />
-  <img alt="Sistem SWRO desalinasi TSM" src="images/produk-swro-15tpd-a.png" style={{"width":"100%","height":"100%","objectFit":"contain","background":"#0a2040","padding":"10px"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Membran</div>
-            <h3>Elemen Membran RO / NF / UF</h3>
-            <p>Membran RO, NF, dan UF dari merek terkemuka dunia untuk penggantian elemen membran dengan performa optimal dan umur pakai maksimal.</p>
-            <div className="pc-specs"><span className="spec-chip">Dow Filmtec</span><span className="spec-chip">Toray</span><span className="spec-chip">Hydranautics</span></div>
-          </div>
-          <div className="pc-foot"><span>Stok tersedia</span><Link className="pc-lnk" to="/produk/membran">Lihat →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0a2240,#0d3a6b)"}}><picture>
-  <source srcSet="images/foto-bengkel.webp" type="image/webp" />
-  <img alt="Bengkel dan workshop PT Tirta Sumber Makmur" src="images/foto-bengkel.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Kimia</div>
-            <h3>Antiscalant, Biocide &amp; CIP</h3>
-            <p>Bahan kimia water treatment berkualitas tinggi: antiscalant untuk mencegah scaling, biocide untuk mencegah biofouling, dan CIP chemicals untuk pencucian membran.</p>
-            <div className="pc-specs"><span className="spec-chip">Antiscalant</span><span className="spec-chip">Biocide</span><span className="spec-chip">CIP Chemicals</span></div>
-          </div>
-          <div className="pc-foot"><span>Stok tersedia</span><Link className="pc-lnk" to="/produk/kimia">Lihat →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#1a2d42,#0d5fa8)"}}><picture>
-  <source srcSet="images/porto-pelindo-2.webp" type="image/webp" />
-  <img alt="Proyek sistem RO Pelindo TSM" src="images/porto-pelindo-2.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Mekanikal</div>
-            <h3>Pompa &amp; Pressure Vessel</h3>
-            <p>Pompa high-pressure dari Grundfos, CAT Pumps, dan Danfoss. Pressure vessel FRP dari Code Line, Pentair, dan Codeline untuk berbagai kapasitas sistem RO.</p>
-            <div className="pc-specs"><span className="spec-chip">Grundfos</span><span className="spec-chip">Pentair</span><span className="spec-chip">SS 316L</span></div>
-          </div>
-          <div className="pc-foot"><span>Pesan sekarang</span><Link className="pc-lnk" to="/produk/pompa">Lihat →</Link></div>
-        </div>
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0a4060,#1e90d6)"}}><picture>
-  <source srcSet="images/produk-ro-9m3-b.webp" type="image/webp" />
-  <img alt="Sistem RO industri 9 m3 per jam TSM" src="images/produk-ro-9m3-b.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Instrumen</div>
-            <h3>Sensor &amp; Instrumen Monitoring</h3>
-            <p>TDS meter, conductivity meter, pH meter, flow meter, pressure transmitter, dan sistem monitoring online untuk pengawasan kualitas air secara real-time dan otomatis.</p>
-            <div className="pc-specs"><span className="spec-chip">TDS / pH / DO</span><span className="spec-chip">Online Monitor</span><span className="spec-chip">SCADA Ready</span></div>
-          </div>
-          <div className="pc-foot"><span>Konsultasi dulu</span><Link className="pc-lnk" to="/produk/instrumen">Lihat →</Link></div>
-        </div>
+        <ProductCard img="produk-swro-15tpd-a.png" cat="Membran" title="Elemen Membran RO / NF / UF" desc="Membran RO, NF, dan UF dari merek terkemuka dunia untuk penggantian elemen membran dengan performa optimal dan umur pakai maksimal." url="/produk/membran" urlText="Lihat →" footText="Stok tersedia" specs={["Dow Filmtec", "Toray", "Hydranautics"]} />
+        <ProductCard img="foto-bengkel.jpg" cat="Kimia" title="Antiscalant, Biocide & CIP" desc="Bahan kimia water treatment berkualitas tinggi: antiscalant untuk mencegah scaling, biocide untuk mencegah biofouling, dan CIP chemicals untuk pencucian membran." url="/produk/kimia" urlText="Lihat →" footText="Stok tersedia" specs={["Antiscalant", "Biocide", "CIP Chemicals"]} />
+        <ProductCard img="porto-pelindo-2.jpg" cat="Mekanikal" title="Pompa & Pressure Vessel" desc="Pompa high-pressure dari Grundfos, CAT Pumps, dan Danfoss. Pressure vessel FRP dari Code Line, Pentair, dan Codeline untuk berbagai kapasitas sistem RO." url="/produk/pompa" urlText="Lihat →" footText="Pesan sekarang" specs={["Grundfos", "Pentair", "SS 316L"]} />
+        <ProductCard img="produk-ro-9m3-b.jpg" cat="Instrumen" title="Sensor & Instrumen Monitoring" desc="TDS meter, conductivity meter, pH meter, flow meter, pressure transmitter, dan sistem monitoring online untuk pengawasan kualitas air secara real-time dan otomatis." url="/produk/instrumen" urlText="Lihat →" footText="Konsultasi dulu" specs={["TDS / pH / DO", "Online Monitor", "SCADA Ready"]} />
 
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0a4060,#1e90d6)"}}><picture>
-  <source srcSet="images/produk-ro-9m3-a.webp" type="image/webp" />
-  <img alt="Mesin AMDK lini produksi air minum dalam kemasan TSM" src="images/produk-ro-9m3-a.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Mesin AMDK</div>
-            <h3>Lini Produksi Air Minum Dalam Kemasan</h3>
-            <p>Solusi turnkey untuk pabrik AMDK: water treatment, ozonisasi, UV sterilization, dan filling cup, botol PET, atau gallon. Sesuai standar BPOM, SNI 3553, dan halal MUI.</p>
-            <div className="pc-specs"><span className="spec-chip">Cup / PET / Gallon</span><span className="spec-chip">BPOM Ready</span><span className="spec-chip">SNI 3553</span></div>
-          </div>
-          <div className="pc-foot"><span>Turnkey Solution</span><Link className="pc-lnk" to="/produk/amdk">Lihat →</Link></div>
-        </div>
+        <ProductCard img="produk-ro-9m3-a.jpg" cat="Mesin AMDK" title="Lini Produksi Air Minum Dalam Kemasan" desc="Solusi turnkey untuk pabrik AMDK: water treatment, ozonisasi, UV sterilization, dan filling cup, botol PET, atau gallon. Sesuai standar BPOM, SNI 3553, dan halal MUI." url="/produk/amdk" urlText="Lihat →" footText="Turnkey Solution" specs={["Cup / PET / Gallon", "BPOM Ready", "SNI 3553"]} />
 
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0a4060,#1e90d6)"}}><picture>
-  <source srcSet="images/produk-ro-industri-2.webp" type="image/webp" />
-  <img alt="Ozon generator industrial untuk disinfeksi air AMDK dan kolam premium" src="images/produk-ro-industri-2.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Disinfeksi</div>
-            <h3>Ozon Generator Industri</h3>
-            <p>Ozon generator korona discharge dengan PSA oksigen untuk disinfeksi AMDK, kolam renang premium, oksidasi besi-mangan, dan air limbah. Kapasitas 1 g/jam – 10 kg/jam.</p>
-            <div className="pc-specs"><span className="spec-chip">1 g/jam – 10 kg/jam</span><span className="spec-chip">PSA O₂ ready</span><span className="spec-chip">SS-316L</span></div>
-          </div>
-          <div className="pc-foot"><span>Konsultasi dulu</span><Link className="pc-lnk" to="/produk/ozon">Lihat →</Link></div>
-        </div>
+        <ProductCard img="produk-ro-industri-2.jpg" cat="Disinfeksi" title="Ozon Generator Industri" desc="Ozon generator korona discharge dengan PSA oksigen untuk disinfeksi AMDK, kolam renang premium, oksidasi besi-mangan, dan air limbah. Kapasitas 1 g/jam – 10 kg/jam." url="/produk/ozon" urlText="Lihat →" footText="Konsultasi dulu" specs={["1 g/jam – 10 kg/jam", "PSA O₂ ready", "SS-316L"]} />
 
-        <div className="pc ">
-          <div className="pc-img" style={{"background":"linear-gradient(135deg,#0a4060,#1e90d6)"}}><picture>
-  <source srcSet="images/produk-ro-9m3-d.webp" type="image/webp" />
-  <img alt="UV sterilizer ultraviolet untuk disinfeksi air minum dan industri" src="images/produk-ro-9m3-d.jpg" style={{"width":"100%","height":"100%","objectFit":"cover","opacity":".85"}} loading="lazy" decoding="async" />
-</picture></div>
-          <div className="pc-body">
-            <div className="pc-cat">Disinfeksi</div>
-            <h3>UV Sterilizer 254nm</h3>
-            <p>Sistem disinfeksi UV-C untuk air minum, output RO, AMDK, kolam renang, dan air limbah. Lampu UV tier-1 Trojan/Atlantic/Wedeco. Dosis tervalidasi 40-100 mJ/cm² sesuai USEPA.</p>
-            <div className="pc-specs"><span className="spec-chip">0.5 – 500 m³/jam</span><span className="spec-chip">USEPA UVDGM</span><span className="spec-chip">SS-316L</span></div>
-          </div>
-          <div className="pc-foot"><span>Konsultasi dulu</span><Link className="pc-lnk" to="/produk/uv">Lihat →</Link></div>
-        </div>
+        <ProductCard img="produk-ro-9m3-d.jpg" cat="Disinfeksi" title="UV Sterilizer 254nm" desc="Sistem disinfeksi UV-C untuk air minum, output RO, AMDK, kolam renang, dan air limbah. Lampu UV tier-1 Trojan/Atlantic/Wedeco. Dosis tervalidasi 40-100 mJ/cm² sesuai USEPA." url="/produk/uv" urlText="Lihat →" footText="Konsultasi dulu" specs={["0.5 – 500 m³/jam", "USEPA UVDGM", "SS-316L"]} />
       </div>
     </div>
 
@@ -281,11 +90,11 @@ const Produk = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2 className="font-condensed text-[clamp(1.5rem,2.4vw,2.1rem)] font-extrabold mb-[0.7rem]">Tidak Menemukan yang Anda Cari?</h2>
-    <p className="text-[0.88rem] opacity-90 mb-[1.5rem]">Tim kami siap merancang solusi custom sesuai kebutuhan spesifik Anda — dari awal hingga commissioning.</p>
-    <div className="flex gap-[1rem] justify-center flex-wrap">
-      <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">💬 Konsultasi Produk</Link>
-      <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" to="/artikel">📚 Baca Artikel Teknis</Link>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Tidak Menemukan yang Anda Cari?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">Tim kami siap merancang solusi custom sesuai kebutuhan spesifik Anda — dari awal hingga commissioning.</p>
+    <div className="flex gap-4 justify-center flex-wrap">
+      <Button variant="white" to="/kontak" >💬 Konsultasi Produk</Button>
+      <Button variant="outline-white" to="/artikel" >📚 Baca Artikel Teknis</Button>
     </div>
   </div>
 </div>

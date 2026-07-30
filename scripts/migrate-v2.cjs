@@ -30,12 +30,7 @@ const classMap = {
   'form-group': 'mb-[0.92rem]',
   'form-row': 'grid grid-cols-1 md:grid-cols-2 gap-[0.92rem]',
   
-  // Buttons
-  'btn-primary': 'inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-accent text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,180,216,0.32)] hover:bg-white hover:text-blue hover:-translate-y-[2px]',
-  'btn-blue': 'inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-blue text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-blue hover:text-white hover:-translate-y-[2px]',
-  'btn-white': 'inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]',
-  'btn-ghost': 'inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white',
-  'btn-submit': 'w-full py-[0.82rem] bg-blue text-white font-barlow font-bold text-[0.9rem] tracking-[0.08em] uppercase rounded-[6px] cursor-pointer transition-all duration-300 hover:bg-navy hover:-translate-y-[1px]',
+  // Buttons will be transformed to <Button /> components instead of inline classes
   
   // Article Cards
   'art-card': 'bg-white rounded-[10px] overflow-hidden border border-border flex flex-col transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] hover:border-accent group',
@@ -113,6 +108,13 @@ function processHtml(html) {
   
   const $content = cheerio.load(contentHtml, { decodeEntities: false }, false);
   
+  // Apply nested styles BEFORE classMap removes the legacy parent classes
+  $content('.sec-header h2').addClass('font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]');
+  $content('.sec-header p').addClass('text-[0.88rem] text-muted leading-[1.75]');
+  
+  $content('.cta-band h2').addClass('font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]');
+  $content('.cta-band p').addClass('text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8');
+
   // Map standard classes
   $content('*').each((i, el) => {
     let classes = $(el).attr('class');
@@ -130,10 +132,102 @@ function processHtml(html) {
     }
   });
 
-  // Handle specific nested styling rules from style.css
-  $content('.sec-header h2').addClass('font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]');
-  $content('.sec-header p').addClass('text-[0.88rem] text-muted leading-[1.75]');
-  
+  // Convert ProductCards
+  let usesProductCard = false;
+  const productCardsMap = [];
+  $content('.pc').each((i, el) => {
+    usesProductCard = true;
+    const $el = $(el);
+    
+    let img = $el.find('.pc-img img').attr('src') || '';
+    if (img.startsWith('images/')) img = img.replace('images/', '');
+    
+    const badge = $el.find('.pc-badge').text().trim();
+    const cat = $el.find('.pc-cat').text().trim();
+    const title = $el.find('h3').text().trim();
+    const desc = $el.find('p').text().trim();
+    
+    let url = $el.find('.pc-lnk').attr('href') || $el.find('.pc-lnk').attr('to') || '';
+    // Strip .html and fix prefixes if needed
+    if (url.endsWith('.html')) url = url.replace('.html', '');
+    if (url.includes('-')) {
+        let parts = url.split('-');
+        let first = parts[0];
+        if (first === 'porto') first = 'portofolio';
+        url = first + '/' + parts.slice(1).join('-');
+    }
+    if (!url.startsWith('/')) url = '/' + url;
+    
+    const urlText = $el.find('.pc-lnk').text().trim();
+    const footText = $el.find('.pc-foot span').text().trim();
+    
+    const specs = [];
+    $el.find('.pc-specs .spec-chip').each((j, s) => {
+      specs.push($(s).text().trim());
+    });
+    
+    let jsxAttr = `img="${img}"`;
+    if (badge) jsxAttr += ` badge="${badge}"`;
+    if (cat) jsxAttr += ` cat="${cat}"`;
+    if (title) jsxAttr += ` title="${title}"`;
+    if (desc) jsxAttr += ` desc="${desc}"`;
+    if (url) jsxAttr += ` url="${url}"`;
+    if (urlText && urlText !== 'Detail →' && urlText !== 'Detail \u2192' && urlText !== 'Detail &rarr;') jsxAttr += ` urlText="${urlText}"`;
+    if (footText && footText !== 'Mulai dari konsultasi') jsxAttr += ` footText="${footText}"`;
+    if (specs.length > 0) {
+      const specsArr = specs.map(s => `"${s}"`).join(', ');
+      jsxAttr += ` specs={[${specsArr}]}`;
+    }
+    
+    const compStr = `<ProductCard ${jsxAttr} />`;
+    productCardsMap.push(compStr);
+    $el.replaceWith(`___PRODUCT_CARD_${i}___`);
+  });
+
+  // Convert Buttons
+  let usesButtonComponent = false;
+  const buttonComponentsMap = [];
+  $content('a.btn-primary, a.btn-blue, a.btn-white, a.btn-ghost, button.btn-submit').each((i, el) => {
+    usesButtonComponent = true;
+    const $el = $(el);
+    
+    let variant = 'primary';
+    if ($el.hasClass('btn-white')) variant = 'white';
+    else if ($el.hasClass('btn-ghost')) variant = 'outline-white';
+    
+    let href = $el.attr('href') || $el.attr('to') || '';
+    let toAttr = '';
+    
+    if ($el[0].tagName.toLowerCase() === 'a') {
+      if (href) {
+        if (href.endsWith('.html')) {
+          href = href.replace('.html', '');
+          if (href.includes('-')) {
+              let parts = href.split('-');
+              let first = parts[0];
+              if (first === 'porto') first = 'portofolio';
+              href = first + '/' + parts.slice(1).join('-');
+          }
+          if (!href.startsWith('/')) href = '/' + href;
+          toAttr = `to="${href}"`;
+        } else if (href.startsWith('http') || href.startsWith('mailto')) {
+          toAttr = `href="${href}"`;
+        } else {
+          if (!href.startsWith('/')) href = '/' + href;
+          toAttr = `to="${href}"`;
+        }
+      }
+    }
+    
+    // For submit buttons
+    const typeAttr = $el[0].tagName.toLowerCase() === 'button' ? 'type="submit" className="w-full text-[0.9rem] tracking-[0.08em]"' : '';
+    
+    const content = $el.html();
+    const compStr = `<Button variant="${variant}" ${toAttr} ${typeAttr}>${content}</Button>`;
+    buttonComponentsMap.push(compStr);
+    $el.replaceWith(`___BUTTON_COMP_${i}___`);
+  });
+
   $content('.prose h2').addClass('font-condensed text-[1.85rem] font-black text-navy mt-[2.5rem] mb-[0.8rem] pt-[0.5rem]');
   $content('.prose h3').addClass('text-[1.12rem] font-bold text-navy mt-[1.8rem] mb-[0.6rem]');
   $content('.prose p').addClass('text-[0.97rem] leading-[1.88] text-text mb-[1.05rem]');
@@ -248,13 +342,22 @@ function processHtml(html) {
   jsx = jsx.replace(/src="assets\//g, 'src="/');
   jsx = jsx.replace(/srcSet="assets\//g, 'srcSet="/');
   
+  // Restore ProductCards & Buttons
+  productCardsMap.forEach((comp, i) => {
+    jsx = jsx.replace(`___PRODUCT_CARD_${i}___`, comp);
+  });
+  
+  buttonComponentsMap.forEach((comp, i) => {
+    jsx = jsx.replace(`___BUTTON_COMP_${i}___`, comp);
+  });
+  
   // Self closing tags
   ['img', 'br', 'hr', 'input', 'meta', 'source'].forEach(tag => {
     const tagRegex = new RegExp(`<${tag}([^>]*?)(?<!/)>`, 'gi');
     jsx = jsx.replace(tagRegex, `<${tag}$1 />`);
   });
 
-  return { jsx, usedIcons, extractedStyles };
+  return { jsx, usedIcons, extractedStyles, usesProductCard, usesButtonComponent };
 }
 
 function processAllFiles() {
@@ -265,7 +368,7 @@ function processAllFiles() {
     if (file === 'index.html' || file === 'tentang.html' || file === 'kontak.html') return;
     
     const html = fs.readFileSync(path.join(legacyDir, file), 'utf8');
-    const { jsx, usedIcons, extractedStyles } = processHtml(html);
+    const { jsx, usedIcons, extractedStyles, usesProductCard, usesButtonComponent } = processHtml(html);
     
     const componentName = file
       .replace('.html', '')
@@ -273,9 +376,17 @@ function processAllFiles() {
       .map(part => part.charAt(0).toUpperCase() + part.slice(1))
       .join('');
       
-    let iconImportStr = '';
+    let importStatements = '';
     if (usedIcons.size > 0) {
-      iconImportStr = `import { ${Array.from(usedIcons).join(', ')} } from 'lucide-react';\n`;
+      importStatements += `import { ${Array.from(usedIcons).join(', ')} } from 'lucide-react';\n`;
+    }
+    
+    if (usesProductCard) {
+      importStatements += `import ProductCard from '../../components/ui/ProductCard';\n`;
+    }
+    
+    if (usesButtonComponent) {
+      importStatements += `import Button from '../../components/ui/Button';\n`;
     }
     
     let styleBlock = '';
@@ -285,8 +396,7 @@ function processAllFiles() {
 
     const componentContent = `import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-${iconImportStr}
-
+${importStatements}
 const ${componentName} = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

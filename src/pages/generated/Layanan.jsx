@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ClipboardList, CheckCircle2, Shield, Microscope, Building } from 'lucide-react';
-
+import Button from '../../components/ui/Button';
 
 const Layanan = () => {
   useEffect(() => {
@@ -58,8 +58,8 @@ const Layanan = () => {
   <div className="max-w-[1240px] mx-auto px-6">
     <div className="text-center max-w-[600px] mx-auto mb-[3rem] ">
       <span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Engineering</span>
-      <h2>Layanan Engineering &amp; Instalasi</h2>
-      <p>Tim insinyur berpengalaman kami menangani seluruh aspek teknis dari desain hingga sistem beroperasi penuh.</p>
+      <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Layanan Engineering &amp; Instalasi</h2>
+      <p className="text-[0.88rem] text-muted leading-[1.75]">Tim insinyur berpengalaman kami menangani seluruh aspek teknis dari desain hingga sistem beroperasi penuh.</p>
       <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
     </div>
     <div className="svc-grid">
@@ -92,7 +92,7 @@ const Layanan = () => {
 </section>
 <section className="py-16" style={{"background":"var(--gray)"}}>
   <div className="max-w-[1240px] mx-auto px-6">
-    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Alur Kerja</span><h2>Proses Layanan TSM</h2><p>Proses terstruktur untuk memastikan setiap proyek berjalan lancar dan sesuai ekspektasi.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
+    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Alur Kerja</span><h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Proses Layanan TSM</h2><p className="text-[0.88rem] text-muted leading-[1.75]">Proses terstruktur untuk memastikan setiap proyek berjalan lancar dan sesuai ekspektasi.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
     <div className="steps ">
       <div className="step"><div className="step-n">1</div><div className="step-ico"><ClipboardList className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /></div><h4>Konsultasi</h4><p>Diskusi kebutuhan dan survei lokasi</p></div>
       <div className="step"><div className="step-n">2</div><div className="step-ico"><Microscope className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /></div><h4>Analisis Air</h4><p>Uji laboratorium kualitas air baku</p></div>
@@ -106,7 +106,7 @@ const Layanan = () => {
 </section>
 <section className="py-16">
   <div className="max-w-[1240px] mx-auto px-6">
-    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Konsultasi &amp; Proyek</span><h2>Layanan Konsultasi &amp; Proyek</h2><p>Solusi komprehensif dari studi kelayakan hingga pelaksanaan proyek turnkey.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
+    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Konsultasi &amp; Proyek</span><h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Layanan Konsultasi &amp; Proyek</h2><p className="text-[0.88rem] text-muted leading-[1.75]">Solusi komprehensif dari studi kelayakan hingga pelaksanaan proyek turnkey.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
     <div className="svc-grid">
       <div className="svc-card " id="audit">
         <div className="svc-ico"><ClipboardList className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /></div><h3>Audit Kualitas Air</h3>
@@ -137,27 +137,27 @@ const Layanan = () => {
 </section>
 <section className="py-16" style={{"background":"var(--gray)"}}>
   <div className="max-w-[1240px] mx-auto px-6">
-    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Paket Perawatan</span><h2>Pilih Paket Perawatan Anda</h2><p>Kontrak perawatan tahunan yang memberikan ketenangan pikiran dan kepastian biaya operasional.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
+    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Paket Perawatan</span><h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Pilih Paket Perawatan Anda</h2><p className="text-[0.88rem] text-muted leading-[1.75]">Kontrak perawatan tahunan yang memberikan ketenangan pikiran dan kepastian biaya operasional.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
     <div className="pkg-grid">
       <div className="pkg ">
         <div className="pkg-head"><div className="pkg-label">Basic</div><h3>Paket Basic</h3><p>Untuk sistem RO skala kecil &amp; komersial</p></div>
         <div className="pkg-body">
           <ul className="pkg-list"><li>2x kunjungan teknisi per tahun</li><li>Penggantian cartridge filter</li><li>Analisis kualitas air (2x / tahun)</li><li>Laporan kondisi sistem</li><li>Hotline teknis jam kerja</li></ul>
-          <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-blue text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-blue hover:text-white hover:-translate-y-[2px]" style={{"width":"100%","justifyContent":"center"}} to="/kontak">Minta Penawaran</Link>
+          <Button variant="primary" to="/kontak" >Minta Penawaran</Button>
         </div>
       </div>
       <div className="pkg featured ">
         <div className="pkg-head"><div className="pkg-label">⭐ Paling Populer</div><h3>Paket Standard</h3><p>Untuk sistem RO industri menengah</p></div>
         <div className="pkg-body">
           <ul className="pkg-list"><li>4x kunjungan teknisi per tahun</li><li>CIP membran 1x per tahun</li><li>Penggantian semua filter berkala</li><li>Analisis air komprehensif (4x)</li><li>Laporan performa bulanan</li><li>Hotline darurat 24/7</li><li>Diskon 15% suku cadang</li></ul>
-          <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-accent text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,180,216,0.32)] hover:bg-white hover:text-blue hover:-translate-y-[2px]" style={{"width":"100%","justifyContent":"center"}} to="/kontak">Minta Penawaran</Link>
+          <Button variant="primary" to="/kontak" >Minta Penawaran</Button>
         </div>
       </div>
       <div className="pkg ">
         <div className="pkg-head"><div className="pkg-label">Premium</div><h3>Paket Premium</h3><p>Untuk sistem RO industri besar &amp; kritis</p></div>
         <div className="pkg-body">
           <ul className="pkg-list"><li>12x kunjungan teknisi per tahun</li><li>CIP membran terjadwal penuh</li><li>Semua penggantian filter included</li><li>Monitoring online real-time</li><li>Dedicated teknisi PIC</li><li>Respons darurat prioritas</li><li>Diskon 25% suku cadang</li><li>Garansi uptime 95%</li></ul>
-          <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-blue text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-blue hover:text-white hover:-translate-y-[2px]" style={{"width":"100%","justifyContent":"center"}} to="/kontak">Minta Penawaran</Link>
+          <Button variant="primary" to="/kontak" >Minta Penawaran</Button>
         </div>
       </div>
     </div>
@@ -165,9 +165,9 @@ const Layanan = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Butuh Layanan Segera?</h2>
-    <p>Tim kami siap membantu Anda 24/7. Hubungi sekarang untuk konsultasi gratis.</p>
-    <div className="flex gap-4 justify-center flex-wrap"><Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">📞 Hubungi Kami</Link><Link href="https://wa.me/62818719119" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" target="_blank" rel="noopener noreferrer">💬 WhatsApp Sekarang</Link></div>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Butuh Layanan Segera?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">Tim kami siap membantu Anda 24/7. Hubungi sekarang untuk konsultasi gratis.</p>
+    <div className="flex gap-4 justify-center flex-wrap"><Button variant="white" to="/kontak" >📞 Hubungi Kami</Button><Button variant="outline-white" href="https://wa.me/62818719119" >💬 WhatsApp Sekarang</Button></div>
   </div>
 </div>
 

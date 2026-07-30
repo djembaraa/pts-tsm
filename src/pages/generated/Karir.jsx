@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ClipboardList, Wrench, Building, Activity } from 'lucide-react';
-
+import Button from '../../components/ui/Button';
 
 const Karir = () => {
   useEffect(() => {
@@ -42,7 +42,7 @@ const Karir = () => {
 </div>
 <section className="py-16">
   <div className="max-w-[1240px] mx-auto px-6">
-    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Lowongan Terbuka</span><h2>Posisi yang Tersedia</h2><p>Temukan peluang karir yang sesuai dengan keahlian dan passion Anda.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
+    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Lowongan Terbuka</span><h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Posisi yang Tersedia</h2><p className="text-[0.88rem] text-muted leading-[1.75]">Temukan peluang karir yang sesuai dengan keahlian dan passion Anda.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
     <div className="job-grid">
       <div className="job-card ">
         <span className="job-type" style={{"background":"var(--blue)"}}>Full Time</span>
@@ -97,7 +97,7 @@ const Karir = () => {
 </section>
 <section className="py-16" style={{"background":"var(--gray)"}}>
   <div className="max-w-[1240px] mx-auto px-6">
-    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Mengapa TSM?</span><h2>Benefit Bergabung dengan Kami</h2><p>Kami berkomitmen untuk menjadi tempat kerja yang mendukung pertumbuhan dan kesejahteraan setiap karyawan.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
+    <div className="text-center max-w-[600px] mx-auto mb-[3rem] "><span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Mengapa TSM?</span><h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Benefit Bergabung dengan Kami</h2><p className="text-[0.88rem] text-muted leading-[1.75]">Kami berkomitmen untuk menjadi tempat kerja yang mendukung pertumbuhan dan kesejahteraan setiap karyawan.</p><div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div></div>
     <div className="benefit-grid">
       <div className="ben-card "><div className="ben-ico">💰</div><h4>Gaji Kompetitif</h4><p>Kompensasi yang kompetitif dengan review berkala berdasarkan performa dan kontribusi</p></div>
       <div className="ben-card "><div className="ben-ico">📚</div><h4>Training &amp; Sertifikasi</h4><p>Program pelatihan teknis dan sertifikasi profesional yang didanai perusahaan</p></div>
@@ -118,15 +118,15 @@ const Karir = () => {
       <div className="mb-[0.92rem]"><label>Pendidikan Terakhir</label><select><option value="">— Pilih —</option><option>SMK / SMA</option><option>D3</option><option>S1</option><option>S2/S3</option></select></div>
       <div className="mb-[0.92rem]"><label>Ceritakan tentang diri Anda dan motivasi bergabung</label><textarea placeholder="Pengalaman kerja relevan, keahlian teknis, dan alasan ingin bergabung dengan PT Tirta Sumber Makmur..."></textarea></div>
       <div className="mb-[0.92rem]"><label>Link CV (Google Drive, LinkedIn, dll)</label><input type="url" placeholder="https://drive.google.com/..." /></div>
-      <button className="w-full py-[0.82rem] bg-blue text-white font-barlow font-bold text-[0.9rem] tracking-[0.08em] uppercase rounded-[6px] cursor-pointer transition-all duration-300 hover:bg-navy hover:-translate-y-[1px]" >📨 Kirim Lamaran</button>
+      <Button variant="primary"  type="submit" className="w-full text-[0.9rem] tracking-[0.08em]">📨 Kirim Lamaran</Button>
     </div>
   </div>
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Tidak Ada Posisi yang Cocok?</h2>
-    <p>Kirimkan CV Anda sebagai open application. Kami selalu mencari talenta terbaik untuk bergabung dengan tim TSM.</p>
-    <div className="flex gap-4 justify-center flex-wrap"><Link href="mailto:obed@tsm.or.id" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]">📧 Kirim CV ke Email</Link><Link href="https://wa.me/62818719119" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" target="_blank" rel="noopener noreferrer">💬 Tanya via WhatsApp</Link></div>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Tidak Ada Posisi yang Cocok?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">Kirimkan CV Anda sebagai open application. Kami selalu mencari talenta terbaik untuk bergabung dengan tim TSM.</p>
+    <div className="flex gap-4 justify-center flex-wrap"><Button variant="white" href="mailto:obed@tsm.or.id" >📧 Kirim CV ke Email</Button><Button variant="outline-white" href="https://wa.me/62818719119" >💬 Tanya via WhatsApp</Button></div>
   </div>
 </div>
 

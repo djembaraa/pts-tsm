@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Microscope } from 'lucide-react';
-
+import Button from '../../components/ui/Button';
 
 const Faq = () => {
   useEffect(() => {
@@ -95,7 +95,7 @@ const Faq = () => {
         <div className="bg-white border border-border rounded-[10px] p-[1.35rem] mb-[1.35rem]" style={{"background":"linear-gradient(145deg,var(--navy),var(--blue))","border":"none"}}>
           <h4 style={{"color":"rgba(255,255,255,.45)","borderColor":"rgba(255,255,255,.15)"}}>Pertanyaan Lain?</h4>
           <p style={{"fontSize":".86rem","opacity":".84","color":"#fff","lineHeight":"1.65","marginBottom":"1rem"}}>Tidak menemukan jawaban yang Anda cari? Hubungi tim ahli kami langsung.</p>
-          <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" style={{"width":"100%","justifyContent":"center","fontSize":".82rem"}} to="/kontak">💬 Hubungi Kami</Link>
+          <Button variant="white" to="/kontak" >💬 Hubungi Kami</Button>
         </div>
         <div className="bg-white border border-border rounded-[10px] p-[1.35rem] mb-[1.35rem] ">
           <h4>Artikel Terkait</h4>
@@ -111,9 +111,9 @@ const Faq = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Masih Ada Pertanyaan?</h2>
-    <p>Tim ahli kami siap menjawab pertanyaan spesifik Anda tentang teknologi water treatment.</p>
-    <div className="flex gap-4 justify-center flex-wrap"><Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">📞 Hubungi Kami</Link><Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" to="/artikel">📚 Baca Artikel Teknis</Link></div>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Masih Ada Pertanyaan?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">Tim ahli kami siap menjawab pertanyaan spesifik Anda tentang teknologi water treatment.</p>
+    <div className="flex gap-4 justify-center flex-wrap"><Button variant="white" to="/kontak" >📞 Hubungi Kami</Button><Button variant="outline-white" to="/artikel" >📚 Baca Artikel Teknis</Button></div>
   </div>
 </div>
 

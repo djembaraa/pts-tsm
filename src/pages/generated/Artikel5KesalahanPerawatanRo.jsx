@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ClipboardList, Droplet, CheckCircle2, Shield } from 'lucide-react';
-
+import { ArrowRight, Droplet, CheckCircle2, Shield } from 'lucide-react';
+import Button from '../../components/ui/Button';
 
 const Artikel5KesalahanPerawatanRo = () => {
   useEffect(() => {
@@ -220,7 +220,7 @@ const Artikel5KesalahanPerawatanRo = () => {
         <div className="bg-white border border-border rounded-[10px] p-[1.35rem] mb-[1.35rem]" style={{"background":"linear-gradient(145deg,var(--navy),var(--blue))","border":"none"}}>
           <h4 style={{"color":"rgba(255,255,255,.45)","borderColor":"rgba(255,255,255,.15)"}}>Program Perawatan</h4>
           <p style={{"fontSize":".86rem","lineHeight":"1.65","marginBottom":"1rem","opacity":".84","color":"#fff"}}>Kontrak perawatan tahunan TSM mencakup teknisi terjadwal, CIP, analisis air, dan stok suku cadang prioritas.</p>
-          <Link href="layanan.html#maintenance" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" style={{"width":"100%","justifyContent":"center","fontSize":".82rem"}}><ClipboardList className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /> Lihat Program</Link>
+          <Button variant="white" to="/layanan.html#maintenance" >📋 Lihat Program</Button>
         </div>
 
         <div className="bg-white border border-border rounded-[10px] p-[1.35rem] mb-[1.35rem]">
@@ -238,11 +238,11 @@ const Artikel5KesalahanPerawatanRo = () => {
 </section>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Ingin Audit Kondisi Membran RO Anda?</h2>
-    <p>Tim teknisi TSM siap melakukan pemeriksaan menyeluruh dan memberikan rekomendasi perawatan — gratis.</p>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Ingin Audit Kondisi Membran RO Anda?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">Tim teknisi TSM siap melakukan pemeriksaan menyeluruh dan memberikan rekomendasi perawatan — gratis.</p>
     <div className="flex gap-4 justify-center flex-wrap">
-      <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">📞 Minta Audit Gratis</Link>
-      <Link href="layanan.html#maintenance" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white"><Shield className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /> Program Perawatan</Link>
+      <Button variant="white" to="/kontak" >📞 Minta Audit Gratis</Button>
+      <Button variant="outline-white" to="/layanan.html#maintenance" >🛡️ Program Perawatan</Button>
     </div>
   </div>
 </div>

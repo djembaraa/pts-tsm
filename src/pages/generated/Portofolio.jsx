@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wrench, Factory, Droplet, Waves, CheckCircle2, Shield, Package, Activity, Ship } from 'lucide-react';
-
+import { ArrowRight, Factory, Droplet, Waves, CheckCircle2, Shield, Package, Activity, Ship } from 'lucide-react';
+import Button from '../../components/ui/Button';
 
 const Portofolio = () => {
   useEffect(() => {
@@ -763,11 +763,11 @@ const Portofolio = () => {
 </div>
 <div className="bg-gradient-to-r from-blue to-sky py-[3.2rem] text-center text-white">
   <div className="max-w-[1240px] mx-auto px-6">
-    <h2>Proyek Anda Berikutnya?</h2>
-    <p>Tim TSM siap menangani proyek water treatment skala apapun — dari perencanaan hingga serah terima.</p>
+    <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold leading-[1.15] mb-[0.65rem]">Proyek Anda Berikutnya?</h2>
+    <p className="text-[0.88rem] opacity-90 leading-[1.75] max-w-[600px] mx-auto mb-8">Tim TSM siap menangani proyek water treatment skala apapun — dari perencanaan hingga serah terima.</p>
     <div className="flex gap-4 justify-center flex-wrap">
-      <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] bg-white text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.12)] hover:bg-navy hover:text-white hover:-translate-y-[2px]" to="/kontak">📞 Diskusi Proyek</Link>
-      <Link className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-white/55 text-white font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-white/12 hover:border-white" to="/layanan"><Wrench className="w-[1.2em] h-[1.2em] inline-block -mt-1 mr-1 text-accent" /> Lihat Layanan Kami</Link>
+      <Button variant="white" to="/kontak" >📞 Diskusi Proyek</Button>
+      <Button variant="outline-white" to="/layanan" >🛠️ Lihat Layanan Kami</Button>
     </div>
   </div>
 </div>

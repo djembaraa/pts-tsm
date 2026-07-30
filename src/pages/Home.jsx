@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Trophy, Microscope, Wrench, Focus, Leaf, ScrollText, Droplet, Waves, Building2, Droplets, Ship, Settings, Factory, Calendar, Clock, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import ClientMarquee from '../components/ui/ClientMarquee';
+import ProductCard from '../components/ui/ProductCard';
+import Button from '../components/ui/Button';
 
   const Home = () => {
   const revealRefs = useRef([]);
@@ -167,26 +169,19 @@ import ClientMarquee from '../components/ui/ClientMarquee';
               { img: 'porto-kontainer-1.jpg', cat: 'Mobile / Portable', title: 'RO Mobile — Sistem Kontainer', desc: 'Unit RO dalam kontainer atau mobile yang dapat dipindah, ideal untuk offshore, kepulauan, dan lokasi terpencil.', url: '/produk/ro-mobile' },
               { img: 'foto-bengkel.jpg', cat: 'Produksi & Workshop', title: 'Bengkel Produksi TSM', desc: 'Setiap sistem dirancang, dirakit, dan diuji di bengkel sendiri di Bekasi sebelum dikirim ke lokasi klien.', url: '/tentang' }
             ].map((pc, idx) => (
-              <div key={idx} ref={addToRefs} className="bg-white border border-border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] hover:border-accent group opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 flex flex-col">
-                <div className="h-[175px] overflow-hidden shrink-0">
-                  <img src={`/images/${pc.img}`} alt={pc.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105" />
-                </div>
-                <div className="p-[1.25rem] flex flex-col flex-1">
-                  <div className="text-[0.62rem] font-bold tracking-[0.12em] uppercase text-accent mb-[0.32rem]">{pc.cat}</div>
-                  <h3 className="text-[0.9rem] font-bold text-navy mb-[0.38rem]">{pc.title}</h3>
-                  <p className="text-[0.79rem] text-muted leading-[1.62] mb-[0.8rem] flex-1">{pc.desc}</p>
-                  <Link to={pc.url} className="text-[0.75rem] font-bold text-blue tracking-[0.05em] uppercase inline-flex items-center gap-[0.3rem] transition-all duration-300 hover:gap-[0.52rem] hover:text-navy mt-auto">
-                    Detail Produk &rarr;
-                  </Link>
-                </div>
-              </div>
+              <ProductCard 
+                key={idx}
+                ref={addToRefs}
+                className="opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0"
+                {...pc}
+              />
             ))}
           </div>
           
           <div className="text-center mt-[2.5rem]">
-            <Link to="/produk" className="inline-flex items-center gap-[0.46rem] py-[0.78rem] px-[1.75rem] border-2 border-blue text-blue font-bold text-[0.86rem] tracking-[0.05em] uppercase rounded-[6px] transition-all duration-300 hover:bg-blue hover:text-white hover:-translate-y-[2px]">
+            <Button to="/produk" variant="primary">
               Lihat Semua Produk &amp; Solusi &rarr;
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
