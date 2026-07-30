@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Mail, ChevronDown, Menu, X, Droplet, Waves, Ship, Truck, CheckCircle2, Shield, Settings, Factory, Calculator, FileText, FlaskConical, Award } from 'lucide-react';
+import Button from '../ui/Button';
 
 const CONTACT_INFO = {
   phone1: "021-88871689",
@@ -233,9 +234,9 @@ const Navbar = () => {
 
           {/* CTA & Hamburger */}
           <div className="flex items-center gap-3 shrink-0">
-            <Link to="/kontak" className="hidden lg:inline-flex items-center justify-center gap-2 px-[1.2rem] py-[0.65rem] bg-blue text-white text-[0.78rem] font-bold tracking-[0.05em] uppercase rounded-[6px] hover:bg-navy hover:-translate-y-[2px] hover:shadow-[0_6px_20px_rgba(13,95,168,0.35)] transition-all whitespace-nowrap">
-              📞 Konsultasi Gratis
-            </Link>
+            <Button to="/kontak" variant="solid-blue" className="hidden lg:inline-flex px-[1.2rem] py-[0.65rem] text-[0.78rem]" icon={<Phone size={16} />}>
+              Konsultasi Gratis
+            </Button>
             <button 
               className="lg:hidden flex flex-col items-center justify-center p-2 cursor-pointer shrink-0 text-navy hover:text-blue transition-colors" 
               onClick={() => setIsMobileMenuOpen(true)}
