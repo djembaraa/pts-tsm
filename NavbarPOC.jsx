@@ -79,8 +79,8 @@ const NavbarPOC = () => {
                 <div className="flex-1 min-w-0">
                   <h4 className="text-[0.68rem] font-bold tracking-widest uppercase text-[#00b4d8] mb-3 pb-2 border-b border-[#cde3f3]">Reverse Osmosis System</h4>
                   <ul>
-                    <li className="mb-2"><a href="#" className="text-[0.85rem] text-[#1a2d42] flex items-center gap-2 py-1 hover:text-[#0d5fa8] hover:pl-1 transition-all">💧 Tap Water RO</a></li>
-                    <li className="mb-2"><a href="#" className="text-[0.85rem] text-[#1a2d42] flex items-center gap-2 py-1 hover:text-[#0d5fa8] hover:pl-1 transition-all">🌊 Seawater RO</a></li>
+                    <li className="mb-2"><a href="#" className="text-[0.85rem] text-[#1a2d42] flex items-center gap-2 py-1 hover:text-[#0d5fa8] hover:pl-1 transition-all">Tap Water RO</a></li>
+                    <li className="mb-2"><a href="#" className="text-[0.85rem] text-[#1a2d42] flex items-center gap-2 py-1 hover:text-[#0d5fa8] hover:pl-1 transition-all">Seawater RO</a></li>
                   </ul>
                 </div>
                 {/* Feature Box */}

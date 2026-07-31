@@ -101,10 +101,10 @@ import Button from '../components/ui/Button';
                 Engineered water treatment solutions for industry, marine, hospitality, and infrastructure &mdash; trusted by leading companies across Indonesia.
               </p>
               <div className="flex gap-[0.65rem] flex-wrap opacity-0 animate-[fadeUp_0.7s_0.68s_ease_forwards]">
-                <Button to="/kontak" variant="primary">
+                <Button to="/kontak" variant="primary" className="min-w-[210px]">
                   Minta Penawaran
                 </Button>
-                <Button to="/produk" variant="ghost">
+                <Button to="/produk" variant="ghost" className="min-w-[210px]">
                   Jelajahi Solusi →
                 </Button>
               </div>

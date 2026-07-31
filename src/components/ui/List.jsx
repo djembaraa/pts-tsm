@@ -25,10 +25,10 @@ export const List = ({ children, type = 'unordered', className = '' }) => {
   );
 };
 
-export const ListItem = ({ children, type }) => {
+export const ListItem = ({ children, type, ...props }) => {
   if (type === 'unordered') {
     return (
-      <li className="flex items-start gap-3">
+      <li className="flex items-start gap-3" {...props}>
         <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-[2px]" />
         <span className="leading-relaxed text-text">{children}</span>
       </li>
@@ -37,7 +37,7 @@ export const ListItem = ({ children, type }) => {
   
   // Ordered list fallback
   return (
-    <li className="pl-2 leading-relaxed">{children}</li>
+    <li className="pl-2 leading-relaxed" {...props}>{children}</li>
   );
 };
 
