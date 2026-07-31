@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Rocket, Handshake, Lightbulb, Trophy, Users, Leaf, Zap, Award, BookOpen, ShieldCheck, FileBadge, Microscope } from 'lucide-react';
+import { Target, Rocket, Handshake, Lightbulb, Trophy, Users, Leaf, Zap, Award, BookOpen, ShieldCheck, FileBadge, Microscope, Droplets, SunMedium, Recycle, GraduationCap, Hospital, Shield } from 'lucide-react';
 import ClientMarquee from '../components/ui/ClientMarquee';
 
 const Tentang = () => {
@@ -37,13 +37,13 @@ const Tentang = () => {
   return (
     <div>
       {/* ══ PAGE HERO ══ */}
-      <div className="bg-gradient-to-br from-navy to-[#0a2240] text-center pt-[5rem] pb-[4rem] text-white">
-        <div className="max-w-[1240px] mx-auto px-6">
-          <div className="text-[0.7rem] uppercase tracking-[0.1em] text-white/50 mb-[0.8rem]">
-            <Link to="/" className="text-accent hover:text-white transition-colors">Beranda</Link> › Perusahaan › Tentang Kami
+      <div className="bg-gradient-to-br from-navy to-blue text-white py-[4rem] pb-[3.5rem] relative overflow-hidden">
+        <div className="max-w-[1240px] mx-auto px-6 relative z-10 text-center">
+          <div className="text-[0.75rem] opacity-70 mb-[1rem] flex items-center justify-center gap-[0.42rem] flex-wrap">
+            <Link to="/" className="hover:text-ice transition-colors">Beranda</Link> › Perusahaan › Tentang Kami
           </div>
-          <h1 className="font-condensed text-[clamp(2.2rem,3.5vw,3rem)] font-extrabold mb-[0.6rem]">Tentang PT Tirta Sumber Makmur</h1>
-          <p className="text-[0.95rem] text-white/80 max-w-[650px] mx-auto leading-relaxed">Lebih dari dua dekade berdedikasi menghadirkan solusi air bersih berkualitas tinggi untuk industri dan masyarakat Indonesia.</p>
+          <h1 className="font-condensed text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.1] mb-[1rem]">Tentang PT Tirta Sumber Makmur</h1>
+          <p className="text-[0.95rem] opacity-90 max-w-[700px] mx-auto leading-relaxed">Lebih dari dua dekade berdedikasi menghadirkan solusi air bersih berkualitas tinggi untuk industri dan masyarakat Indonesia.</p>
         </div>
       </div>
 
@@ -209,8 +209,73 @@ const Tentang = () => {
         </div>
       </section>
       
+      {/* ══ CSR & LINGKUNGAN ══ */}
+      <section className="py-[4.5rem] bg-gray">
+        <div className="max-w-[1240px] mx-auto px-6">
+          <div ref={addToRefs} className="text-center max-w-[700px] mx-auto mb-12 opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0">
+            <span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-white border border-border px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem]">CSR &amp; Lingkungan</span>
+            <h2 className="font-condensed text-[clamp(1.6rem,2.6vw,2.2rem)] font-extrabold text-navy leading-[1.15] mb-[0.65rem]">Komitmen Sosial &amp; Lingkungan</h2>
+            <p className="text-[0.88rem] text-muted leading-[1.75]">Sebagai perusahaan yang bergerak di bidang pengelolaan air, kami percaya tanggung jawab kami melampaui transaksi bisnis — untuk lingkungan, masyarakat, dan keberlanjutan sumber daya air Indonesia.</p>
+            <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
+          </div>
+
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[1.5rem] mb-[3rem]">
+            {/* Card 1 */}
+            <div ref={addToRefs} className="bg-gradient-to-br from-emerald-800 to-emerald-500 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+              <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><Droplets size={36} /></div>
+              <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Akses Air Bersih untuk Pulau Terpencil</h3>
+              <p className="text-[0.92rem] leading-[1.65] text-white/90">Bersama pemerintah daerah dan kementerian terkait, kami terlibat dalam program penyediaan SWRO untuk pulau-pulau kecil di Indonesia Timur, NTT, dan Maluku — memberi akses air minum aman ke komunitas yang sebelumnya bergantung pada air hujan atau air laut yang tercemar.</p>
+            </div>
+
+            {/* Card 2 */}
+            <div ref={addToRefs} className="bg-gradient-to-br from-[#0a2240] to-blue text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+              <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><SunMedium size={36} /></div>
+              <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Sistem Bertenaga Surya</h3>
+              <p className="text-[0.92rem] leading-[1.65] text-white/90">Kami telah mengembangkan dan memasang sistem RO bertenaga panel surya untuk lokasi yang tidak terjangkau jaringan listrik PLN — termasuk untuk Kementerian LHK di Padang Sidempuan dan beberapa fasilitas masjid serta pesantren di daerah terpencil.</p>
+            </div>
+
+            {/* Card 3 */}
+            <div ref={addToRefs} className="bg-gradient-to-br from-purple-800 to-purple-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+              <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><Recycle size={36} /></div>
+              <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Efisiensi Energi &amp; Daur Ulang</h3>
+              <p className="text-[0.92rem] leading-[1.65] text-white/90">Sistem RO modern yang kami pasang menggunakan Energy Recovery Device (ERD) yang mengurangi konsumsi listrik hingga 40%. Untuk industri tekstil dan F&amp;B, kami menyediakan sistem ZLD (Zero Liquid Discharge) yang mendaur-ulang air limbah untuk dipakai kembali.</p>
+            </div>
+
+            {/* Card 4 */}
+            <div ref={addToRefs} className="bg-gradient-to-br from-red-800 to-red-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+              <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><GraduationCap size={36} /></div>
+              <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Air Minum Sehat untuk Kampus</h3>
+              <p className="text-[0.92rem] leading-[1.65] text-white/90">Drinking fountain dan sistem RO kampus yang kami pasang di Universitas Airlangga, Atma Jaya, dan kampus lain berkontribusi pada pengurangan ribuan botol plastik sekali pakai per hari di lingkungan akademis.</p>
+            </div>
+
+            {/* Card 5 */}
+            <div ref={addToRefs} className="bg-gradient-to-br from-amber-900 to-amber-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+              <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><Hospital size={36} /></div>
+              <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Dukungan untuk Layanan Kesehatan</h3>
+              <p className="text-[0.92rem] leading-[1.65] text-white/90">Kami mendukung Dinas Kesehatan dan rumah sakit pemerintah (RSUD) di berbagai daerah dengan sistem RO medical-grade untuk hemodialisis dan sterilisasi — termasuk Dinkes Aceh, Halmahera, dan Makassar.</p>
+            </div>
+
+            {/* Card 6 */}
+            <div ref={addToRefs} className="bg-gradient-to-br from-blue-900 to-blue-500 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+              <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><Shield size={36} /></div>
+              <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Dukungan untuk Pertahanan Negara</h3>
+              <p className="text-[0.92rem] leading-[1.65] text-white/90">Memasok watermaker SWRO kepada TNI AL untuk 15+ unit KRI memberi jaminan ketersediaan air tawar untuk awak kapal selama operasi laut — bagian kontribusi kami pada kemandirian armada nasional.</p>
+            </div>
+          </div>
+
+          {/* ISO 14001 highlight */}
+          <div ref={addToRefs} className="bg-white border border-border rounded-[12px] p-[2rem] grid grid-cols-1 md:grid-cols-[80px_1fr] gap-[1.5rem] items-center opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] hover:-translate-y-[2px]">
+            <div className="text-[3rem] text-center text-emerald-500 flex justify-center md:justify-start"><Leaf size={48} /></div>
+            <div className="text-center md:text-left">
+              <h3 className="font-condensed text-[1.3rem] font-bold text-navy mb-[0.4rem]">Tersertifikasi ISO 14001:2015 — Sistem Manajemen Lingkungan</h3>
+              <p className="text-[0.9rem] text-muted leading-[1.65] m-0">Kami berkomitmen mengelola dampak lingkungan dari operasi kami secara terukur dan terus diperbaiki — dari pengelolaan limbah workshop, pemakaian bahan kimia, hingga pemilihan komponen yang efisien energi. <a href="#sertifikasi" className="text-blue font-bold hover:text-navy transition-colors">Lihat sertifikasi &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* ══ KLIEN & BRANDS ══ */}
-      <section className="py-[4rem] bg-gray border-t border-border">
+      <section className="py-[4rem] bg-white border-t border-border">
         <div className="max-w-[1240px] mx-auto px-6 mb-12">
           <div ref={addToRefs} className="text-center max-w-[600px] mx-auto opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0">
             <span className="inline-block text-[0.65rem] font-bold tracking-[0.16em] uppercase text-accent bg-ice px-[0.82rem] py-[0.24rem] rounded-[20px] mb-[0.75rem] border border-border">Klien &amp; Mitra</span>

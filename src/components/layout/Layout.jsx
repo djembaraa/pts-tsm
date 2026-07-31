@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import GlobalLightbox from '../ui/GlobalLightbox';
+import TawkToChat from '../ui/TawkToChat';
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer />
+      <TawkToChat />
       <GlobalLightbox />
     </div>
   );
