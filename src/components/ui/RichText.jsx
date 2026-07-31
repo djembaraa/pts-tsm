@@ -40,9 +40,10 @@ const RichText = ({ content, className = '' }) => {
         // 3. LEGACY ARTICLE COMPONENTS REPLACEMENT
         if (domNode.name === 'div') {
           const classes = domNode.attribs?.class || '';
+          const classList = classes.split(/\s+/);
           
           // Ignore legacy related articles grid (handled dynamically by ArticleTemplate)
-          if (classes.includes('related-grid') || classes.includes('rel-card') || classes.includes('rel-body') || classes.includes('rel-img')) {
+          if (classList.includes('related-grid') || classList.includes('rel-card') || classList.includes('rel-body') || classList.includes('rel-img')) {
             return <React.Fragment key={Math.random()} />;
           }
           
@@ -58,7 +59,7 @@ const RichText = ({ content, className = '' }) => {
             if (hasRelatedTitle) return <React.Fragment key={Math.random()} />;
           }
           
-          if (classes.includes('app-tags')) {
+          if (classList.includes('app-tags')) {
             return (
               <div className="flex flex-wrap gap-2 my-5">
                 {domToReact(domNode.children, options)}
@@ -66,7 +67,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('info-box') || (domNode.attribs?.style && domNode.attribs.style.includes('var(--ice)'))) {
+          if (classList.includes('info-box') || (domNode.attribs?.style && domNode.attribs.style.includes('var(--ice)'))) {
             return (
               <div className="my-8 p-6 bg-ice border border-border border-l-4 border-l-accent rounded-xl text-[0.95rem] text-navy">
                 {domToReact(domNode.children, options)}
@@ -74,7 +75,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('checklist-box')) {
+          if (classList.includes('checklist-box')) {
             return (
               <div className="my-8 p-6 bg-gray border border-border border-l-4 border-l-blue rounded-xl text-[0.95rem]">
                 {domToReact(domNode.children, options)}
@@ -82,7 +83,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('mk-card')) {
+          if (classList.includes('mk-card')) {
             return (
               <div className="relative bg-white border border-border rounded-xl p-6 shadow-sm my-10 pt-8 mt-12">
                 {domToReact(domNode.children, options)}
@@ -90,7 +91,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('mk-num')) {
+          if (classList.includes('mk-num')) {
             return (
               <div className="absolute -top-6 -left-2 sm:-left-6 w-12 h-12 bg-gradient-to-br from-navy to-blue text-white font-condensed font-black text-xl rounded-full flex items-center justify-center shadow-md border-4 border-white">
                 {domToReact(domNode.children, options)}
@@ -98,7 +99,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('mk-labels')) {
+          if (classList.includes('mk-labels')) {
             return (
               <div className="flex flex-wrap gap-3 my-4">
                 {domToReact(domNode.children, options)}
@@ -106,7 +107,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('mk-tip')) {
+          if (classList.includes('mk-tip')) {
             return (
               <div className="mt-5 p-4 bg-blue/5 border border-blue/20 rounded-lg text-sm text-navy flex items-start gap-3">
                 <Lightbulb className="text-accent shrink-0 mt-0.5" size={18} />
@@ -115,7 +116,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
 
-          if (classes.includes('opex-grid') || classes.includes('case-stats')) {
+          if (classList.includes('opex-grid') || classList.includes('case-stats')) {
             return (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
                 {domToReact(domNode.children, options)}
@@ -123,7 +124,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
 
-          if (classes.includes('opex-card') || classes.includes('cs-box')) {
+          if (classList.includes('opex-card') || classList.includes('cs-box')) {
             return (
               <div className="bg-white border border-border rounded-xl p-4 text-center shadow-sm flex flex-col items-center justify-center my-4 md:my-0">
                 {domToReact(domNode.children, options)}
@@ -131,7 +132,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('stat-box')) {
+          if (classList.includes('stat-box')) {
             return (
               <div className="bg-white border border-border rounded-xl p-4 text-center shadow-sm inline-flex flex-col items-center justify-center m-2 w-[calc(50%-1rem)] sm:w-[calc(33%-1rem)] align-top min-h-[120px]">
                 {domToReact(domNode.children, options)}
@@ -139,7 +140,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('cs-num') || classes.includes('sn')) {
+          if (classList.includes('cs-num') || classList.includes('sn')) {
             return (
               <div className="text-2xl md:text-3xl font-condensed font-black text-blue mb-1">
                 {domToReact(domNode.children, options)}
@@ -147,7 +148,7 @@ const RichText = ({ content, className = '' }) => {
             );
           }
           
-          if (classes.includes('cs-lbl') || classes.includes('sl')) {
+          if (classList.includes('cs-lbl') || classList.includes('sl')) {
             return (
               <div className="text-xs md:text-sm text-muted font-bold uppercase tracking-wider">
                 {domToReact(domNode.children, options)}
@@ -236,17 +237,18 @@ const RichText = ({ content, className = '' }) => {
         // 5. LINK / BUTTON REPLACEMENT
         if (domNode.name === 'a') {
           const classes = domNode.attribs?.class || '';
+          const classList = classes.split(/\s+/);
           
-          if (classes.includes('rel-card')) {
+          if (classList.includes('rel-card')) {
              return <React.Fragment key={Math.random()} />;
           }
-          let rawHref = domNode.attribs?.href || '#';
+          let rawHref = (domNode.attribs?.href || '#').trim();
           
           let variant = null;
-          if (classes.includes('btn-primary') || classes.includes('btn')) variant = 'primary';
-          else if (classes.includes('btn-blue')) variant = 'blue';
-          else if (classes.includes('btn-white')) variant = 'white';
-          else if (classes.includes('btn-ghost')) variant = 'ghost';
+          if (classList.includes('btn-primary') || classList.includes('btn')) variant = 'primary';
+          else if (classList.includes('btn-blue')) variant = 'blue';
+          else if (classList.includes('btn-white')) variant = 'white';
+          else if (classList.includes('btn-ghost')) variant = 'ghost';
 
           // Route mapping
           let resolvedHref = rawHref;
@@ -264,18 +266,18 @@ const RichText = ({ content, className = '' }) => {
               resolvedHref = resolvedHref.substring(0, hashIndex);
             }
 
-            if (resolvedHref === 'kontak' || resolvedHref === '/kontak.html' || resolvedHref === 'kontak.html') {
+            if (resolvedHref === 'kontak' || resolvedHref === '/kontak') {
               resolvedHref = '/kontak';
             } else if (resolvedHref.startsWith('artikel-')) {
-              resolvedHref = `/artikel/${resolvedHref}`;
+              resolvedHref = `/artikel/${resolvedHref.replace('artikel-', '')}`;
             } else if (resolvedHref.startsWith('produk-')) {
-              resolvedHref = `/produk/${resolvedHref}`;
+              resolvedHref = `/produk/${resolvedHref.replace('produk-', '')}`;
             } else if (resolvedHref.startsWith('layanan-')) {
-              resolvedHref = `/layanan/${resolvedHref}`;
+              resolvedHref = `/layanan/${resolvedHref.replace('layanan-', '')}`;
             } else if (resolvedHref.startsWith('industri-')) {
-              resolvedHref = `/industri/${resolvedHref}`;
+              resolvedHref = `/industri/${resolvedHref.replace('industri-', '')}`;
             } else if (resolvedHref.startsWith('portofolio-')) {
-              resolvedHref = `/portofolio/${resolvedHref}`;
+              resolvedHref = `/portofolio/${resolvedHref.replace('portofolio-', '')}`;
             } else if (!resolvedHref.startsWith('/')) {
               resolvedHref = `/${resolvedHref}`;
             }
