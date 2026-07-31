@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Factory, Building2, PlusSquare, FlaskConical, Leaf, 
-  Zap, Building, Ship, Droplets, ArrowRight, MessageSquare, Phone
+  Zap, Building, Ship, Droplets, ArrowRight, MessageSquare, Phone,
+  ChevronLeft, ChevronRight
 } from 'lucide-react';
 import Button from '../../components/ui/Button';
 import ClientMarquee from '../../components/ui/ClientMarquee';
@@ -102,6 +103,14 @@ const industryList = [
 
 const IndustriIndex = () => {
   const revealRefs = useRef([]);
+  const industriRef = useRef(null);
+  
+  const scrollIndustri = (direction) => {
+    if (industriRef.current) {
+      const scrollAmount = 300;
+      industriRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
   
   const addToRefs = (el) => {
     if (el && !revealRefs.current.includes(el)) {
@@ -148,9 +157,9 @@ const IndustriIndex = () => {
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem]">
+          <div ref={industriRef} className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] overflow-x-auto snap-x snap-mandatory pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] scroll-smooth">
             {industryList.map((item, idx) => (
-              <div key={item.id} ref={addToRefs} className="bg-white border border-border rounded-xl p-8 flex flex-col transition-all duration-300 relative overflow-hidden group hover:-translate-y-[4px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0">
+              <div key={item.id} ref={addToRefs} className="bg-white border border-border rounded-xl p-8 flex flex-col transition-all duration-300 relative overflow-hidden group hover:-translate-y-[4px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue to-accent origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></div>
                 
                 <div className="flex items-center gap-4 mb-4">
@@ -183,6 +192,16 @@ const IndustriIndex = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Industri Arrows (Mobile Only) */}
+          <div className="flex sm:hidden justify-center gap-4 mt-2">
+            <button onClick={() => scrollIndustri('left')} aria-label="Previous card" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronLeft size={22} />
+            </button>
+            <button onClick={() => scrollIndustri('right')} aria-label="Next card" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronRight size={22} />
+            </button>
           </div>
         </div>
       </section>
