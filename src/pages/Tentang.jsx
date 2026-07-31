@@ -1,10 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Rocket, Handshake, Lightbulb, Trophy, Users, Leaf, Zap, Award, BookOpen, ShieldCheck, FileBadge, Microscope, Droplets, SunMedium, Recycle, GraduationCap, Hospital, Shield } from 'lucide-react';
+import { Target, Rocket, Handshake, Lightbulb, Trophy, Users, Leaf, Zap, Award, BookOpen, ShieldCheck, FileBadge, Microscope, Droplets, SunMedium, Recycle, GraduationCap, Hospital, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 import ClientMarquee from '../components/ui/ClientMarquee';
 
 const Tentang = () => {
   const revealRefs = useRef([]);
+  const nilaiRef = useRef(null);
+  const csrRef = useRef(null);
+
+  const scrollNilai = (direction) => {
+    if (nilaiRef.current) {
+      const scrollAmount = 280;
+      nilaiRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const scrollCsr = (direction) => {
+    if (csrRef.current) {
+      const scrollAmount = 300;
+      csrRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -129,7 +145,7 @@ const Tentang = () => {
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
           
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-[1.3rem]">
+          <div ref={nilaiRef} className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-[1.3rem] overflow-x-auto snap-x snap-mandatory pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] scroll-smooth">
             {[
               { icon: Handshake, title: 'Integritas', desc: 'Kami berkomitmen pada kejujuran, transparansi, dan tanggung jawab dalam setiap aspek bisnis kami.' },
               { icon: Lightbulb, title: 'Inovasi', desc: 'Terus mengadopsi teknologi terdepan untuk menghadirkan solusi yang lebih baik dan efisien bagi klien.' },
@@ -138,12 +154,22 @@ const Tentang = () => {
               { icon: Leaf, title: 'Keberlanjutan', desc: 'Berkomitmen pada solusi yang ramah lingkungan dan mendukung pengelolaan air yang berkelanjutan.' },
               { icon: Zap, title: 'Responsif', desc: 'Cepat dan tanggap dalam merespons kebutuhan dan permasalahan yang dihadapi klien kami.' }
             ].map((val, idx) => (
-              <div key={idx} ref={addToRefs} className="bg-white border border-border rounded-[12px] p-[1.75rem] text-center transition-all duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] hover:border-accent opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 group">
+              <div key={idx} ref={addToRefs} className="bg-white border border-border rounded-[12px] p-[1.75rem] text-center transition-all duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_44px_rgba(10,34,64,0.18)] hover:border-accent opacity-0 translate-y-[22px] [&.visible]:opacity-100 [&.visible]:translate-y-0 group min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
                 <div className="text-[2.2rem] mb-[0.8rem] flex justify-center text-blue group-hover:text-accent transition-colors"><val.icon size={36} /></div>
                 <h3 className="text-[0.98rem] font-bold text-navy mb-[0.45rem]">{val.title}</h3>
                 <p className="text-[0.83rem] text-muted leading-[1.65]">{val.desc}</p>
               </div>
             ))}
+          </div>
+
+          {/* Nilai Arrows (Mobile Only) */}
+          <div className="flex sm:hidden justify-center gap-4 mt-2">
+            <button onClick={() => scrollNilai('left')} aria-label="Previous card" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronLeft size={22} />
+            </button>
+            <button onClick={() => scrollNilai('right')} aria-label="Next card" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronRight size={22} />
+            </button>
           </div>
         </div>
       </section>
@@ -219,48 +245,58 @@ const Tentang = () => {
             <div className="w-[36px] h-[3px] bg-gradient-to-r from-blue to-accent rounded-[2px] mx-auto mt-[0.85rem]"></div>
           </div>
 
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[1.5rem] mb-[3rem]">
+          <div ref={csrRef} className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] mb-[2rem] overflow-x-auto snap-x snap-mandatory pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] scroll-smooth">
             {/* Card 1 */}
-            <div ref={addToRefs} className="bg-gradient-to-br from-emerald-800 to-emerald-500 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+            <div ref={addToRefs} className="bg-gradient-to-br from-emerald-800 to-emerald-500 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
               <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><Droplets size={36} /></div>
               <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Akses Air Bersih untuk Pulau Terpencil</h3>
               <p className="text-[0.92rem] leading-[1.65] text-white/90">Bersama pemerintah daerah dan kementerian terkait, kami terlibat dalam program penyediaan SWRO untuk pulau-pulau kecil di Indonesia Timur, NTT, dan Maluku — memberi akses air minum aman ke komunitas yang sebelumnya bergantung pada air hujan atau air laut yang tercemar.</p>
             </div>
 
             {/* Card 2 */}
-            <div ref={addToRefs} className="bg-gradient-to-br from-[#0a2240] to-blue text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+            <div ref={addToRefs} className="bg-gradient-to-br from-[#0a2240] to-blue text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
               <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><SunMedium size={36} /></div>
               <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Sistem Bertenaga Surya</h3>
               <p className="text-[0.92rem] leading-[1.65] text-white/90">Kami telah mengembangkan dan memasang sistem RO bertenaga panel surya untuk lokasi yang tidak terjangkau jaringan listrik PLN — termasuk untuk Kementerian LHK di Padang Sidempuan dan beberapa fasilitas masjid serta pesantren di daerah terpencil.</p>
             </div>
 
             {/* Card 3 */}
-            <div ref={addToRefs} className="bg-gradient-to-br from-purple-800 to-purple-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+            <div ref={addToRefs} className="bg-gradient-to-br from-purple-800 to-purple-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
               <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><Recycle size={36} /></div>
               <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Efisiensi Energi &amp; Daur Ulang</h3>
               <p className="text-[0.92rem] leading-[1.65] text-white/90">Sistem RO modern yang kami pasang menggunakan Energy Recovery Device (ERD) yang mengurangi konsumsi listrik hingga 40%. Untuk industri tekstil dan F&amp;B, kami menyediakan sistem ZLD (Zero Liquid Discharge) yang mendaur-ulang air limbah untuk dipakai kembali.</p>
             </div>
 
             {/* Card 4 */}
-            <div ref={addToRefs} className="bg-gradient-to-br from-red-800 to-red-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+            <div ref={addToRefs} className="bg-gradient-to-br from-red-800 to-red-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
               <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><GraduationCap size={36} /></div>
               <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Air Minum Sehat untuk Kampus</h3>
               <p className="text-[0.92rem] leading-[1.65] text-white/90">Drinking fountain dan sistem RO kampus yang kami pasang di Universitas Airlangga, Atma Jaya, dan kampus lain berkontribusi pada pengurangan ribuan botol plastik sekali pakai per hari di lingkungan akademis.</p>
             </div>
 
             {/* Card 5 */}
-            <div ref={addToRefs} className="bg-gradient-to-br from-amber-900 to-amber-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+            <div ref={addToRefs} className="bg-gradient-to-br from-amber-900 to-amber-600 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
               <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><Hospital size={36} /></div>
               <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Dukungan untuk Layanan Kesehatan</h3>
               <p className="text-[0.92rem] leading-[1.65] text-white/90">Kami mendukung Dinas Kesehatan dan rumah sakit pemerintah (RSUD) di berbagai daerah dengan sistem RO medical-grade untuk hemodialisis dan sterilisasi — termasuk Dinkes Aceh, Halmahera, dan Makassar.</p>
             </div>
 
             {/* Card 6 */}
-            <div ref={addToRefs} className="bg-gradient-to-br from-blue-900 to-blue-500 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg">
+            <div ref={addToRefs} className="bg-gradient-to-br from-blue-900 to-blue-500 text-white rounded-[14px] p-[2rem] opacity-0 translate-y-[22px] transition-all duration-[620ms] ease-out [&.visible]:opacity-100 [&.visible]:translate-y-0 group hover:-translate-y-[4px] hover:shadow-lg min-w-[280px] max-[640px]:w-[85vw] snap-center shrink-0 sm:min-w-0 sm:w-auto">
               <div className="text-[2.2rem] mb-[0.8rem] text-white/90 group-hover:scale-110 transition-transform"><Shield size={36} /></div>
               <h3 className="font-condensed text-[1.4rem] font-bold text-white mb-[0.6rem]">Dukungan untuk Pertahanan Negara</h3>
               <p className="text-[0.92rem] leading-[1.65] text-white/90">Memasok watermaker SWRO kepada TNI AL untuk 15+ unit KRI memberi jaminan ketersediaan air tawar untuk awak kapal selama operasi laut — bagian kontribusi kami pada kemandirian armada nasional.</p>
             </div>
+          </div>
+
+          {/* CSR Arrows (Mobile Only) */}
+          <div className="flex sm:hidden justify-center gap-4 mt-2 mb-[3rem]">
+            <button onClick={() => scrollCsr('left')} aria-label="Previous card" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronLeft size={22} />
+            </button>
+            <button onClick={() => scrollCsr('right')} aria-label="Next card" className="w-[42px] h-[42px] rounded-full bg-white border border-border flex items-center justify-center text-navy hover:bg-accent hover:text-white hover:-translate-y-[2px] transition-all duration-300 shadow-sm">
+              <ChevronRight size={22} />
+            </button>
           </div>
 
           {/* ISO 14001 highlight */}
